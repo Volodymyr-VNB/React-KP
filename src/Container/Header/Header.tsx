@@ -1,3 +1,9 @@
+import './Header.scss'
+import logo from './assets/logo.png'
+import gameChanging from './assets/game-changing-1000x600.jpg'
+import howToMake from './assets/how-to-make1000x600.jpg'
+import texnologi from './assets/texnologi-1000x600.jpg'
+
 type Props = {}
 const Header = (props: Props) => {
   return (
@@ -15,7 +21,7 @@ const Header = (props: Props) => {
                             <a href="https://demo.rivaxstudio.com/fonix/main/game-changing-virtual-reality-console/">
                                 <img
                                     className="heder-slide-img "
-                                    src="game-changing-1000x600.jpg"
+                                    src={gameChanging}
                                     alt="game"
                                 />
                                 <span className="heder-span">
@@ -26,7 +32,7 @@ const Header = (props: Props) => {
                             <a href="https://demo.rivaxstudio.com/fonix/main/how-to-make-a-competitors-success-work-for-you/">
                                 <img
                                     className="heder-slide-img "
-                                    src="how-to-make1000x600.jpg"
+                                    src={howToMake}
                                     alt="game"
                                 />
                                 <span className="heder-span">
@@ -37,7 +43,7 @@ const Header = (props: Props) => {
                             <a href="https://demo.rivaxstudio.com/fonix/main/technology-allows-profit-to-serve-the-community/">
                                 <img
                                     className="heder-slide-img "
-                                    src="texnologi-1000x600.jpg"
+                                    src={texnologi}
                                     alt="game"
                                 />
                                 <span className="heder-span">
@@ -50,7 +56,7 @@ const Header = (props: Props) => {
                             <a href="https://demo.rivaxstudio.com/fonix/main/game-changing-virtual-reality-console/">
                                 <img
                                     className="heder-slide-img "
-                                    src="game-changing-1000x600.jpg"
+                                    src={gameChanging}
                                     alt="game"
                                 />
                                 <span className="heder-span">
@@ -61,7 +67,7 @@ const Header = (props: Props) => {
                             <a href="https://demo.rivaxstudio.com/fonix/main/how-to-make-a-competitors-success-work-for-you/">
                                 <img
                                     className="heder-slide-img "
-                                    src="how-to-make1000x600.jpg"
+                                    src={howToMake}
                                     alt="game"
                                 />
                                 <span className="heder-span">
@@ -72,7 +78,7 @@ const Header = (props: Props) => {
                             <a href="https://demo.rivaxstudio.com/fonix/main/technology-allows-profit-to-serve-the-community/">
                                 <img
                                     className="heder-slide-img "
-                                    src="texnologi-1000x600.jpg"
+                                    src={texnologi}
                                     alt="game"
                                 />
                                 <span className="heder-span">
@@ -96,7 +102,7 @@ const Header = (props: Props) => {
         </div>
         <div className="header-1 row">
             <img
-                src="logo.png"
+                src={logo}
                 alt="Fonix"
                 className="logo"
                 width="200"
