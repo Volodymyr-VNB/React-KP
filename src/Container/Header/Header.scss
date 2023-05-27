@@ -1,3 +1,7 @@
+header {
+    font-family: 'Poppins', sans-serif;}
+    
+
 * {box-sizing: border-box;}
 
 header{
@@ -33,7 +37,7 @@ header{
 .hot-gripfire{
     width: 13px;
     height: 16px;
-    background: url(./assets/grifit.svg) top / 13px 16px no-repeat;
+    background: url(../../assets/grifit.svg) top / 13px 16px no-repeat;
 }
 .hot-text
 {color: #FFFFFF;
@@ -67,7 +71,7 @@ header{
     
 }
 .search-img{
-    background:  url(./assets/search_icon_white.svg) top/20px 20px no-repeat;
+    background:  url(../../assets/search_icon_white.svg) top/20px 20px no-repeat;
     width: 20px;
     height: 20px;
 }
@@ -99,7 +103,7 @@ header{
     100% { transform: translateX(-50%);}
 }
 .heder-slide1 {
-    width: 200%;
+    width: 254%;
     animation: marquee-infinite 15s linear infinite;
 }
 .running-line span {
@@ -115,6 +119,8 @@ header{
 }
 .heder-span {
     text-align: left;
+    font-size: 14px;
+    font-weight: 700;
 }
 .running-line:hover .heder-slide1 {
     animation-play-state: paused;
@@ -169,7 +175,7 @@ ul,li {
 }
 
 .header-menu-0 > .header-menu-item:has(ul) > a:after {
-    content: url(./assets/arrows0.svg);
+    content: url(../../assets/arrows0.svg);
     position: absolute;
     padding-left: 5px;
   
@@ -185,6 +191,7 @@ ul,li {
     margin-left: -20px;
     padding-left: 20px;
     box-shadow: 2px 11px 30px rgba(51, 51, 51, 0.08);
+    z-index: 5;
 }
 .header-menu-item:hover .header-menu-sub {
     display: flex;
@@ -192,8 +199,9 @@ ul,li {
 }  
 .header-menu-sub li{
     width: 200%;
-    line-height: 1.5;
-    height: 1.5;
+    line-height: 2.5;
+    height: 2.5;
+    
 }
 
 .like::after{
@@ -222,17 +230,17 @@ ul,li {
 }
 
 .whatsapp::after{
-    content: url(./assets/whatsapp.svg); 
+    content: url(../../assets/whatsapp.svg); 
     /* background: url(/public/whatsapp.svg) top /30px 30px no-repeat; */
 }
 .facebook::after{
-    content: url(./assets/facebook.svg); 
+    content: url(../../assets/facebook.svg); 
 }
 .gitH::after{
-    content: url(./assets/gitHub.svg); 
+    content: url(../../assets/gitHub.svg); 
 }
 .soundcloud::after{
-    content: url(./assets/soundcloud.svg); 
+    content: url(../../assets/soundcloud.svg); 
 }
 .header-icons{
     justify-content: end;
@@ -241,9 +249,4 @@ ul,li {
 }
 
 
-/* main */
-main{
-    background-color: aqua;
-    width: 100%;
-    height: 320px;
-}
+

@@ -1,0 +1,226 @@
+@import '../_valiable.scss';
+@import '../_font.scss';
+
+main{
+    font-family: 'Merriweather', serif;
+}
+ol, ul, li ,img  {
+vertical-align: middle;
+} 
+.dispNone{
+    display: none;
+}
+.displayBlock{
+    display:inline;
+}
+.text-align-center{
+    text-align: center;
+}
+
+.scale{
+    position: relative;
+    overflow: hidden;
+}
+@keyframes ani {
+    0% {transform: translateY(150%);}
+    100% {transform: translateY(0);}
+  }
+.post{
+@include container( flex,space-between,
+    center, 50px, auto, 50px, auto,
+    $wight-frame, auto);
+position: relative;
+overflow: hidden;
+overflow-y: hidden;
+}
+.post-Img{
+    width: 830px;
+    height: 500px; 
+    transition: transform 0.5s;
+   position: absolute;    
+
+   object-fit: cover;
+   z-index: 1;
+   border-radius: 15px;
+   align-self: flex-start;
+}
+.post-Img:hover {
+    transform: scale(1.1);
+}
+
+.post-Recent-ImgS{
+   height: 500px;
+   width: 65%;
+   gap: 30px;
+   justify-content: end;
+   flex-direction: column;
+   border-radius: 15px;
+   
+ }
+ 
+ 
+
+
+ .post-contentn:hover .post-coments{
+    display: block;
+    transform: translateY(150%);
+    animation: ani 1s forwards;
+
+ }
+
+ .post-contentn{
+    margin-bottom: 40px;
+   
+    
+ }
+.post-contentn>div,
+.post-excerpt , .post-Title-a,
+.post-coments{
+    z-index: 5;
+    position: relative;
+    color: white;
+    margin: 0px 50px;
+    
+}
+.post-title-inner {
+    margin-top: 11px;
+}
+.post-contentn>div{
+    margin-bottom: 20px;
+}
+.post-Title-a{
+    // white-space: nowrap
+    display: inline-block;
+    text-decoration: none;
+    
+}
+.post-Title-a:hover {
+    text-decoration: underline solid 2px white;
+    text-underline-offset: 8px;
+    
+  }
+.post-Category a::before,
+.post-Subcategory a::before{
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50px;
+    background: #00bcae;
+    margin-right: 5px;
+  
+}
+.post-Category a,
+.post-Subcategory a{
+    color: white;
+text-transform: uppercase;
+margin: 5px;
+text-decoration: none;
+}
+.post-Recent{
+    width: 30%;
+    height: 500px;
+    flex-direction: column;
+}
+.post-Recen-a{
+    position: relative;
+    left: 50px;
+   
+} 
+.post-Recent-img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+  
+}
+
+
+.post-news>li{
+    list-style-type: decimal-leading-zero;
+   
+}
+.post-news>li::marker{
+    color: #D9DBE0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    height: 120px;
+    display: inline-flex ; 
+    vertical-align: middle !important ;
+}
+.post-li{
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    gap: 10px;
+    margin: 7px 0;
+}
+.subtitle-text{
+    width: fit-content;
+    height: 13px;
+   background-color: $color-title-1;
+   padding: 1px 5px;
+   font-size: 10px;
+   font-weight: 700;
+   letter-spacing: 0.5px;
+   color: white;
+   text-transform: uppercase;
+   vertical-align: top;
+   margin-top: -25%;
+}
+.post-Recent-title{
+    margin: 10px 0;
+    text-decoration: none;
+    color: $color-2;
+}
+.titre-line{
+    margin-top: 10px;
+}
+// categories
+.categories{
+    @include container( flex,space-between,
+        flex-start, 50px, auto, 50px, auto,
+        $wight-frame, auto);
+    position: relative;
+    flex-direction: column;
+   }
+.cat-color{
+    font-size: 16px;
+    color: $color-recent;
+}
+.categories-item{
+    width: 235px;
+    height: 330px;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    border: solid 2px #EAEFF4 ;
+    border-radius: 10px;
+    background-color: white;
+}
+.categories-img{
+    width: 192px;
+    height: 192px;
+    
+}
+.categories-item, .categories-img {
+    position: relative;
+    overflow: hidden;
+    transition: 0.6s ease;
+}
+.img-containet{
+    position: relative;
+    overflow: hidden; 
+    width: 192px;
+    height: 192px;
+    border-radius: 50%;
+    box-shadow: 0px 10px 25px 0px rgba(23.88474864130433, 26.60561452364424, 35.24999999999997, 0.4);
+
+}
+.categories-img:hover{
+    // transform: scale(1.1);
+    scale: 1.1;
+}
+.categories-line{
+    gap: 30px;
+}

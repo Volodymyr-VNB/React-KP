@@ -1,0 +1,20 @@
+$wight-frame :1280px;
+
+$color-title    : #191A1b;
+$color-2        : #2b2d42;
+$color-title-1  : #38CCA7;
+$color-views    : #2e3039;
+$color-recent    : #717171;
+
+
+
+@mixin container( $flex,$justify-content,
+$align-items, $margT, $margR, $margB, $margL,
+$width-container,$height  ){
+    display: $flex;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    margin: $margT $margR $margB $margL;
+    width: $width-container;
+    height: $height;
+    }

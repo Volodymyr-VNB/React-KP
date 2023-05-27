@@ -1,8 +1,9 @@
 import './Header.scss'
-import logo from './assets/logo.png'
-import gameChanging from './assets/game-changing-1000x600.jpg'
-import howToMake from './assets/how-to-make1000x600.jpg'
-import texnologi from './assets/texnologi-1000x600.jpg'
+import logo from 'assets/logo.png'
+import gameChanging from 'assets/game-changing-1000x600.jpg'
+import howToMake from 'assets/how-to-make1000x600.jpg'
+import texnologi from 'assets/texnologi-1000x600.jpg'
+import Animation from 'components/Animation/Animation'
 
 type Props = {}
 const Header = (props: Props) => {
@@ -18,75 +19,40 @@ const Header = (props: Props) => {
                 <div className="running-line">
                     <div className="heder-slide1 row">
                         <span>
-                            <a href="https://demo.rivaxstudio.com/fonix/main/game-changing-virtual-reality-console/">
-                                <img
-                                    className="heder-slide-img "
-                                    src={gameChanging}
-                                    alt="game"
-                                />
-                                <span className="heder-span">
-                                    Game Changing Virtual Reality
-                                    Console
-                                </span>
-                            </a>
-                            <a href="https://demo.rivaxstudio.com/fonix/main/how-to-make-a-competitors-success-work-for-you/">
-                                <img
-                                    className="heder-slide-img "
-                                    src={howToMake}
-                                    alt="game"
-                                />
-                                <span className="heder-span">
-                                    How to Make a Competitor`s Success
-                                    Work for You
-                                </span>
-                            </a>
-                            <a href="https://demo.rivaxstudio.com/fonix/main/technology-allows-profit-to-serve-the-community/">
-                                <img
-                                    className="heder-slide-img "
-                                    src={texnologi}
-                                    alt="game"
-                                />
-                                <span className="heder-span">
-                                    Technology Allows Profit To Serve
-                                    The Community
-                                </span>
-                            </a>
+                          <Animation
+                            hrefAni = "https://demo.rivaxstudio.com/fonix/main/game-changing-virtual-reality-console/"
+                            srcAni  = {gameChanging}
+                            TxtAni  = "Game Changing Virtual Reality Console"
+                            />
+                          <Animation
+                            hrefAni = "https://demo.rivaxstudio.com/fonix/main/how-to-make-a-competitors-success-work-for-you/"
+                            srcAni  = {howToMake}
+                            TxtAni  = "How to Make a Competitor`s Success Work for You"
+                            />
+                          <Animation
+                            hrefAni = "https://demo.rivaxstudio.com/fonix/main/technology-allows-profit-to-serve-the-community/"
+                            srcAni  = {texnologi}
+                            TxtAni  = "Technology Allows Profit To Serve The Community"
+                            />
                         </span>
                         <span>
-                            <a href="https://demo.rivaxstudio.com/fonix/main/game-changing-virtual-reality-console/">
-                                <img
-                                    className="heder-slide-img "
-                                    src={gameChanging}
-                                    alt="game"
-                                />
-                                <span className="heder-span">
-                                    Game Changing Virtual Reality
-                                    Console
-                                </span>
-                            </a>
-                            <a href="https://demo.rivaxstudio.com/fonix/main/how-to-make-a-competitors-success-work-for-you/">
-                                <img
-                                    className="heder-slide-img "
-                                    src={howToMake}
-                                    alt="game"
-                                />
-                                <span className="heder-span">
-                                    How to Make a Competitor`s Success
-                                    Work for You
-                                </span>
-                            </a>
-                            <a href="https://demo.rivaxstudio.com/fonix/main/technology-allows-profit-to-serve-the-community/">
-                                <img
-                                    className="heder-slide-img "
-                                    src={texnologi}
-                                    alt="game"
-                                />
-                                <span className="heder-span">
-                                    Technology Allows Profit To Serve
-                                    The Community
-                                </span>
-                            </a>
+                          <Animation
+                            hrefAni = "https://demo.rivaxstudio.com/fonix/main/game-changing-virtual-reality-console/"
+                            srcAni  = {gameChanging}
+                            TxtAni  = "Game Changing Virtual Reality Console"
+                            />
+                          <Animation
+                            hrefAni = "https://demo.rivaxstudio.com/fonix/main/how-to-make-a-competitors-success-work-for-you/"
+                            srcAni  = {howToMake}
+                            TxtAni  = "How to Make a Competitor`s Success Work for You"
+                            />
+                          <Animation
+                            hrefAni = "https://demo.rivaxstudio.com/fonix/main/technology-allows-profit-to-serve-the-community/"
+                            srcAni  = {texnologi}
+                            TxtAni  = "Technology Allows Profit To Serve The Community"
+                            />
                         </span>
+                        
                     </div>
                 </div>
 
