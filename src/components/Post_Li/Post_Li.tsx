@@ -1,3 +1,4 @@
+import ColorCat from 'components/ColorCat/ColorCat';
 import { RiFireLine} from 'react-icons/ri';
 type LineNews = {
 srcImg    : string,
@@ -11,20 +12,27 @@ imgClass  : string,
 aClass    : string,
 h6Class   : string,
 iconClass : string,
-containerImg : string
+containerImg : string,
+catClass  :string,
+catText  :string
 
 }
 const Post_Li = 
 ( {srcImg, altImg,hrefTitle,titleShot,
     titleAll,  titleViews,
     divClass,imgClass,aClass,h6Class,iconClass,
-    containerImg
+    containerImg,catClass,catText
   }: LineNews) => {
   return (
               <div className={divClass}>
                 <div className= {containerImg} >
                 <img  className={imgClass} src={srcImg} alt={altImg} />
                 </div>
+                
+                <ColorCat 
+                catClass  = {catClass} 
+                catText  ={catText}
+                />
                 <h5 >
                   <a href={hrefTitle} className= {aClass}
                     title={titleShot}>
