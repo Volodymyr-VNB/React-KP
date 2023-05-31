@@ -34,7 +34,7 @@ const ColorCat = ({catClass, catText =""}: Props) => {
         default:
             divStyle.color = '#717171';
       }
-      console.log("{divStyle}",{divStyle});
+      
     return (
     <div  className={catClass} style={divStyle} >
                  {catText}

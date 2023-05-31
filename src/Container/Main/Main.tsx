@@ -19,6 +19,18 @@ import lost from "assets/lost-tourists-450x350.jpg"
 import { Carousel } from 'antd';
 import { LeftOutlined ,RightOutlined   } from "@ant-design/icons";
 // import "./ antd/dist/antd.css";
+import baner from 'assets/banner-3-700x165.png'
+import game from "assets/game-changing-1000x600.jpg"
+import mobile2 from "assets/mobile2.jpg"
+import mobile3 from "assets/mobile3.jpg"
+import mobile4 from "assets/mobile4.jpg"
+import digital1 from "assets/how-to-make1000x600.jpg"
+import digital2 from "assets/digital2-1300x650.jpg"
+import digital3 from "assets/digital31000x600.jpg"
+import gadget1 from "assets/gadget1-1000x600.jpg"
+import gadget3 from "assets/gadget3-450x350.jpg"
+import Weekly from 'components/Weekly/Weekly'
+
 
 const contentStyle: React.CSSProperties = {
   margin: 0,
@@ -260,7 +272,7 @@ const Main = (props: Props) => {
             titleViews= "4 min Read"
             divClass  = 'categories-item row featured-item'
             imgClass  = 'categories-img featured-img'
-            aClass    = "post-Recent-title"
+            aClass    = "post-Recent-title line-a line-a-l"
             h6Class   = 'titre-line'
             iconClass = "dispNone"
             containerImg= "img-containet-featured"
@@ -276,7 +288,7 @@ const Main = (props: Props) => {
             titleViews= "4 min Read"
             divClass  = 'categories-item row featured-item'
             imgClass  = 'categories-img featured-img'
-            aClass    = "post-Recent-title"
+            aClass    = "post-Recent-title line-a line-a-l"
             h6Class   = 'titre-line'
             iconClass = "dispNone"
             containerImg= "img-containet-featured"
@@ -292,7 +304,7 @@ const Main = (props: Props) => {
             titleViews= "4 min Read"
             divClass  = 'categories-item row featured-item'
             imgClass  = 'categories-img featured-img'
-            aClass    = "post-Recent-title"
+            aClass    = "post-Recent-title line-a line-a-l"
             h6Class   = 'titre-line'
             iconClass = "dispNone"
             containerImg= "img-containet-featured"
@@ -308,7 +320,7 @@ const Main = (props: Props) => {
             titleViews= "4 min Read"
             divClass  = 'categories-item row featured-item'
             imgClass  = 'categories-img featured-img'
-            aClass    = "post-Recent-title"
+            aClass    = "post-Recent-title line-a line-a-l"
             h6Class   = 'titre-line'
             iconClass = "dispNone"
             containerImg= "img-containet-featured"
@@ -324,7 +336,7 @@ const Main = (props: Props) => {
             titleViews= "4 min Read"
             divClass  = 'categories-item row featured-item'
             imgClass  = 'categories-img featured-img'
-            aClass    = "post-Recent-title"
+            aClass    = "post-Recent-title line-a line-a-l"
             h6Class   = 'titre-line'
             iconClass = "dispNone"
             containerImg= "img-containet-featured"
@@ -340,7 +352,7 @@ const Main = (props: Props) => {
             titleViews= "4 min Read"
             divClass  = 'categories-item row featured-item'
             imgClass  = 'categories-img featured-img'
-            aClass    = "post-Recent-title"
+            aClass    = "post-Recent-title line-a line-a-l"
             h6Class   = 'titre-line'
             iconClass = "dispNone"
             containerImg= "img-containet-featured"
@@ -351,8 +363,32 @@ const Main = (props: Props) => {
         </div>  
       
       </section>
-     
-
+       <section className='baner'>
+        <img src={baner} alt="baner"  />
+      </section>
+      <section className='weeklyNews'>  
+      <h3 className='cat-color'>Recent</h3>
+        <h3 className='post-title-inner'>Weekly News</h3>
+        <div className="weeklyNews">
+        {/* <Post_Li
+            srcImg    = {game}
+            altImg    = "Game"
+            hrefTitle = "https:/"
+            titleShot = "Game Changing Virtual Reality Console"
+            titleAll  = "Game Changing Virtual Reality Console "
+            titleViews= "157 Views"
+            divClass  = ' row weeklyNews-item'
+            imgClass  = 'categories-img weeklyNews-img'
+            aClass    = "post-Recent-title line-a line-a-l "
+            h6Class   = 'titre-line '
+            iconClass = "displayBlokc"
+            containerImg= "wweeklyNews-container"
+            catClass  = "featured-cat h4-cat weeklyText"
+            catText   = "Digital"
+            /> */}
+            <Weekly/>
+         </div>  
+      </section>
            
 
         </main>
