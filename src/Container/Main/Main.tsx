@@ -28,14 +28,14 @@ import baner from 'assets/banner-3-700x165.png'
 // import gadget3 from 'assets/gadget3-450x350.jpg'
 import Weekly from 'components/Weekly/Weekly'
 
-const contentStyle: React.CSSProperties = {
-    margin: 0,
-    height: '160px',
-    color: '#fff',
-    lineHeight: '160px',
-    textAlign: 'center',
-    background: '#364d79',
-}
+// const contentStyle: React.CSSProperties = {
+//     margin: 0,
+//     height: '160px',
+//     color: '#fff',
+//     lineHeight: '160px',
+//     textAlign: 'center',
+//     background: '#364d79',
+// }
 
 // const MainC: React.FC = () => {
 //   const onChange = (currentSlide: number) => {
@@ -63,10 +63,10 @@ const Main = (props: Props) => {
                         <div className="post-contentn">
                             <div className="row ">
                                 <div className="post-Category h4-cat">
-                                    <a href="#">Gadget</a>{' '}
+                                    <a href="#top">Gadget</a>{' '}
                                 </div>
                                 <div className="post-Subcategory h4-cat">
-                                    <a href="#">Tech News</a>{' '}
+                                    <a href="#top">Tech News</a>{' '}
                                 </div>
                             </div>
                             <h1 className="post-Title">

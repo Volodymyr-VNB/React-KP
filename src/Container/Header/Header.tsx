@@ -77,40 +77,40 @@ const Header = (props: Props) => {
             <nav className="header-menu">
                 <ul className='header-menu-0'>
                     <li className='header-menu-item'>
-                        <a href="#">Home</a>
+                        <a href="#top">Home</a>
                     </li>
                     <li className='header-menu-item'>
-                        <a href="#">Travel</a>
+                        <a href="#top">Travel</a>
                     </li>
                     <li className='header-menu-item'>
-                        <a href="#">Categories</a>
+                        <a href="#top">Categories</a>
                         <ul className='header-menu-sub'>
                             <li>
-                                <a href="#">Mobile</a>
+                                <a href="#top">Mobile</a>
                             </li>
                             <li>
-                                <a href="#">Travel</a>
+                                <a href="#top">Travel</a>
                             </li>
                             <li>
-                                <a href="#">Digital</a>
+                                <a href="#top">Digital</a>
                             </li>
                             <li>
-                                <a href="#">Gadget</a>
+                                <a href="#top">Gadget</a>
                             </li>
                             <li>
-                                <a href="#">Lifestyle</a>
+                                <a href="#top">Lifestyle</a>
                             </li>
                         </ul>
                     </li>
                     <li className='header-menu-item like row'>
-                        <a href="#">Favorites</a>
+                        <a href="#top">Favorites</a>
                         <div className="like-number">
                             <p id="like-count">0</p>
                         </div>
                         
                     </li>
                     <li className='header-menu-item'>
-                        <a href="#">About</a>
+                        <a href="#top">About</a>
                     </li>
                 </ul>
             </nav>
