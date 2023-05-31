@@ -1,14 +1,14 @@
-import game from "assets/game-changing-1000x600.jpg"
-import mobile2 from "assets/mobile2.jpg"
-import mobile3 from "assets/mobile3.jpg"
-import mobile4 from "assets/mobile4.jpg"
-import digital1 from "assets/how-to-make1000x600.jpg"
-import digital2 from "assets/digital2-1300x650.jpg"
-import digital3 from "assets/digital31000x600.jpg"
-import gadget1 from "assets/gadget1-1000x600.jpg"
-import gadget3 from "assets/gadget3-450x350.jpg"
-import stylishBohemianCouple from "assets/stylish-bohemian-couple-700x700.jpg"
-import { Node } from "typescript"
+// import game from "assets/game-changing-1000x600.jpg"
+// import mobile2 from "assets/mobile2.jpg"
+// import mobile3 from "assets/mobile3.jpg"
+// import mobile4 from "assets/mobile4.jpg"
+// import digital1 from "assets/how-to-make1000x600.jpg"
+// import digital2 from "assets/digital2-1300x650.jpg"
+// import digital3 from "assets/digital31000x600.jpg"
+// import gadget1 from "assets/gadget1-1000x600.jpg"
+// import gadget3 from "assets/gadget3-450x350.jpg"
+// import stylishBohemianCouple from "assets/stylish-bohemian-couple-700x700.jpg"
+
 type Article = {
     categoriy   :string
     subcategoriy:string

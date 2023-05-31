@@ -17,7 +17,7 @@ catClass  :string,
 catText  :string
 
 }
-const Post_Li = 
+const PostLi = 
 ( {srcImg, altImg,hrefTitle,titleShot,
     titleAll,  titleViews,
     divClass,imgClass,aClass,h6Class,iconClass,
@@ -44,4 +44,4 @@ const Post_Li =
               </div>
   )
 }
-export default Post_Li
+export default PostLi
