@@ -1,52 +1,12 @@
 import './Main.scss'
 
-import prettyBlondeGirl from 'assets/pretty-blonde-girl-1300x650.jpg'
-import bikiniGirlHolding from 'assets/bikini-girl-holding-700x700.jpg'
-import stylishBohemianCouple from 'assets/stylish-bohemian-couple-700x700.jpg'
-import womanWithHat from 'assets/woman-with-hat-700x700.jpg'
-import woodenBridgeKoh from 'assets/wooden-bridge-koh-700x700.jpg'
-import {  FaRegComment } from 'react-icons/fa'
+import { FaRegComment } from 'react-icons/fa'
 import PostLi from 'components/PostLi/PostLi'
-import mobile from 'assets/mobile-1000x600.jpg'
-import digital from 'assets/digital-1024x682.jpg'
-import cadget from 'assets/gadget-768x960.jpg'
-import livestule from 'assets/lafeStyle-1024x682.jpg'
-import sexyStylish from 'assets/sexy-stylish-450x350.jpg'
-import lost from 'assets/lost-tourists-450x350.jpg'
 import { Carousel } from 'antd'
 import { LeftOutlined, RightOutlined } from '@ant-design/icons'
 // import "./ antd/dist/antd.css";
-import baner from 'assets/banner-3-700x165.png'
-// import game from 'assets/game-changing-1000x600.jpg'
-// import mobile2 from 'assets/mobile2.jpg'
-// import mobile3 from 'assets/mobile3.jpg'
-// import mobile4 from 'assets/mobile4.jpg'
-// import digital1 from 'assets/how-to-make1000x600.jpg'
-// import digital2 from 'assets/digital2-1300x650.jpg'
-// import digital3 from 'assets/digital31000x600.jpg'
-// import gadget1 from 'assets/gadget1-1000x600.jpg'
-// import gadget3 from 'assets/gadget3-450x350.jpg'
 import Weekly from 'components/Weekly/Weekly'
-
-// const contentStyle: React.CSSProperties = {
-//     margin: 0,
-//     height: '160px',
-//     color: '#fff',
-//     lineHeight: '160px',
-//     textAlign: 'center',
-//     background: '#364d79',
-// }
-
-// const MainC: React.FC = () => {
-//   const onChange = (currentSlide: number) => {
-//     console.log(currentSlide);
-//   };
-// const Arrow = ({ type, style, className, onClick }) => (
-//   <LeftSquareOutlined type={type} style={style} className={className} onClick={onClick} />
-// );
-// const Arrow1 = ({ type, style, className, onClick }) => (
-//   <RightSquareOutlined  type={type} style={style} className={className} onClick={onClick} />
-// );
+import Post from 'components/Post/Post'
 
 type Props = {}
 const Main = (props: Props) => {
@@ -54,10 +14,10 @@ const Main = (props: Props) => {
         <>
             <main className="main">
                 <section className="post">
-                    <div className="post-Recent-ImgS row">
+                    {/* <div className="post-Recent-ImgS row">
                         <img
                             className="post-Img"
-                            src={prettyBlondeGirl}
+                            src='images/pretty-blonde-girl-1300x650.jpg'
                             alt="Pretty Blonde Girl"
                         />
                         <div className="post-contentn">
@@ -88,7 +48,30 @@ const Main = (props: Props) => {
                                 <FaRegComment /> No coments. 116 Views
                             </h4>
                         </div>
-                    </div>
+                    </div> */}
+                    <Post 
+                    srcImg    ='images/pretty-blonde-girl-1300x650.jpg'
+                    altImg    ="Pretty Blonde Girl"
+                    hrefTitle ="https://demo.rivaxstudio.com/fonix/main/top-5-new-tech-gadgets-you-must-have-in-2023/"
+                    titleShot ="Top 5 New Tech Gadgets You Must Have In 2023"
+                    titleAll  ="Top 5 New Tech Gadgets You Must Have In 2023"
+                    titleViews="116 Views"
+                    divClass  ="post-Recent-ImgS row"
+                    imgClass  ="post-Img"
+                    aClass    ="post-Title-a line-a"
+                    h4Class   ="post-coments dispNone"
+                    containerImg ="post-contentn"
+                    catClass  ="post-Category h4-cat"
+                    catText  ="Gadget"
+                    subcatClass ="post-Subcategory h4-cat"
+                    subcatText ="Tech News"
+                    h1Class="post-Title"
+                    excerptClass="post-excerpt"
+                    excerpt="Far far away, behind the word mountains, far
+                        from the countries Vokalia and Consonantia,
+                        there live the blind texts. Separated they live
+                        in&#8230;"
+                    />
 
                     <div className="post-Recent row">
                         <div className="post-Recent-a row">
@@ -101,9 +84,8 @@ const Main = (props: Props) => {
                         </div>
                         <ol className="post-news">
                             <li>
-                                {' '}
                                 <PostLi
-                                    srcImg={stylishBohemianCouple}
+                                    srcImg="images/stylish-bohemian-couple-700x700.jpg"
                                     altImg="Stylish Bohemian Couple"
                                     hrefTitle="https:/"
                                     titleShot="10 Honeymoon Destinations for Every Budget"
@@ -117,11 +99,11 @@ const Main = (props: Props) => {
                                     iconClass="displayBlock"
                                     catClass="dispNone"
                                     catText="Travel"
-                                />{' '}
+                                />
                             </li>
                             <li>
                                 <PostLi
-                                    srcImg={woodenBridgeKoh}
+                                    srcImg="images/wooden-bridge-koh-700x700.jpg"
                                     altImg="Wooden Bridge Koh"
                                     hrefTitle="https:/"
                                     titleShot="15 Underrated but Amazing Island Vacations"
@@ -139,7 +121,7 @@ const Main = (props: Props) => {
                             </li>
                             <li>
                                 <PostLi
-                                    srcImg={womanWithHat}
+                                    srcImg="images/woman-with-hat-700x700.jpg"
                                     altImg="Woman With Hat"
                                     hrefTitle="https:/"
                                     titleShot="How a Beach Vacation Can be a Skincare Treatment"
@@ -157,7 +139,7 @@ const Main = (props: Props) => {
                             </li>
                             <li>
                                 <PostLi
-                                    srcImg={bikiniGirlHolding}
+                                    srcImg="images/bikini-girl-holding-700x700.jpg"
                                     altImg="Bikini Girl Holding"
                                     hrefTitle="https:/"
                                     titleShot="How to Turn a Mini Camera into a PowerTech"
@@ -181,7 +163,7 @@ const Main = (props: Props) => {
                     <h3 className="post-title-inner">Categories</h3>
                     <div className="categories-line row">
                         <PostLi
-                            srcImg={mobile}
+                            srcImg="images/mobile-1000x600.jpg"
                             altImg="Mobile"
                             hrefTitle="https:/"
                             titleShot="Mobile"
@@ -197,7 +179,7 @@ const Main = (props: Props) => {
                             catText="Mobile"
                         />
                         <PostLi
-                            srcImg={womanWithHat}
+                            srcImg="images/woman-with-hat-700x700.jpg"
                             altImg="Travel"
                             hrefTitle="https:/"
                             titleShot="Travel"
@@ -213,7 +195,7 @@ const Main = (props: Props) => {
                             catText="Travel"
                         />
                         <PostLi
-                            srcImg={digital}
+                            srcImg="images/digital-1024x682.jpg"
                             altImg="Digital"
                             hrefTitle="https:/"
                             titleShot="Digital"
@@ -229,7 +211,7 @@ const Main = (props: Props) => {
                             catText="Digital"
                         />
                         <PostLi
-                            srcImg={cadget}
+                            srcImg="images/gadget-768x960.jpg"
                             altImg="Cadget"
                             hrefTitle="https:/"
                             titleShot="Cadget"
@@ -245,7 +227,7 @@ const Main = (props: Props) => {
                             catText="Cadget"
                         />
                         <PostLi
-                            srcImg={livestule}
+                            srcImg="images/lafeStyle-1024x682.jpg"
                             altImg="Livestule"
                             hrefTitle="https:/"
                             titleShot="Livestule"
@@ -280,7 +262,7 @@ const Main = (props: Props) => {
                             nextArrow={<RightOutlined />}
                         >
                             <PostLi
-                                srcImg={stylishBohemianCouple}
+                                srcImg="images/stylish-bohemian-couple-700x700.jpg"
                                 altImg="Stylish Bohemian Couple"
                                 hrefTitle="https:/"
                                 titleShot="10 Honeymoon Destinations for Every Budget"
@@ -296,7 +278,7 @@ const Main = (props: Props) => {
                                 catText="Travel"
                             />
                             <PostLi
-                                srcImg={woodenBridgeKoh}
+                                srcImg="images/wooden-bridge-koh-700x700.jpg"
                                 altImg="Wooden Bridge Koh"
                                 hrefTitle="https:/"
                                 titleShot="15 Underrated but Amazing Island Vacations"
@@ -312,7 +294,7 @@ const Main = (props: Props) => {
                                 catText="Entertainment"
                             />
                             <PostLi
-                                srcImg={womanWithHat}
+                                srcImg="images/woman-with-hat-700x700.jpg"
                                 altImg="Woman With Hat"
                                 hrefTitle="https:/"
                                 titleShot="How a Beach Vacation Can be a Skincare Treatment"
@@ -328,7 +310,7 @@ const Main = (props: Props) => {
                                 catText="Lifestyle"
                             />
                             <PostLi
-                                srcImg={bikiniGirlHolding}
+                                srcImg="images/bikini-girl-holding-700x700.jpg"
                                 altImg="Bikini Girl Holding"
                                 hrefTitle="https:/"
                                 titleShot="How to Turn a Mini Camera into a PowerTech"
@@ -344,7 +326,7 @@ const Main = (props: Props) => {
                                 catText="Travel"
                             />
                             <PostLi
-                                srcImg={sexyStylish}
+                                srcImg="images/sexy-stylish-450x350.jpg"
                                 altImg="Bikini Girl Holding"
                                 hrefTitle="https:/"
                                 titleShot="Most Beautiful Days in Sydney Have Started"
@@ -360,7 +342,7 @@ const Main = (props: Props) => {
                                 catText="Lifestyle"
                             />
                             <PostLi
-                                srcImg={lost}
+                                srcImg="images/lost-tourists-450x350.jpg"
                                 altImg="Travel in Bermuda"
                                 hrefTitle="https:/"
                                 titleShot="Travel in Bermuda: Read Tips & Tricks to the Island Life   "
@@ -379,7 +361,7 @@ const Main = (props: Props) => {
                     </div>
                 </section>
                 <section className="baner">
-                    <img src={baner} alt="baner" />
+                    <img src="images/banner-3-700x165.png" alt="baner" />
                 </section>
                 <section className="weeklyNews">
                     <h3 className="cat-color">Recent</h3>

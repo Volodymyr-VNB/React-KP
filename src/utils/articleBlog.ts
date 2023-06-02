@@ -1,15 +1,16 @@
-// import game from "assets/game-changing-1000x600.jpg"
-// import mobile2 from "assets/mobile2.jpg"
-// import mobile3 from "assets/mobile3.jpg"
-// import mobile4 from "assets/mobile4.jpg"
-// import digital1 from "assets/how-to-make1000x600.jpg"
-// import digital2 from "assets/digital2-1300x650.jpg"
-// import digital3 from "assets/digital31000x600.jpg"
-// import gadget1 from "assets/gadget1-1000x600.jpg"
-// import gadget3 from "assets/gadget3-450x350.jpg"
-// import stylishBohemianCouple from "assets/stylish-bohemian-couple-700x700.jpg"
+// import game from "images/game-changing-1000x600.jpg"
+// import mobile2 from "images/mobile2.jpg"
+// import mobile3 from "images/mobile3.jpg"
+// import mobile4 from "images/mobile4.jpg"
+// import digital1 from "images/how-to-make1000x600.jpg"
+// import digital2 from "images/digital2-1300x650.jpg"
+// import digital3 from "images/digital31000x600.jpg"
+// import gadget1 from "images/gadget1-1000x600.jpg"
+// import gadget3 from "images/gadget3-450x350.jpg"
+// import stylishBohemianCouple from "images/stylish-bohemian-couple-700x700.jpg"
 
 type Article = {
+    id:number
     categoriy   :string
     subcategoriy:string
     srcImg    : string
@@ -29,9 +30,10 @@ type Article = {
 
 const articleArray: Article[] =[
     {
+        id:1,
         categoriy   :'Travel',
         subcategoriy:'Travel',
-        srcImg    : `{stylishBohemianCouple}` ,
+        srcImg    : "images/stylish-bohemian-couple-700x700.jpg" ,
         altImg    :'Stylish Bohemian Couple',
         hrefTitle :'https:/',
         titleShot :'10 Honeymoon Destinations for Every Budget',
@@ -46,9 +48,10 @@ const articleArray: Article[] =[
         likes: 0,  
     },
     {
+        id:2,
         categoriy   :'Entertainment',
         subcategoriy:'Travel',
-        srcImg    :'{woodenBridgeKoh}',
+        srcImg    :'images/wooden-bridge-koh-700x700.jpg',
         altImg    :'Wooden Bridge Koh',
         hrefTitle :'https:/',
         titleShot :'15 Underrated but Amazing Island Vacations',
@@ -63,9 +66,10 @@ const articleArray: Article[] =[
         likes: 0,  
     },
     {
+        id:3,
         categoriy   :'Lifestyle',
         subcategoriy:'Travel',
-        srcImg    :'{womanWithHat}',
+        srcImg    :'images/woman-with-hat-700x700.jpg',
         altImg    :'Woman With Hat',
         hrefTitle :'https:/',
         titleShot :'How a Beach Vacation Can be a Skincare Treatment',
@@ -80,9 +84,10 @@ const articleArray: Article[] =[
         likes: 0,  
     },
     {
+        id:4,
         categoriy   :'Travel',
         subcategoriy:'Travel',
-        srcImg    :'{bikiniGirlHolding}',
+        srcImg    :'images/bikini-girl-holding-700x700.jpg',
         altImg    :'Bikini Girl Holding',
         hrefTitle :'https:/',
         titleShot :'How to Turn a Mini Camera into a PowerTech',
@@ -97,9 +102,10 @@ const articleArray: Article[] =[
         likes: 0,  
     },
     {
+        id:5,
         categoriy   :'Mobile',
         subcategoriy:'Digital',
-        srcImg    :'{mobile}',
+        srcImg    :'images/mobile-1000x600.jpg',
         altImg    :'Sony Laptops Are',
         hrefTitle :'https:/',
         titleShot :'Sony Laptops Are Still Part Of The Sony Family',
@@ -114,9 +120,10 @@ const articleArray: Article[] =[
         likes: 0,  
     },
     {
+        id:6,
         categoriy   :'Mobile',
         subcategoriy:'Digital',
-        srcImg    :'{mobile2}',
+        srcImg    :'images/mobile2.jpg',
         altImg    :'Digital Calendars',
         hrefTitle :'https:/',
         titleShot :'Digital Calendars & Organizers to Get You Organized',
@@ -131,9 +138,10 @@ const articleArray: Article[] =[
         likes: 0,  
     },
     {
+        id:7,
         categoriy   :'Mobile',
         subcategoriy:'Gadget',
-        srcImg    :'{mobile3}',
+        srcImg    :'images/mobile3.jpg',
         altImg    :'DEverything You Wanted',
         hrefTitle :'https:/',
         titleShot :'Everything You Wanted to Know About Technology',
@@ -148,9 +156,10 @@ const articleArray: Article[] =[
         likes: 0,  
     },
     {
+        id:8,
         categoriy   :'Travel',
         subcategoriy:'Travel',
-        srcImg    :'{lost}',
+        srcImg    :'images/lost-tourists-450x350.jpg',
         altImg    :'Travel in Bermuda',
         hrefTitle :'https:/',
         titleShot :'Travel in Bermuda: Read Tips & Tricks to the Island Life',
@@ -165,9 +174,10 @@ const articleArray: Article[] =[
         likes: 0,  
     },
     {
+        id:9,
         categoriy   :'Mobile',
         subcategoriy:'Gadget',
-        srcImg    :'{mobile4}',
+        srcImg    :'images/mobile4.jpg',
         altImg    :'Digital Calendars',
         hrefTitle :'https:/',
         titleShot :'AI Needs Your Data and You Should Get Paid for It',
@@ -182,9 +192,10 @@ const articleArray: Article[] =[
         likes: 0,  
     },
     {
+        id:10,
         categoriy   :'Travel',
         subcategoriy:'Lifestyle',
-        srcImg    :'{sexyStylish}',
+        srcImg    :'images/sexy-stylish-450x350.jpg',
         altImg    :'Most Beautiful Days',
         hrefTitle :'https:/',
         titleShot :'Most Beautiful Days in Sydney Have Started',
@@ -199,9 +210,10 @@ const articleArray: Article[] =[
         likes: 0,  
     },
     {
+        id:11,
         categoriy   :'Digital',
         subcategoriy:'Digital',
-        srcImg    :'{game}',
+        srcImg    :'images/game-changing-1000x600.jpg',
         altImg    :'Game Changing Virtual',
         hrefTitle :'https:/',
         titleShot :'Game Changing Virtual Reality Console',
@@ -216,9 +228,10 @@ const articleArray: Article[] =[
         likes: 0,  
     },
     {
+        id:12,
         categoriy   :'Digital',
         subcategoriy:'Digital',
-        srcImg    :'{digital1}',
+        srcImg    :'images/how-to-make1000x600.jpg',
         altImg    :'How to Make',
         hrefTitle :'https:/',
         titleShot :'How to Make a Competitor`s Success Work for You',
@@ -233,9 +246,10 @@ const articleArray: Article[] =[
         likes: 0,  
     },
     {
+        id:13,
         categoriy   :'Digital',
         subcategoriy:'Gadget',
-        srcImg    :'{digital3}',
+        srcImg    :'images/digital31000x600.jpg',
         altImg    :'Innovative VR Screen',
         hrefTitle :'https:/',
         titleShot :'Innovative VR Screen and Control Tech Debuts at CES',
@@ -250,9 +264,10 @@ const articleArray: Article[] =[
         likes: 0,  
     },
     {
+        id:14,
         categoriy   :'Digital',
         subcategoriy:'Digital',
-        srcImg    :'{digital2}',
+        srcImg    :'images/digital2-1300x650.jpg',
         altImg    :'Extend Work Until',
         hrefTitle :'https:/',
         titleShot :'Google, Facebook Extend Work Until 2021',
@@ -267,9 +282,10 @@ const articleArray: Article[] =[
         likes: 0,  
     },
     {
+        id:15,
         categoriy   :'Gadget',
         subcategoriy:'Gadget',
-        srcImg    :'{prettyBlondeGirl}',
+        srcImg    :'images/pretty-blonde-girl-1300x650.jpg',
         altImg    :'Extend Work Until',
         hrefTitle :'https:/',
         titleShot :'Top 5 New Tech Gadgets You Must Have In 2023',
@@ -284,9 +300,10 @@ const articleArray: Article[] =[
         likes: 0,  
     },
     {
+        id:16,
         categoriy   :'Gadget',
         subcategoriy:'Digital',
-        srcImg    :'{gadget1}',
+        srcImg    :'images/gadget1-1000x600.jpg',
         altImg    :'Ultimate Gadgets',
         hrefTitle :'https:/',
         titleShot :'Ultimate Gadgets Guide + What Is Hot This Season',
@@ -301,9 +318,10 @@ const articleArray: Article[] =[
         likes: 0,  
     },
     {
+        id:17,
         categoriy   :'Gadget',
         subcategoriy:'Entertainment',
-        srcImg    :'{gadget3}',
+        srcImg    :'images/gadget3-450x350.jpg',
         altImg    :'A Smarter Way',
         hrefTitle :'https:/',
         titleShot :'A Smarter Way to Think About Intelligent Machines',
