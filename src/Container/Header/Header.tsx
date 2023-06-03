@@ -1,8 +1,6 @@
 import './Header.scss'
 import logo from 'assets/logo.png'
-// import gameChanging from 'assets/game-changing-1000x600.jpg'
-// import howToMake from 'assets/how-to-make1000x600.jpg'
-// import texnologi from 'assets/texnologi-1000x600.jpg'
+
 import Animation from 'components/Animation/Animation'
 
 type Props = {}
@@ -66,6 +64,7 @@ const Header = (props: Props) => {
                 </div>
             </div>
         </div>
+        <div className="header-fon1 ">
         <div className="header-1 row">
             <img
                 src={logo}
@@ -119,10 +118,10 @@ const Header = (props: Props) => {
                 <div className="whatsapp social"></div>
                 <div className="gitH social"></div>
                 <div className="facebook social"></div>
-                {/* <img src="" alt="" /> */}
+              
 
             </div>
-        </div>
+        </div></div>
     </header>
 </>
   )

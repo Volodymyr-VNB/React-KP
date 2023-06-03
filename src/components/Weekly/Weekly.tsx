@@ -11,7 +11,7 @@ type Props = {}
 const Weekly = (props: Props) => {
     return (
         <>
-            <Row gutter={32} justify="space-between" align="top">
+            <Row justify="space-between" align="top">
                 {articleArray.map(
                     ({id,srcImg,altImg,hrefTitle,titleShot,
                         titleAll,titleViews,categoriy}) =>  

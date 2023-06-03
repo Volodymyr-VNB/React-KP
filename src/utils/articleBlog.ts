@@ -1,13 +1,3 @@
-// import game from "images/game-changing-1000x600.jpg"
-// import mobile2 from "images/mobile2.jpg"
-// import mobile3 from "images/mobile3.jpg"
-// import mobile4 from "images/mobile4.jpg"
-// import digital1 from "images/how-to-make1000x600.jpg"
-// import digital2 from "images/digital2-1300x650.jpg"
-// import digital3 from "images/digital31000x600.jpg"
-// import gadget1 from "images/gadget1-1000x600.jpg"
-// import gadget3 from "images/gadget3-450x350.jpg"
-// import stylishBohemianCouple from "images/stylish-bohemian-couple-700x700.jpg"
 
 type Article = {
     id:number

@@ -37,32 +37,39 @@ overflow-y: hidden;
     width: 830px;
     height: 500px; 
     transition: transform 0.5s;
-   position: absolute;    
+//  position: absolute;    
 
    object-fit: cover;
    z-index: 1;
    border-radius: 15px;
    align-self: flex-start;
 }
+.post-containerImg{
+    width: 830px;
+    height: 500px;   
+    position: absolute; 
+    overflow: hidden;
+overflow-y: hidden; 
+}
 .post-Img:hover {
     transform: scale(1.1);
 }
-.post-Img::before {
-    background-color: transparent;
-    background-image: linear-gradient(180deg, #02010100 0%, #161617 100%);
-    content: '';
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    bottom: 0;
-    left: 0;
-    z-index: 2;
-    border-radius: inherit;
-    background: #33373a3b;
-    transition: 0.6s ease;
+// .post-Img::before {
+//     background-color: transparent;
+//     background-image: linear-gradient(180deg, #02010100 0%, #161617 100%);
+//     content: '';
+//     display: block;
+//     position: absolute;
+//     width: 100%;
+//     height: 100%;
+//     bottom: 0;
+//     left: 0;
+//     z-index: 2;
+//     border-radius: inherit;
+//     background: #33373a3b;
+//     transition: 0.6s ease;
 
-}
+// }
 
 .post-Recent-ImgS{
    height: 500px;
@@ -305,8 +312,8 @@ text-decoration: none;
     // color: $color-Travel;   
 }
 
-.ant-carousel .slick-prev,
-.ant-carousel .slick-next
+.ant-carousel0 .slick-prev,
+.ant-carousel0 .slick-next
 {
   font-size: 25px;
   color: black;
@@ -318,23 +325,23 @@ text-decoration: none;
     top: -30px;
  
 }
-.ant-carousel .slick-prev:focus,
-.ant-carousel .slick-next:focus,
-.ant-carousel .slick-prev:hover,
-.ant-carousel .slick-next:hover {
+.ant-carousel0 .slick-prev:focus,
+.ant-carousel0 .slick-next:focus,
+.ant-carousel0 .slick-prev:hover,
+.ant-carousel0 .slick-next:hover {
   
   color: white;
   background-color: #2894FF;
   
  
 }
-.ant-carousel .slick-prev {
+.ant-carousel0 .slick-prev {
     left: 1130px;
 }
-.ant-carousel .slick-next {
+.ant-carousel0 .slick-next {
     right:  10px;
 }
-.ant-carousel{
+.ant-carousel0{
     width: $wight-frame;
     margin: 10px 0;
     margin-left: -15px;
@@ -382,4 +389,40 @@ text-decoration: none;
    }
    .weeklyNews-item>h5{
     margin: 20px 0;
+   }
+   .weeklyNews-block{
+    margin: 30px 0px;
+    width: 1264px;
+   }
+   .editorChoice {
+    width: 100%;
+    padding: 30px 0;
+    justify-content: center;
+    background-color: black;
+   }
+   .editorChoiceFon {
+    @include container( flex,space-between,
+        flex-start, 50px, auto, 50px, auto,
+        $wight-frame, auto);
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    
+   }
+   .color-white {
+    color: white;
+   }
+   .stayConnected {
+    @include container( flex,space-between,
+        center, 100px, auto, 50px, auto,
+        $wight-frame, 330px);
+    position: relative;
+    justify-content: center;
+    background-color: #F7F7F7;
+    background-image: url(../../../public/images/stayConnected.png);
+    background-position: 93% 0px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    
+    
    }

@@ -7,6 +7,8 @@ import { LeftOutlined, RightOutlined } from '@ant-design/icons'
 // import "./ antd/dist/antd.css";
 import Weekly from 'components/Weekly/Weekly'
 import Post from 'components/Post/Post'
+import CarouselEditor from 'Container/CarouselEditor/CarouselEditor'
+import StayConnected from 'components/StayConnected/StayConnected'
 
 type Props = {}
 const Main = (props: Props) => {
@@ -14,60 +16,26 @@ const Main = (props: Props) => {
         <>
             <main className="main">
                 <section className="post">
-                    {/* <div className="post-Recent-ImgS row">
-                        <img
-                            className="post-Img"
-                            src='images/pretty-blonde-girl-1300x650.jpg'
-                            alt="Pretty Blonde Girl"
-                        />
-                        <div className="post-contentn">
-                            <div className="row ">
-                                <div className="post-Category h4-cat">
-                                    <a href="#top">Gadget</a>{' '}
-                                </div>
-                                <div className="post-Subcategory h4-cat">
-                                    <a href="#top">Tech News</a>{' '}
-                                </div>
-                            </div>
-                            <h1 className="post-Title">
-                                <a
-                                    href="https://demo.rivaxstudio.com/fonix/main/top-5-new-tech-gadgets-you-must-have-in-2023/"
-                                    className="post-Title-a line-a"
-                                    title="Top 5 New Tech Gadgets You Must Have In 2023"
-                                >
-                                    Top 5 New Tech Gadgets You Must Have In 2023
-                                </a>
-                            </h1>
-                            <h4 className="post-excerpt">
-                                Far far away, behind the word mountains, far
-                                from the countries Vokalia and Consonantia,
-                                there live the blind texts. Separated they live
-                                in&#8230;
-                            </h4>
-                            <h4 className="post-coments dispNone">
-                                <FaRegComment /> No coments. 116 Views
-                            </h4>
-                        </div>
-                    </div> */}
-                    <Post 
-                    srcImg    ='images/pretty-blonde-girl-1300x650.jpg'
-                    altImg    ="Pretty Blonde Girl"
-                    hrefTitle ="https://demo.rivaxstudio.com/fonix/main/top-5-new-tech-gadgets-you-must-have-in-2023/"
-                    titleShot ="Top 5 New Tech Gadgets You Must Have In 2023"
-                    titleAll  ="Top 5 New Tech Gadgets You Must Have In 2023"
-                    titleViews="116 Views"
-                    divClass  ="post-Recent-ImgS row"
-                    imgClass  ="post-Img"
-                    aClass    ="post-Title-a line-a"
-                    h4Class   ="post-coments dispNone"
-                    containerImg ="post-contentn"
-                    catClass  ="post-Category h4-cat"
-                    catText  ="Gadget"
-                    subcatClass ="post-Subcategory h4-cat"
-                    subcatText ="Tech News"
-                    h1Class="post-Title"
-                    excerptClass="post-excerpt"
-                    excerpt="Far far away, behind the word mountains, far
+                    <Post
+                        srcImg="images/pretty-blonde-girl-1300x650.jpg"
+                        altImg="Pretty Blonde Girl"
+                        hrefTitle="https://demo.rivaxstudio.com/fonix/main/top-5-new-tech-gadgets-you-must-have-in-2023/"
+                        titleShot="Top 5 New Tech Gadgets You Must Have In 2023"
+                        titleAll="Top 5 New Tech Gadgets You Must Have In 2023"
+                        titleViews="116 Views"
+                        divClass="post-Recent-ImgS row"
+                        imgClass="post-Img"
+                        aClass="post-Title-a line-a"
+                        h4Class="post-coments dispNone"
+                        containerImg="post-containerImg scale"
+                        contentn="post-contentn"
+                        catClass="post-Category h4-cat"
+                        catText="Gadget"
+                        subcatClass="post-Subcategory h4-cat"
+                        subcatText="Tech News"
+                        h1Class="post-Title"
+                        excerptClass="post-excerpt"
+                        excerpt="Far far away, behind the word mountains, far
                         from the countries Vokalia and Consonantia,
                         there live the blind texts. Separated they live
                         in&#8230;"
@@ -253,13 +221,11 @@ const Main = (props: Props) => {
                             autoplaySpeed={4000}
                             slidesToShow={4}
                             focusOnSelect={true}
-                            //  swipeToSlide= {1}
                             dots={false}
-                            //  prevArrow={<Arrow type="left"  />}
-                            //  nextArrow={<Arrow1 type="right" className='.right' />}
                             arrows={true}
                             prevArrow={<LeftOutlined />}
                             nextArrow={<RightOutlined />}
+                            className= "ant-carousel0"
                         >
                             <PostLi
                                 srcImg="images/stylish-bohemian-couple-700x700.jpg"
@@ -366,25 +332,21 @@ const Main = (props: Props) => {
                 <section className="weeklyNews">
                     <h3 className="cat-color">Recent</h3>
                     <h3 className="post-title-inner">Weekly News</h3>
-                    <div className="weeklyNews">
-                        {/* <PostLi
-            srcImg    = {game}
-            altImg    = "Game"
-            hrefTitle = "https:/"
-            titleShot = "Game Changing Virtual Reality Console"
-            titleAll  = "Game Changing Virtual Reality Console "
-            titleViews= "157 Views"
-            divClass  = ' row weeklyNews-item'
-            imgClass  = 'categories-img weeklyNews-img'
-            aClass    = "post-Recent-title line-a line-a-l "
-            h6Class   = 'titre-line '
-            iconClass = "displayBlokc"
-            containerImg= "wweeklyNews-container"
-            catClass  = "featured-cat h4-cat weeklyText"
-            catText   = "Digital"
-            /> */}
+                    <div className="weeklyNews-block">
                         <Weekly />
                     </div>
+                </section>
+                <section className="editorChoice">
+                    <div className="editorChoiceFon">
+                        <h3 className="cat-color color-white">Recent</h3>
+                        <h3 className="post-title-inner color-white">
+                            Editor's Choice
+                        </h3>
+                    </div>
+                    <CarouselEditor/>
+                </section>
+                <section className='stayConnected'>
+                   <StayConnected/> 
                 </section>
             </main>
         </>
