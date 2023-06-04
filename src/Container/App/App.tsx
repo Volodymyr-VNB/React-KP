@@ -1,3 +1,4 @@
+import Footer from 'Container/Footer/Footer'
 import Header from 'Container/Header/Header'
 import Main from 'Container/Main/Main'
 
@@ -7,6 +8,7 @@ const App = (props: Props) => {
     <>
             <Header/>
             <Main/>
+            <Footer/>
         </>
   )
 }

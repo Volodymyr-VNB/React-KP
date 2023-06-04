@@ -1,13 +1,13 @@
 import './Main.scss'
 
-import { FaRegComment } from 'react-icons/fa'
+
 import PostLi from 'components/PostLi/PostLi'
 import { Carousel } from 'antd'
 import { LeftOutlined, RightOutlined } from '@ant-design/icons'
 // import "./ antd/dist/antd.css";
 import Weekly from 'components/Weekly/Weekly'
 import Post from 'components/Post/Post'
-import CarouselEditor from 'Container/CarouselEditor/CarouselEditor'
+import CarouselEditor from 'components/CarouselEditor/CarouselEditor'
 import StayConnected from 'components/StayConnected/StayConnected'
 
 type Props = {}

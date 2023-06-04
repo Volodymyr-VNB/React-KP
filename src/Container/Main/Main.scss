@@ -54,22 +54,7 @@ overflow-y: hidden;
 .post-Img:hover {
     transform: scale(1.1);
 }
-// .post-Img::before {
-//     background-color: transparent;
-//     background-image: linear-gradient(180deg, #02010100 0%, #161617 100%);
-//     content: '';
-//     display: block;
-//     position: absolute;
-//     width: 100%;
-//     height: 100%;
-//     bottom: 0;
-//     left: 0;
-//     z-index: 2;
-//     border-radius: inherit;
-//     background: #33373a3b;
-//     transition: 0.6s ease;
 
-// }
 
 .post-Recent-ImgS{
    height: 500px;
@@ -134,16 +119,7 @@ overflow-y: hidden;
     background-position: left 0% bottom;
     color: white;
 }
-// .post-Recent-title:hover {
-//     background-size: 100% 2px;
-//     color: #5960ff;
-// }
-
-//   ::selection {
-//     background-color: #4b5767;
-//     color: white;
-//     text-shadow: none;
-// }  
+//  
 .post-Category a::before,
 .post-Subcategory a::before{
     content: '';
