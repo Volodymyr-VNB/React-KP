@@ -109,7 +109,7 @@ const Header = (props: Props) => {
                         
                     </li>
                     <li className='header-menu-item'>
-                        <a href="#top">About</a>
+                        <a href="#about">About</a>
                     </li>
                 </ul>
             </nav>

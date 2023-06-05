@@ -18,27 +18,27 @@ const Footer = (props: Props) => {
                 <h4>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit.{' '}
                 </h4>
-                <button type="submit" className="button-foot">
+                <button type="submit" className="button-foot h4 color-white">
                     About us
                 </button>
             </div>
             <div className="foot-cat row">
-              <h3 className='linear'>Categories</h3>
+              <h3 className='linear linear-Baza'>Categories</h3>
               <h4>Digital</h4>
               <h4>Entertainment</h4>
               <h4>Fashion</h4>
             </div>
             <div className="foot-new row">
-              <h3 className='linear'>Newsletter</h3>
+              <h3 className='linear linear-Baza'>Newsletter</h3>
               <div className='row-col' >
                     <input type="email" className='input input2' placeholder="Email" />
                     <button type="submit" className="button2">
-                        <span className="button-text h4 color-white">Subscribe</span>
+                        <span className="button-text color-white h4">Subscribe</span>
                     </button>
                 </div>
             </div>
             <div className="foot-follows row">
-              <h3 className='linear'>Follow Us</h3>
+              <h3 className='linear linear-Baza'>Follow Us</h3>
               <div className='row socIcon' >
                     <div className="foot-twitter soc-size"><BsTwitter size={20}/>Twitter</div>
                     <div className="foot-Linkedin soc-size"><FaLinkedinIn size={20}/>Linkedin</div>

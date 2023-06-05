@@ -16,6 +16,7 @@ type Article = {
     lastRead :string
     comentsNum :number
     likes: number
+    viewsBlokc: string
 }
 
 const articleArray: Article[] =[
@@ -36,6 +37,7 @@ const articleArray: Article[] =[
         lastRead :' 4 Mins Read',
         comentsNum :1,
         likes: 0,  
+        viewsBlokc:"Featured News",
     },
     {
         id:2,
@@ -54,7 +56,7 @@ const articleArray: Article[] =[
         lastRead :' 4 Mins Read',
         comentsNum :1,
         likes: 0,  
-    },
+    viewsBlokc:"Featured News", },
     {
         id:3,
         categoriy   :'Lifestyle',
@@ -72,7 +74,7 @@ const articleArray: Article[] =[
         lastRead :' 4 Mins Read',
         comentsNum :1,
         likes: 0,  
-    },
+    viewsBlokc:"Featured News", },
     {
         id:4,
         categoriy   :'Travel',
@@ -90,7 +92,7 @@ const articleArray: Article[] =[
         lastRead :' 4 Mins Read',
         comentsNum :1,
         likes: 0,  
-    },
+    viewsBlokc:"Featured News", },
     {
         id:5,
         categoriy   :'Mobile',
@@ -108,7 +110,7 @@ const articleArray: Article[] =[
         lastRead :' 4 Mins Read',
         comentsNum :1,
         likes: 0,  
-    },
+    viewsBlokc:"Weekly News" , },
     {
         id:6,
         categoriy   :'Mobile',
@@ -126,7 +128,7 @@ const articleArray: Article[] =[
         lastRead :' 4 Mins Read',
         comentsNum :1,
         likes: 0,  
-    },
+    viewsBlokc:"", },
     {
         id:7,
         categoriy   :'Mobile',
@@ -144,7 +146,7 @@ const articleArray: Article[] =[
         lastRead :' 4 Mins Read',
         comentsNum :1,
         likes: 0,  
-    },
+    viewsBlokc:"", },
     {
         id:8,
         categoriy   :'Travel',
@@ -162,7 +164,7 @@ const articleArray: Article[] =[
         lastRead :' 4 Mins Read',
         comentsNum :1,
         likes: 0,  
-    },
+    viewsBlokc:"Weekly News" , },
     {
         id:9,
         categoriy   :'Mobile',
@@ -180,7 +182,7 @@ const articleArray: Article[] =[
         lastRead :' 4 Mins Read',
         comentsNum :1,
         likes: 0,  
-    },
+    viewsBlokc:"", },
     {
         id:10,
         categoriy   :'Travel',
@@ -198,7 +200,7 @@ const articleArray: Article[] =[
         lastRead :' 4 Mins Read',
         comentsNum :1,
         likes: 0,  
-    },
+    viewsBlokc:"Featured News", },
     {
         id:11,
         categoriy   :'Digital',
@@ -216,12 +218,12 @@ const articleArray: Article[] =[
         lastRead :' 4 Mins Read',
         comentsNum :1,
         likes: 0,  
-    },
+    viewsBlokc:"Weekly News", },
     {
         id:12,
         categoriy   :'Digital',
         subcategoriy:'Digital',
-        srcImg    :'images/how-to-make1000x600.jpg',
+        srcImg    :'images/about_thought.jpg',
         altImg    :'How to Make',
         hrefTitle :'https:/',
         titleShot :'How to Make a Competitor`s Success Work for You',
@@ -234,7 +236,7 @@ const articleArray: Article[] =[
         lastRead :' 4 Mins Read',
         comentsNum :1,
         likes: 0,  
-    },
+    viewsBlokc:"Weekly News" , },
     {
         id:13,
         categoriy   :'Digital',
@@ -252,7 +254,7 @@ const articleArray: Article[] =[
         lastRead :' 4 Mins Read',
         comentsNum :1,
         likes: 0,  
-    },
+    viewsBlokc:"", },
     {
         id:14,
         categoriy   :'Digital',
@@ -270,7 +272,7 @@ const articleArray: Article[] =[
         lastRead :' 4 Mins Read',
         comentsNum :1,
         likes: 0,  
-    },
+    viewsBlokc:"", },
     {
         id:15,
         categoriy   :'Gadget',
@@ -288,7 +290,7 @@ const articleArray: Article[] =[
         lastRead :' 4 Mins Read',
         comentsNum :1,
         likes: 0,  
-    },
+    viewsBlokc:"", },
     {
         id:16,
         categoriy   :'Gadget',
@@ -306,7 +308,7 @@ const articleArray: Article[] =[
         lastRead :' 4 Mins Read',
         comentsNum :1,
         likes: 0,  
-    },
+    viewsBlokc:"", },
     {
         id:17,
         categoriy   :'Gadget',
@@ -324,6 +326,24 @@ const articleArray: Article[] =[
         lastRead :' 4 Mins Read',
         comentsNum :1,
         likes: 0,  
-    },
+    viewsBlokc:"", },
+    {
+        id:18,
+        categoriy   :'Lifestyle',
+        subcategoriy:'Fashion',
+        srcImg    :'images/lafeStyle-1024x682.jpg ',
+        altImg    :'5 Fashion Rule',
+        hrefTitle :'https:/',
+        titleShot :'5 Fashion Rules You Should Resolve to Break',
+        titleAll  :'5 Fashion Rules You Should Resolve to Break',
+        titleViews:'6 Posts',
+        excerpt :'Far far away, behind the word mountains, far from the countries Vokalia and...',
+        views: 1,
+        autor:'John Nikova',
+        dates:'September 25, 2022',
+        lastRead :' 4 Mins Read',
+        comentsNum :1,
+        likes: 0,  
+    viewsBlokc:"", },
 ]
 export default articleArray

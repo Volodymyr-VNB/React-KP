@@ -9,10 +9,13 @@ import Weekly from 'components/Weekly/Weekly'
 import Post from 'components/Post/Post'
 import CarouselEditor from 'components/CarouselEditor/CarouselEditor'
 import StayConnected from 'components/StayConnected/StayConnected'
+import articleArray from 'utils/articleBlog'
 
 type Props = {}
 const Main = (props: Props) => {
+    // const isFivt =((articleArray) => articleArray.props.keyA === "Featured News")
     return (
+        
         <>
             <main className="main">
                 <section className="post">
@@ -51,78 +54,38 @@ const Main = (props: Props) => {
                             </span>
                         </div>
                         <ol className="post-news">
-                            <li>
-                                <PostLi
-                                    srcImg="images/stylish-bohemian-couple-700x700.jpg"
-                                    altImg="Stylish Bohemian Couple"
-                                    hrefTitle="https:/"
-                                    titleShot="10 Honeymoon Destinations for Every Budget"
-                                    titleAll="10 Honeymoon Destinations for Every Budget"
-                                    titleViews="112 Views"
-                                    divClass="post-li"
-                                    imgClass="post-Recent-img"
-                                    containerImg="post-Recent-img"
-                                    aClass="post-Recent-title line-a"
-                                    h6Class="titre-line"
-                                    iconClass="displayBlock"
-                                    catClass="dispNone"
-                                    catText="Travel"
-                                />
-                            </li>
-                            <li>
-                                <PostLi
-                                    srcImg="images/wooden-bridge-koh-700x700.jpg"
-                                    altImg="Wooden Bridge Koh"
-                                    hrefTitle="https:/"
-                                    titleShot="15 Underrated but Amazing Island Vacations"
-                                    titleAll="15 Underrated but Amazing Island Vacations"
-                                    titleViews="81 Views"
-                                    divClass="post-li"
-                                    imgClass="post-Recent-img"
-                                    containerImg="post-Recent-img"
-                                    aClass="post-Recent-title line-a"
-                                    h6Class="titre-line"
-                                    iconClass="displayBlock"
-                                    catClass="dispNone"
-                                    catText=""
-                                />
-                            </li>
-                            <li>
-                                <PostLi
-                                    srcImg="images/woman-with-hat-700x700.jpg"
-                                    altImg="Woman With Hat"
-                                    hrefTitle="https:/"
-                                    titleShot="How a Beach Vacation Can be a Skincare Treatment"
-                                    titleAll="How a Beach Vacation Can be a Skincare Treatment"
-                                    titleViews="98 Views"
-                                    divClass="post-li"
-                                    imgClass="post-Recent-img"
-                                    containerImg="post-Recent-img"
-                                    aClass="post-Recent-title line-a"
-                                    h6Class="titre-line"
-                                    iconClass="displayBlock"
-                                    catClass="dispNone"
-                                    catText="Travel"
-                                />
-                            </li>
-                            <li>
-                                <PostLi
-                                    srcImg="images/bikini-girl-holding-700x700.jpg"
-                                    altImg="Bikini Girl Holding"
-                                    hrefTitle="https:/"
-                                    titleShot="How to Turn a Mini Camera into a PowerTech"
-                                    titleAll="How to Turn a Mini Camera into a PowerTech"
-                                    titleViews="88 Views"
-                                    divClass="post-li"
-                                    imgClass="post-Recent-img"
-                                    containerImg="post-Recent-img"
-                                    aClass="post-Recent-title line-a"
-                                    h6Class="titre-line"
-                                    iconClass="displayBlock"
-                                    catClass="dispNone"
-                                    catText="Travel"
-                                />
-                            </li>
+                           
+                            
+                            {articleArray.map(
+                    ({id,srcImg,altImg,hrefTitle,titleShot,
+                        titleAll,titleViews,categoriy,viewsBlokc,dates}) =>  
+                    (
+                    <PostLi 
+                        lili={1}
+                        key={id}
+                        keyA ={viewsBlokc}
+                        srcImg={srcImg}
+                        altImg={altImg}
+                        hrefTitle={hrefTitle}
+                        titleShot={titleShot}
+                        titleAll={titleAll}
+                        titleViews={titleViews}
+                        divClass="post-li"
+                        imgClass="post-Recent-img"
+                        containerImg="post-Recent-img"
+                        aClass="post-Recent-title line-a"
+                        h6Class="titre-line"
+                        iconClass="displayBlock"
+                        catClass="dispNone"
+                        catText={categoriy}
+                        dates={dates}
+                        
+                    />
+                ))
+                .filter((articleArray) => 
+                articleArray.props.dates === "August 26, 2022"
+                // articleArray.props.keyA === "Weekly News"
+                )}
                         </ol>
                     </div>
                 </section>
@@ -130,13 +93,53 @@ const Main = (props: Props) => {
                     <h3 className="cat-color">Recent</h3>
                     <h3 className="post-title-inner">Categories</h3>
                     <div className="categories-line row">
-                        <PostLi
+                        {/*  22*/}
+                        {articleArray.map(
+                    ({id,srcImg,altImg,hrefTitle,titleShot,
+                        titleAll,titleViews,categoriy,viewsBlokc,dates}) =>  
+                    (
+                    <PostLi 
+                        
+                        key={id}
+                        keyKey={id}
+                        keyA ={viewsBlokc}
+                        srcImg={srcImg}
+                        altImg={altImg}
+                        hrefTitle={hrefTitle}
+                        titleShot={titleShot}
+                        titleAll={categoriy}
+                        titleViews={titleViews}
+
+                        divClass="categories-item row"
+                        imgClass="categories-img"
+                        containerImg="img-containet"
+                        aClass="post-Recent-title line-a"
+                        h6Class="titre-line"
+                        iconClass="dispNone"
+                        catClass="dispNone"
+                        catText={categoriy}
+                        dates={dates}
+                        
+                    />
+                ))
+                .filter((articleArray) => 
+                articleArray.props.keyKey === 5 
+                || articleArray.props.keyKey === 4
+                || articleArray.props.keyKey === 12
+                || articleArray.props.keyKey === 17
+                || articleArray.props.keyKey === 18
+                // articleArray.props.keyA === "Weekly News"
+                )}
+
+                        {/* 22 */}
+                        {/* <PostLi
                             srcImg="images/mobile-1000x600.jpg"
                             altImg="Mobile"
                             hrefTitle="https:/"
                             titleShot="Mobile"
                             titleAll="Mobile "
                             titleViews="6 Posts"
+
                             divClass="categories-item row"
                             imgClass="categories-img"
                             aClass="post-Recent-title line-a"
@@ -209,13 +212,14 @@ const Main = (props: Props) => {
                             containerImg="img-containet"
                             catClass="dispNone"
                             catText="Livestule"
-                        />
+                        /> */}
                     </div>
                 </section>
                 <section className="featured-News">
                     <h3 className="cat-color">Recent</h3>
                     <h3 className="post-title-inner">Featured News</h3>
                     <div className="categories-line row">
+                    
                         <Carousel
                             autoplay={true}
                             autoplaySpeed={4000}
@@ -227,103 +231,36 @@ const Main = (props: Props) => {
                             nextArrow={<RightOutlined />}
                             className= "ant-carousel0"
                         >
-                            <PostLi
-                                srcImg="images/stylish-bohemian-couple-700x700.jpg"
-                                altImg="Stylish Bohemian Couple"
-                                hrefTitle="https:/"
-                                titleShot="10 Honeymoon Destinations for Every Budget"
-                                titleAll="10 Honeymoon Destinations for Every Budget "
-                                titleViews="4 min Read"
-                                divClass="categories-item row featured-item"
-                                imgClass="categories-img featured-img"
-                                aClass="post-Recent-title line-a line-a-l"
-                                h6Class="titre-line"
-                                iconClass="dispNone"
-                                containerImg="img-containet-featured"
-                                catClass="featured-cat h4-cat"
-                                catText="Travel"
-                            />
-                            <PostLi
-                                srcImg="images/wooden-bridge-koh-700x700.jpg"
-                                altImg="Wooden Bridge Koh"
-                                hrefTitle="https:/"
-                                titleShot="15 Underrated but Amazing Island Vacations"
-                                titleAll="15 Underrated but Amazing Island Vacations "
-                                titleViews="4 min Read"
-                                divClass="categories-item row featured-item"
-                                imgClass="categories-img featured-img"
-                                aClass="post-Recent-title line-a line-a-l"
-                                h6Class="titre-line"
-                                iconClass="dispNone"
-                                containerImg="img-containet-featured"
-                                catClass="featured-cat h4-cat"
-                                catText="Entertainment"
-                            />
-                            <PostLi
-                                srcImg="images/woman-with-hat-700x700.jpg"
-                                altImg="Woman With Hat"
-                                hrefTitle="https:/"
-                                titleShot="How a Beach Vacation Can be a Skincare Treatment"
-                                titleAll="How a Beach Vacation Can be a Skincare Treatment"
-                                titleViews="4 min Read"
-                                divClass="categories-item row featured-item"
-                                imgClass="categories-img featured-img"
-                                aClass="post-Recent-title line-a line-a-l"
-                                h6Class="titre-line"
-                                iconClass="dispNone"
-                                containerImg="img-containet-featured"
-                                catClass="featured-cat h4-cat"
-                                catText="Lifestyle"
-                            />
-                            <PostLi
-                                srcImg="images/bikini-girl-holding-700x700.jpg"
-                                altImg="Bikini Girl Holding"
-                                hrefTitle="https:/"
-                                titleShot="How to Turn a Mini Camera into a PowerTech"
-                                titleAll="How to Turn a Mini Camera into a PowerTech"
-                                titleViews="4 min Read"
-                                divClass="categories-item row featured-item"
-                                imgClass="categories-img featured-img"
-                                aClass="post-Recent-title line-a line-a-l"
-                                h6Class="titre-line"
-                                iconClass="dispNone"
-                                containerImg="img-containet-featured"
-                                catClass="featured-cat h4-cat"
-                                catText="Travel"
-                            />
-                            <PostLi
-                                srcImg="images/sexy-stylish-450x350.jpg"
-                                altImg="Bikini Girl Holding"
-                                hrefTitle="https:/"
-                                titleShot="Most Beautiful Days in Sydney Have Started"
-                                titleAll="Most Beautiful Days in Sydney Have Started"
-                                titleViews="4 min Read"
-                                divClass="categories-item row featured-item"
-                                imgClass="categories-img featured-img"
-                                aClass="post-Recent-title line-a line-a-l"
-                                h6Class="titre-line"
-                                iconClass="dispNone"
-                                containerImg="img-containet-featured"
-                                catClass="featured-cat h4-cat"
-                                catText="Lifestyle"
-                            />
-                            <PostLi
-                                srcImg="images/lost-tourists-450x350.jpg"
-                                altImg="Travel in Bermuda"
-                                hrefTitle="https:/"
-                                titleShot="Travel in Bermuda: Read Tips & Tricks to the Island Life   "
-                                titleAll="Travel in Bermuda: Read Tips & Tricks to the Island Life   "
-                                titleViews="4 min Read"
-                                divClass="categories-item row featured-item"
-                                imgClass="categories-img featured-img"
-                                aClass="post-Recent-title line-a line-a-l"
-                                h6Class="titre-line"
-                                iconClass="dispNone"
-                                containerImg="img-containet-featured"
-                                catClass="featured-cat h4-cat"
-                                catText="Travel"
-                            />
-                        </Carousel>
+                            
+                    {articleArray.map(
+                    ({id,srcImg,altImg,hrefTitle,titleShot,
+                        titleAll,titleViews,categoriy,viewsBlokc}) =>  
+                    (<PostLi 
+                        key={id}
+                        keyA ={viewsBlokc}
+                        srcImg={srcImg}
+                        altImg={altImg}
+                        hrefTitle={hrefTitle}
+                        titleShot={titleShot}
+                        titleAll={titleAll}
+                        titleViews={titleViews}
+                        divClass="categories-item row featured-item"
+                        imgClass="categories-img featured-img"
+                        aClass="post-Recent-title line-a line-a-l"
+                        h6Class="titre-line "
+                        iconClass="dispNone"
+                        containerImg="img-containet-featured"
+                        catClass="featured-cat h4-cat"
+                        catText={categoriy}
+                    />
+                ))
+                .filter((articleArray) => 
+                articleArray.props.titleShot === 'Sony Laptops Are Still Part Of The Sony Family'
+                ||
+                articleArray.props.keyA === "Featured News"
+                )}
+                </Carousel>
+
                     </div>
                 </section>
                 <section className="baner">

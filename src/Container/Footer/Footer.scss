@@ -33,12 +33,8 @@
     transition: 0.3s;
     cursor: pointer;
 }
-.linear{
-   
-    position: relative;
-    // text-underline-offset: 1.3em;
-    padding-bottom: 6px;
-    
+
+.linear-Baza{
     text-decoration: none;
     background-image: linear-gradient(90deg, currentColor, currentColor);
     background-repeat: no-repeat;
@@ -46,6 +42,11 @@
     background-position: left 0% bottom;
     color: black;
     outline: 0;
+}
+.linear{
+   position: relative;
+    // text-underline-offset: 1.3em;
+    padding-bottom: 6px;
 }
 .foot-cat{
     gap: 20px;

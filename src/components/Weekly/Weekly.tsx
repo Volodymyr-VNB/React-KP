@@ -1,10 +1,6 @@
 import {  Row } from 'antd'
-// import Grid from 'antd/es/card/Grid'
 import PostLi from 'components/PostLi/PostLi'
 import articleArray from 'utils/articleBlog'
-
-
-    // articleArray.map((article) => console.log('article', article.srcImg))
 
 
 type Props = {}
@@ -14,9 +10,10 @@ const Weekly = (props: Props) => {
             <Row justify="space-between" align="top">
                 {articleArray.map(
                     ({id,srcImg,altImg,hrefTitle,titleShot,
-                        titleAll,titleViews,categoriy}) =>  
+                        titleAll,titleViews,categoriy,viewsBlokc,dates}) =>  
                     (<PostLi 
                         key={id}
+                        keyA ={viewsBlokc}
                         srcImg={srcImg}
                         altImg={altImg}
                         hrefTitle={hrefTitle}
@@ -31,8 +28,14 @@ const Weekly = (props: Props) => {
                         containerImg="wweeklyNews-container"
                         catClass="featured-cat h4-cat weeklyText"
                         catText={categoriy}
+                        dates={dates}
+                        
                     />
-                ))}
+                )).filter((articleArray) => 
+                articleArray.props.keyA === "Weekly News" 
+                ||
+                articleArray.props.dates === "August 26, 2022" 
+                )  }
             </Row>
         </>
     )

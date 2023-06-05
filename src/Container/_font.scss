@@ -13,6 +13,7 @@ h1,.h1{
   color: $color-title;
 }
 h5,.h5 {
+    font-family: Merriweather,sans-serif;
     font-size: 1.1rem;
     font-weight: 700; 
     line-height: 1.4;
@@ -50,3 +51,6 @@ h3,.h3{
     text-indent: 0;
     font-size: 1.45rem;
 }
+.color-white {
+    color: white;
+   }

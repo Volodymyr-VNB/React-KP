@@ -119,6 +119,11 @@ overflow-y: hidden;
     background-position: left 0% bottom;
     color: white;
 }
+
+.post-Recent-title:hover {
+    background-size: 100% 2px;
+    color: #5960ff;
+}        
 //  
 .post-Category a::before,
 .post-Subcategory a::before{
