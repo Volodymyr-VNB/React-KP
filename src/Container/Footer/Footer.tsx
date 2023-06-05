@@ -1,5 +1,6 @@
 import './Footer.scss'
 import logo from 'assets/logo.png'
+import Fonex from 'components/Fonex/Fonex'
 import { BsTwitter,BsPinterest,BsTelegram } from 'react-icons/bs'
 import { FaLinkedinIn } from 'react-icons/fa'
 
@@ -7,21 +8,13 @@ type Props = {}
 const Footer = (props: Props) => {
     return (
         <section className="footer">
-            <div className="footer-about row">
-                <img
-                    src={logo}
-                    alt="Fonix"
-                    className="logo1"
-                    width="200"
-                    height="62"
-                />
-                <h4>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.{' '}
-                </h4>
-                <button type="submit" className="button-foot h4 color-white">
-                    About us
-                </button>
-            </div>
+            
+            <Fonex
+            classNam ="footer-about row"
+            h4="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            butClass="button-foot h4 color-white"
+            buttonName="About us"
+            />
             <div className="foot-cat row">
               <h3 className='linear linear-Baza'>Categories</h3>
               <h4>Digital</h4>

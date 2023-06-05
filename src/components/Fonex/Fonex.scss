@@ -1,0 +1,23 @@
+.footer-about{
+    width: 25%;
+    flex-direction: column;
+    gap: 20px;
+}
+.footer-about .button-foot{
+    width: 120px ;
+    height: 40px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    background-color: #21242E;
+    color: #FFFFFF;
+    border-radius: 3px 3px 3px 3px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.footer-about-page h4{
+    color: white;
+}
+.footpage-cont .footer-about-page button{
+   background-color: red;
+}
