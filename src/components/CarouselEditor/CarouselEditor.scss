@@ -1,17 +1,95 @@
-.post-Recent-ImgS-car{
-    height: 510px;
+.post-Recent-ImgS-car {
+    height: 710px;
     width: 100%;
-    
-    border-radius: 0px;  
+
+    border-radius: 0px;
 }
-.post-containerImg-car{
-    // width: 30%;
-    height: 510px;
-    margin: 0 0px;   
-    
+.post-containerImg-car {
+    width: 700px;
+    height: 710px;
+    margin: 0 0px;
 }
-.editorChoiceCarousel{
+.editorChoiceCarousel {
+    width: 1680px;
+    height: 710px;
+    margin: 30px auto;
+}
+.carouse-a {
+    // background-color: rgba($color: #000000, $alpha: 0.25);
+    animation: neon1 1.5s ease-in-out infinite alternate;
+    transition: all 0.5s;
+}
+@keyframes neon1 {
+    from {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff,
+            0 0 40px #53adf6, 0 0 70px #53adf6, 0 0 80px #53adf6,
+            0 0 100px #53adf6, 0 0 150px #53adf6;
+    }
+    to {
+        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff,
+            0 0 20px #ff1177, 0 0 35px #ff1177, 0 0 40px #ff1177,
+            0 0 50px #ff1177, 0 0 75px #ff1177;
+    }
+}
+.editorChoicCar {
+    width: 900px;
+}
+.post-Img--editor {
+    width: 900px;
+    height: 500px;
+}
+
+.ant-carousel2 .slick-prev,
+.ant-carousel2 .slick-next {
+    color: black;
+    background-color: white;
+    font-size: 50px;
+    width: 49px;
+    height: 49px;
+    //   padding-top: 5px;
+    position: absolute;
+    top: -30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ant-carousel2 .slick-prev:focus,
+.ant-carousel2 .slick-next:focus,
+.ant-carousel2 .slick-prev:hover,
+.ant-carousel2 .slick-next:hover {
+    color: #2894ff;
+    background-color: white;
+}
+
+.ant-carousel2 .slick-prev {
+    left: 1370px;
+    top: 640px;
+}
+.ant-carousel2 .slick-next {
+    right: 200px;
+    top: 640px;
+}
+.ant-carousel2 {
     width: 100%;
-    height: 510px;
-    margin: 0 auto;
- }  
+    margin: 10px 0;
+    margin-left: -15px;
+}
+.ant-carousel2 .slick-dots {
+    width: 100%;
+
+    bottom: -30px;
+}
+.ant-carousel2 .slick-dots li.slick-active {
+    width: 40px;
+}
+.ant-carousel2 .slick-dots li {
+    width: 25px;
+    height: 10px;
+}
+
+.ant-carousel2 .slick-dots li button {
+    height: 8px;
+    background: #ffffff;
+    border-radius: 50%;
+    opacity: 0.5;
+}

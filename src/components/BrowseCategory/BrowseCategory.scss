@@ -1,0 +1,109 @@
+@import '../../Container/_valiable.scss';
+@import '../../Container/_font.scss';
+
+
+.browse-headline{
+    @include container( flex,space-between,
+    flex-start, 50px, auto, 50px, auto,
+    $wight-frame, 300px);
+position: relative;
+justify-content: center;
+flex-direction: column;
+border-radius: 15px;
+border: 1px solid #2a2c342e;
+padding: 45px;
+color: #2e3039;
+gap: 20px;
+
+}
+.post-count {
+        background: #3234400a;
+        padding: 4px 16px;
+      
+        font-size: 0.8rem;
+        border-radius: 50px;
+        align-self: flex-end;
+}
+.browse-headline h1{
+    // text-underline-offset:5px;
+    // text-decoration-line: underline;
+    // text-decoration-thickness: 4px;
+    width: 100%;
+    border-bottom: 4px black solid;
+    
+}
+.browse-centr{
+    @include container( flex,space-between,
+    flex-start, 50px, auto, 50px, auto,
+    $wight-frame, auto);
+}
+.col-8 {
+    flex: 0 0 auto;
+    width:  66.667%;}
+.col-4 {
+    flex: 0 0 auto;
+    width:  33.333%;}
+.brows-articl{
+    gap: 30px;
+    flex-direction: column;
+}
+.Brows-item{
+    justify-content: space-between;
+    
+    margin-bottom: 30px;
+}
+
+.browse-img,
+.brows-container{
+   height: 300px;
+   width: 410px; 
+}
+.brows-container{
+    position: relative;
+    overflow: hidden;
+}
+.brows-cat{
+    height: 20px;
+    justify-content: start;
+    display: flex;
+    align-items: center;
+    padding:10px 10px 10px 0px;
+    width: fit-content;
+    margin-bottom: 30px;
+}
+.brow-title{
+    position: relative;
+    top: 20%;
+}
+.avtor{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: inherit;
+}
+.excerpt{
+    font-size: 1rem;
+
+}
+.brow-txt{
+    width: 50%;
+    padding: 15px;
+    
+}
+.brow-txt .featured-cat::before{
+    contain: "";
+    width: 0px;
+    height: 0px;
+
+}
+.avtor-blok{
+    display: flex;
+    margin: 20px 0;
+ }
+ .avtor-blok-txt{
+    justify-content: center;
+    align-items: start;
+    gap: 10px;
+
+ }

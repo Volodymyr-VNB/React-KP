@@ -13,19 +13,24 @@ import articleArray from 'utils/articleBlog'
 
 type Props = {}
 const Main = (props: Props) => {
-    // const isFivt =((articleArray) => articleArray.props.keyA === "Featured News")
+     
     return (
         
         <>
             <main className="main">
                 <section className="post">
+                {articleArray.map(
+                    ({id,srcImg,altImg,hrefTitle,titleShot,subcategoriy,
+                        titleAll,titleViews,categoriy,excerpt}) =>  
+                    (
                     <Post
-                        srcImg="images/pretty-blonde-girl-1300x650.jpg"
-                        altImg="Pretty Blonde Girl"
-                        hrefTitle="https://demo.rivaxstudio.com/fonix/main/top-5-new-tech-gadgets-you-must-have-in-2023/"
-                        titleShot="Top 5 New Tech Gadgets You Must Have In 2023"
-                        titleAll="Top 5 New Tech Gadgets You Must Have In 2023"
-                        titleViews="116 Views"
+                    keyKey={id}
+                        srcImg={srcImg}
+                        altImg={altImg}
+                        hrefTitle={hrefTitle}
+                        titleShot={titleShot}
+                        titleAll={titleAll}
+                        titleViews={titleViews}
                         divClass="post-Recent-ImgS row"
                         imgClass="post-Img"
                         aClass="post-Title-a line-a"
@@ -33,17 +38,18 @@ const Main = (props: Props) => {
                         containerImg="post-containerImg scale"
                         contentn="post-contentn"
                         catClass="post-Category h4-cat"
-                        catText="Gadget"
+                        catText={categoriy}
                         subcatClass="post-Subcategory h4-cat"
-                        subcatText="Tech News"
+                        subcatText={subcategoriy}
                         h1Class="post-Title"
                         excerptClass="post-excerpt"
-                        excerpt="Far far away, behind the word mountains, far
-                        from the countries Vokalia and Consonantia,
-                        there live the blind texts. Separated they live
-                        in&#8230;"
+                        excerpt={excerpt}
                     />
-
+                    ))
+                    .filter((articleArray) => 
+                    articleArray.props.keyKey === 15 
+                    // articleArray.props.keyA === "Weekly News"
+                    )}
                     <div className="post-Recent row">
                         <div className="post-Recent-a row">
                             <span className="post-title-inner row">
@@ -57,7 +63,7 @@ const Main = (props: Props) => {
                            
                             
                             {articleArray.map(
-                    ({id,srcImg,altImg,hrefTitle,titleShot,
+                    ({id,srcImg,altImg,hrefTitle,titleShot,subcategoriy,
                         titleAll,titleViews,categoriy,viewsBlokc,dates}) =>  
                     (
                     <PostLi 
@@ -79,6 +85,7 @@ const Main = (props: Props) => {
                         catClass="dispNone"
                         catText={categoriy}
                         dates={dates}
+                        subcategoriy={subcategoriy}
                         
                     />
                 ))
@@ -95,7 +102,7 @@ const Main = (props: Props) => {
                     <div className="categories-line row">
                         {/*  22*/}
                         {articleArray.map(
-                    ({id,srcImg,altImg,hrefTitle,titleShot,
+                    ({id,srcImg,altImg,hrefTitle,titleShot,subcategoriy,
                         titleAll,titleViews,categoriy,viewsBlokc,dates}) =>  
                     (
                     <PostLi 
@@ -119,6 +126,7 @@ const Main = (props: Props) => {
                         catClass="dispNone"
                         catText={categoriy}
                         dates={dates}
+                        subcategoriy={subcategoriy}
                         
                     />
                 ))
@@ -131,88 +139,7 @@ const Main = (props: Props) => {
                 // articleArray.props.keyA === "Weekly News"
                 )}
 
-                        {/* 22 */}
-                        {/* <PostLi
-                            srcImg="images/mobile-1000x600.jpg"
-                            altImg="Mobile"
-                            hrefTitle="https:/"
-                            titleShot="Mobile"
-                            titleAll="Mobile "
-                            titleViews="6 Posts"
 
-                            divClass="categories-item row"
-                            imgClass="categories-img"
-                            aClass="post-Recent-title line-a"
-                            h6Class="titre-line"
-                            iconClass="dispNone"
-                            containerImg="img-containet"
-                            catClass="dispNone"
-                            catText="Mobile"
-                        />
-                        <PostLi
-                            srcImg="images/woman-with-hat-700x700.jpg"
-                            altImg="Travel"
-                            hrefTitle="https:/"
-                            titleShot="Travel"
-                            titleAll="Travel"
-                            titleViews="7 Posts"
-                            divClass="categories-item row"
-                            imgClass="categories-img"
-                            aClass="post-Recent-title line-a"
-                            h6Class="titre-line text-align-center"
-                            iconClass="dispNone"
-                            containerImg="img-containet"
-                            catClass="dispNone"
-                            catText="Travel"
-                        />
-                        <PostLi
-                            srcImg="images/digital-1024x682.jpg"
-                            altImg="Digital"
-                            hrefTitle="https:/"
-                            titleShot="Digital"
-                            titleAll="Digital"
-                            titleViews="15 Posts"
-                            divClass="categories-item row"
-                            imgClass="categories-img"
-                            aClass="post-Recent-title line-a"
-                            h6Class="titre-line text-align-center"
-                            iconClass="dispNone"
-                            containerImg="img-containet"
-                            catClass="dispNone"
-                            catText="Digital"
-                        />
-                        <PostLi
-                            srcImg="images/gadget-768x960.jpg"
-                            altImg="Cadget"
-                            hrefTitle="https:/"
-                            titleShot="Cadget"
-                            titleAll="Cadget"
-                            titleViews="6 Posts"
-                            divClass="categories-item row"
-                            imgClass="categories-img"
-                            aClass="post-Recent-title line-a"
-                            h6Class="titre-line text-align-center"
-                            iconClass="dispNone"
-                            containerImg="img-containet"
-                            catClass="dispNone"
-                            catText="Cadget"
-                        />
-                        <PostLi
-                            srcImg="images/lafeStyle-1024x682.jpg"
-                            altImg="Livestule"
-                            hrefTitle="https:/"
-                            titleShot="Livestule"
-                            titleAll="Livestule"
-                            titleViews="14 Posts"
-                            divClass="categories-item row"
-                            imgClass="categories-img"
-                            aClass="post-Recent-title line-a"
-                            h6Class="titre-line text-align-center"
-                            iconClass="dispNone"
-                            containerImg="img-containet"
-                            catClass="dispNone"
-                            catText="Livestule"
-                        /> */}
                     </div>
                 </section>
                 <section className="featured-News">
@@ -233,7 +160,7 @@ const Main = (props: Props) => {
                         >
                             
                     {articleArray.map(
-                    ({id,srcImg,altImg,hrefTitle,titleShot,
+                    ({id,srcImg,altImg,hrefTitle,titleShot,subcategoriy,
                         titleAll,titleViews,categoriy,viewsBlokc}) =>  
                     (<PostLi 
                         key={id}
@@ -252,6 +179,7 @@ const Main = (props: Props) => {
                         containerImg="img-containet-featured"
                         catClass="featured-cat h4-cat"
                         catText={categoriy}
+                        subcategoriy={subcategoriy}
                     />
                 ))
                 .filter((articleArray) => 

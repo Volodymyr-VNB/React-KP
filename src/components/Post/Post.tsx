@@ -21,6 +21,7 @@ type PostNew = {
     h1Class: string
     excerptClass: string
     excerpt: string
+    keyKey?: number,
 }
 
 const Post = ({

@@ -9,7 +9,7 @@ const Weekly = (props: Props) => {
         <>
             <Row justify="space-between" align="top">
                 {articleArray.map(
-                    ({id,srcImg,altImg,hrefTitle,titleShot,
+                    ({id,srcImg,altImg,hrefTitle,titleShot,subcategoriy,
                         titleAll,titleViews,categoriy,viewsBlokc,dates}) =>  
                     (<PostLi 
                         key={id}
@@ -29,6 +29,7 @@ const Weekly = (props: Props) => {
                         catClass="featured-cat h4-cat weeklyText"
                         catText={categoriy}
                         dates={dates}
+                        subcategoriy={subcategoriy}
                         
                     />
                 )).filter((articleArray) => 

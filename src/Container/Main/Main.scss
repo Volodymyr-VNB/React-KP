@@ -58,15 +58,18 @@ overflow-y: hidden;
 
 .post-Recent-ImgS{
    height: 500px;
-   width: 65%;
+   width: 100%;
    gap: 30px;
    justify-content: end;
    flex-direction: column;
    border-radius: 15px;
    
  }
- .post-Img:hover+.post-contentn>.post-coments,
- .post-contentn:hover .post-coments
+//  .post-Img:hover+.post-contentn>.post-coments,
+//  .post-contentn:hover .post-coments
+//  .post-Img:hover>.post-coments
+.post-contentn:hover>.post-coments
+//  .post-excerpt:hover .post-coments
  {
     display: block;
     transform: translateY(150%);
@@ -75,7 +78,9 @@ overflow-y: hidden;
  
  .post-contentn{
     margin-bottom: 40px;
-    padding-top: 100px;
+    margin-top: 100px;
+    transition: 0.6s ease;
+
 }
 .post-contentn>div,
 .post-excerpt , .post-Title-a,

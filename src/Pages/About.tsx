@@ -103,6 +103,7 @@ const About = (props: Props) => {
                             containerImg="img-containet img-containet-about img-containet-about1"
                             catClass="dispNone"
                             catText="Travel"
+                            subcategoriy=""
                         />
                 <PostLi
                             srcImg="images/gadget.jpg"
@@ -119,6 +120,7 @@ const About = (props: Props) => {
                             containerImg="img-containet img-containet-about img-containet-about2"
                             catClass="dispNone"
                             catText="Gadget"
+                            subcategoriy=""
                         />
                 <PostLi
                             srcImg="images/digital.jpg"
@@ -135,6 +137,7 @@ const About = (props: Props) => {
                             containerImg="img-containet img-containet-about img-containet-about3"
                             catClass="dispNone"
                             catText="Digital"
+                            subcategoriy=""
                         />
                 <PostLi
                             srcImg="images/digital-1024x682.jpg"
@@ -151,6 +154,7 @@ const About = (props: Props) => {
                             containerImg="img-containet img-containet-about img-containet-about4"
                             catClass="dispNone"
                             catText="Entertainment"
+                            subcategoriy=""
                         />
                 </div>
             </section>
