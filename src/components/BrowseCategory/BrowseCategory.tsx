@@ -74,7 +74,8 @@ const BrowseCategory = (props: Props) => {
                 </div>
                 <aside className="aside col-4">
                     <TrendingNews/>
-                    <StayConnected/>
+                    <StayConnected
+                    sizeStay = "L"/>
                 </aside>
             </section>
         </>

@@ -1,12 +1,14 @@
 import Newsletter from 'components/Newsletter/Newsletter'
 import './StayConnected.scss'
-import { AiFillInstagram,AiFillBehanceCircle } from 'react-icons/ai';
-import { RiPinterestLine } from 'react-icons/ri';
+import { AiOutlineInstagram, AiFillBehanceCircle } from 'react-icons/ai';
+
+import { RiPinterestLine,RiStackOverflowFill } from 'react-icons/ri';
 type Props = {
     sizeStay?:string
 }
 const StayConnected = ({sizeStay="S"}: Props) => {
-    if (sizeStay = "L") {
+    if (sizeStay == "L") {
+        
         return (
         <>
         <div className="stay row">
@@ -17,14 +19,20 @@ const StayConnected = ({sizeStay="S"}: Props) => {
         </div>                    
                     
                     <div className="trend-stay row">
-                        <div className="social-L instagram "> 24M</div>
-                        <div className="social-L Stackoverflow "> 2k</div>
-                        <div className="social-L Behance ">407k</div>
-                        <div className="social-L Pinterest ">54M</div>
+                        <div className="social-XL instagram ">
+                            <div><AiOutlineInstagram /></div><span>|&#160;&#160;Instagram</span><p>24M</p></div>
+                        <div className="social-XL Stackoverflow "> 
+                        <div><RiStackOverflowFill /></div><span>|&#160;&#160;Stackoverflow</span><p>2k</p></div>
+                        <div className="social-XL Behance ">
+                        <div><AiFillBehanceCircle /></div><span>|&#160;&#160;Behance</span><p>407k</p></div>
+                        <div className="social-XL Pinterest ">
+                        <div><RiPinterestLine /></div><span>|&#160;&#160;Pinterest</span><p>54M</p></div>
                     </div>
                 </div>
                 
-                <Newsletter/>
+                <Newsletter
+                lili={2}
+                />
             </>
         )     
     } else {

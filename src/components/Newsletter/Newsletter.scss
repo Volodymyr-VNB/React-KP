@@ -1,0 +1,71 @@
+.getEvery{
+    gap: 30px;
+    flex-direction: column;
+    color: black;
+}
+.getEvery2{
+    width: 400px;
+    height: 350px;
+    gap: 30px;
+    flex-direction: column;
+   
+    background-color: #5541F8;
+    
+    border-radius: 20px;
+}
+.getEvery2{
+    width: 400px;}
+.getEvery3{
+    padding: 50px 20px 50px 20px;
+flex-direction: column;
+gap: 15px;
+font-family: Poppins,sans-serif;}
+.getEvery2 .input{
+    background: #FFFFFF6E;
+    
+}
+
+
+.getEvery2 .cat-color,
+.getEvery2
+{
+    color: white;
+    text-align: center;
+}
+.getEvery2 .input,
+.getEvery2 .button
+{
+    width: 360px;
+    
+}
+.getEvery2 .input::placeholder{
+    color: white;
+}
+.input{
+    width: 520px;
+    height: 45px;
+    padding: 10px;
+    background: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #E5E5E5;
+}
+
+.button{
+    width: 130px;
+    height: 45px;
+    background-color: #2894FF;
+    
+
+}
+
+.getEvery2 .button{
+    border: 0;
+    background-color: #FFFFFF;
+
+}
+.getEvery2 .button span{
+    
+    color: #053865;
+
+}
