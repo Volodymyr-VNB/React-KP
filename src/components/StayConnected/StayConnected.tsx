@@ -7,7 +7,7 @@ type Props = {
     sizeStay?:string
 }
 const StayConnected = ({sizeStay="S"}: Props) => {
-    if (sizeStay == "L") {
+    if (sizeStay === "L") {
         
         return (
         <>

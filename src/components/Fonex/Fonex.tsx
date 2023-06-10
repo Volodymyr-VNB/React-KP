@@ -19,7 +19,7 @@ const Fonex = ({
 }: Props) => {
     return (
         <div className={classNam}>
-            {color == 'whihe' ? (
+            {color === 'whihe' ? (
                 <img
                     src={logo}
                     alt="Fonix"

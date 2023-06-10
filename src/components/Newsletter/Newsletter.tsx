@@ -4,7 +4,7 @@ type Props = {
     lili?:number
 }
 const Newsletter = ({lili=1}: Props) => {
-  if (lili==2) {
+  if (lili===2) {
     return (
         <div className="getEvery2 row">
                     <div className=" getEvery3 row">

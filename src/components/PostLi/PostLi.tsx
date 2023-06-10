@@ -49,7 +49,7 @@ const PostLi = ({
     excerpt,
 }: LineNews) => {
     // console.log(subcategoriy)
-    if (lili == 1) {
+    if (lili === 1) {
         return (
             <li>
                 <div className={divClass}>
@@ -77,7 +77,7 @@ const PostLi = ({
             </li>
         )
     }
-    if (lili == 2) {
+    if (lili === 2) {
         return (
             <div className={divClass}>
                 <div className={containerImg}>
@@ -111,7 +111,7 @@ const PostLi = ({
             </div>
         )
     }
-    if (lili == 3) {
+    if (lili === 3) {
         return (
             <div className={divClass}>
                 <div className={containerImg}>

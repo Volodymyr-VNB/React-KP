@@ -12,7 +12,7 @@ const ColorCat = ({ catClass, catText = '',lili=1  }: Props) => {
      
     switch (catText) {
         case 'Travel':
-            if (lili==1) {
+            if (lili===1) {
                 divStyle.color = '#00DB92'  
             } else {
                 divStyle.color = '#ffffff'
@@ -21,7 +21,7 @@ const ColorCat = ({ catClass, catText = '',lili=1  }: Props) => {
             html = '#top'
             break
         case 'Lifestyle':
-            if (lili==1) {
+            if (lili===1) {
                 divStyle.color = '#ff4b9d'  
             } else {
                 divStyle.color = '#ffffff'
@@ -31,7 +31,7 @@ const ColorCat = ({ catClass, catText = '',lili=1  }: Props) => {
             html = '#top'
             break
         case 'Fashion':
-            if (lili==1) {
+            if (lili===1) {
                 divStyle.color = '#ff004e'  
             } else {
                 divStyle.color = '#ffffff'
@@ -41,7 +41,7 @@ const ColorCat = ({ catClass, catText = '',lili=1  }: Props) => {
             html = '#top'
             break
         case 'Entertainment':
-            if (lili==1) {
+            if (lili===1) {
                 divStyle.color = '#ffae25'  
             } else {
                 divStyle.color = '#ffffff'
@@ -52,7 +52,7 @@ const ColorCat = ({ catClass, catText = '',lili=1  }: Props) => {
             html = '#top'
             break
         case 'Digital':
-            if (lili==1) {
+            if (lili===1) {
                 divStyle.color = '#1f73ff'  
             } else {
                 divStyle.color = '#ffffff'
@@ -64,7 +64,7 @@ const ColorCat = ({ catClass, catText = '',lili=1  }: Props) => {
             break
 
         case 'Mobile':
-            if (lili==1) {
+            if (lili===1) {
                 divStyle.color = '#9356ff'  
             } else {
                 divStyle.color = '#ffffff'
@@ -74,7 +74,7 @@ const ColorCat = ({ catClass, catText = '',lili=1  }: Props) => {
             html = '#top'
             break
         case 'Gadget':
-            if (lili==1) {
+            if (lili===1) {
                 divStyle.color = '#17a0b5'  
             } else {
                 divStyle.color = '#ffffff'

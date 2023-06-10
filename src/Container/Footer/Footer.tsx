@@ -1,5 +1,5 @@
 import './Footer.scss'
-import logo from 'assets/logo.png'
+    
 import Fonex from 'components/Fonex/Fonex'
 import { BsTwitter,BsPinterest,BsTelegram } from 'react-icons/bs'
 import { FaLinkedinIn } from 'react-icons/fa'
