@@ -3,11 +3,11 @@
 
 
 .browse-headline{
-    @include container( flex,space-between,
+    @include container( flex,center,
     flex-start, 50px, auto, 50px, auto,
     $wight-frame, 300px);
 position: relative;
-justify-content: center;
+// justify-content: center;
 flex-direction: column;
 border-radius: 15px;
 border: 1px solid #2a2c342e;
