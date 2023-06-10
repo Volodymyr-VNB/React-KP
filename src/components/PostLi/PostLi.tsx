@@ -1,3 +1,4 @@
+import { Image } from 'antd'
 import ColorCat from 'components/ColorCat/ColorCat'
 import { RiFireLine } from 'react-icons/ri'
 
@@ -54,6 +55,7 @@ const PostLi = ({
             <li>
                 <div className={divClass}>
                     <div className={containerImg}>
+                    
                         <img className={imgClass} src={srcImg} alt={altImg} />
                     </div>
 
@@ -81,7 +83,12 @@ const PostLi = ({
         return (
             <div className={divClass}>
                 <div className={containerImg}>
-                    <img className={imgClass} src={srcImg} alt={altImg} />
+                <Image
+    width={410}
+    height={300}
+    src={srcImg}
+  />   
+                    {/* <img className={imgClass} src={srcImg} alt={altImg} /> */}
                 </div>
                 <div className="brow-txt ">
                     <ColorCat
@@ -115,6 +122,7 @@ const PostLi = ({
         return (
             <div className={divClass}>
                 <div className={containerImg}>
+                    
                     <img className={imgClass} src={srcImg} alt={altImg} />
                 </div>
                 <div className="list"></div>

@@ -1,4 +1,5 @@
 
+import { Image } from "antd"
 import "./Team.scss"
 import {FaYoutubeSquare} from 'react-icons/fa'
 
@@ -11,7 +12,11 @@ type Props = {
 const Team = ({className,src,names}: Props) => {
   return (
     <div className={className}>
-    <img src={src} alt={names} />
+      <Image
+    width={300}
+    src={src}
+  />
+    {/* <img src={src} alt={names} /> */}
     <h3>{names}</h3>
     <div className="social-stay row">
                     <div className="social2 facebook1"></div>
