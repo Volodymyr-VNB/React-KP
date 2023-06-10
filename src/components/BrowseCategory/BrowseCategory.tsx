@@ -6,9 +6,12 @@ import StayConnected from 'components/StayConnected/StayConnected'
 
 type Props = {}
 const BrowseCategory = (props: Props) => {
+    let count =0
+    count= articleArray.filter((articleArray) =>
+    articleArray.categoriy === 'Travel').length
     return (
         <>
-            <section className="browse-Category">
+            <section className="browse-Category" id='Travel'>
                 <div className="browse-headline">
                     <h4>Browse Category</h4>
                     <h1>Travel</h1>
@@ -19,7 +22,7 @@ const BrowseCategory = (props: Props) => {
                         existence in this spot, which was created for the bliss
                         of souls like mine.
                     </h4>
-                    <h4 className="post-count ">7 Articles</h4>
+                    <h4 className="post-count ">{count} Articles</h4>
                 </div>
             </section>
             <section className="browse-centr row">
@@ -41,6 +44,7 @@ const BrowseCategory = (props: Props) => {
                                 dates,
                                 subcategoriy,
                             }) => (
+                                
                                 <PostLi
                                     key={id}
                                     keyA={viewsBlokc}
@@ -65,12 +69,13 @@ const BrowseCategory = (props: Props) => {
                                     excerpt={excerpt}
                                     subcategoriy={subcategoriy}
                                 />
+                                
                             )
                         )
                         .filter(
                             (articleArray) =>
                                 articleArray.props.catText === 'Travel'
-                        )}
+                        ) }
                 </div>
                 <aside className="aside col-4">
                     <TrendingNews/>

@@ -79,7 +79,7 @@ const Header = (props: Props) => {
                         <a href="#top">Home</a>
                     </li>
                     <li className='header-menu-item'>
-                        <a href="#top">Travel</a>
+                        <a href="#Travel">Travel</a>
                     </li>
                     <li className='header-menu-item'>
                         <a href="#top">Categories</a>
@@ -88,7 +88,7 @@ const Header = (props: Props) => {
                                 <a href="#top">Mobile</a>
                             </li>
                             <li>
-                                <a href="#top">Travel</a>
+                                <a href="#Travel">Travel</a>
                             </li>
                             <li>
                                 <a href="#top">Digital</a>
