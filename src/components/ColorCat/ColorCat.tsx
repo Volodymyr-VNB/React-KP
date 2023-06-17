@@ -1,10 +1,12 @@
+import "./ColorCat.scss"
+import { NavLink } from "react-router-dom";
 type Props = {
     catClass: string,
     catText: string,
     lili?:number,
 }
 const ColorCat = ({ catClass, catText = '',lili=1  }: Props) => {
-  let html  = '#top'  
+  let html  = '/'  
   const divStyle = {
         color: "blue",
         backgroundColor: "inherit",
@@ -18,7 +20,7 @@ const ColorCat = ({ catClass, catText = '',lili=1  }: Props) => {
                 divStyle.color = '#ffffff'
                 divStyle.backgroundColor = '#00DB92'   
             }
-            html = '#top'
+            html = '/browseCategory'
             break
         case 'Lifestyle':
             if (lili===1) {
@@ -28,7 +30,7 @@ const ColorCat = ({ catClass, catText = '',lili=1  }: Props) => {
                 divStyle.backgroundColor = '#ff4b9d'   
             }
             
-            html = '#top'
+            html = '/lifestyle'
             break
         case 'Fashion':
             if (lili===1) {
@@ -38,7 +40,7 @@ const ColorCat = ({ catClass, catText = '',lili=1  }: Props) => {
                 divStyle.backgroundColor = '#ff004e'   
             }
             
-            html = '#top'
+            html = '/fashion'
             break
         case 'Entertainment':
             if (lili===1) {
@@ -49,7 +51,7 @@ const ColorCat = ({ catClass, catText = '',lili=1  }: Props) => {
             }
             
            
-            html = '#top'
+            html = '/entertainment'
             break
         case 'Digital':
             if (lili===1) {
@@ -60,7 +62,7 @@ const ColorCat = ({ catClass, catText = '',lili=1  }: Props) => {
             }
             
             
-            html = '#top'
+            html = '/digital'
             break
 
         case 'Mobile':
@@ -71,7 +73,7 @@ const ColorCat = ({ catClass, catText = '',lili=1  }: Props) => {
                 divStyle.backgroundColor = '#9356ff'   
             }
             
-            html = '#top'
+            html = '/mobile'
             break
         case 'Gadget':
             if (lili===1) {
@@ -80,18 +82,28 @@ const ColorCat = ({ catClass, catText = '',lili=1  }: Props) => {
                 divStyle.color = '#ffffff'
                 divStyle.backgroundColor = '#17a0b5'   
             }
+        
             
-            html = '#top'
+            html = '/gadget'
             break
-
+            case 'Tech News':
+                if (lili===1) {
+                    divStyle.color = '#00bcae'  
+                } else {
+                    divStyle.color = '#ffffff'
+                    divStyle.backgroundColor = '#00bcae'   
+                }
+                html = '/techNews'
+            break
         default:
             divStyle.color = '#717171'
-            html = '#top'
+            html = '/'
     }
 
     return (
         <div className={catClass} style={divStyle}>
-            <a href={html} style={divStyle} >{catText} </a>
+            {/* <a href={html} style={divStyle} >{catText} </a> */}
+            <NavLink to={html} style={divStyle}>{catText}</NavLink>
         </div>
     )
 }

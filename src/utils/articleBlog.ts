@@ -1,5 +1,5 @@
 
-type Article = {
+export type Article = {
     id:number
     categoriy   :string
     subcategoriy:string
@@ -276,7 +276,7 @@ const articleArray: Article[] =[
     {
         id:15,
         categoriy   :'Gadget',
-        subcategoriy:'Gadget',
+        subcategoriy:'Tech News',
         srcImg    :'images/pretty-blonde-girl-1300x650.jpg',
         altImg    :'Extend Work Until',
         hrefTitle :'https:/',
@@ -386,7 +386,7 @@ const articleArray: Article[] =[
         categoriy   :'Fitnes',
         subcategoriy:'Lifestyle',
         srcImg    :'images/fitnes.jpg',
-        altImg    :'25 Things About',
+        altImg    :'This Workout Will Hit Every',
         hrefTitle :'https:/',
         titleShot :'This Workout Will Hit Every Muscle in Your Body',
         titleAll  :'This Workout Will Hit Every Muscle in Your Body',
@@ -399,5 +399,34 @@ const articleArray: Article[] =[
         comentsNum :1,
         likes: 0,  
     viewsBlokc:"Trending News", },
+	{
+        id:22,
+        categoriy   :'Mobile',
+        subcategoriy:'Tech News',
+        srcImg    :'images/gadget.jpg',
+        altImg    :'Mobile Photography',
+        hrefTitle :'https:/',
+        titleShot :'Mobile Photography Tips: Playing with Light',
+        titleAll  :'Mobile Photography Tips: Playing with Light',
+        titleViews:'94 views',
+        excerpt :'Far far away, behind the word mountains, far from the countries Vokalia and...',
+        views: 1,
+        autor:'John Nikova',
+        dates:'September 2, 2022',
+        lastRead :' 4 Mins Read',
+        comentsNum :1,
+        likes: 0,  
+    viewsBlokc:"Other Articles", },
+	
 ]
+
+export const getArticleObject = (array: Article[]) =>
+    array.reduce(
+        (object, article) => ({
+            ...object,
+            [article.id]: article,
+        }),
+        {}
+    )
+    console.log(getArticleObject)
 export default articleArray

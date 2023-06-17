@@ -1,7 +1,8 @@
 import './Header.scss'
 import logo from 'assets/logo.png'
-
+import { NavLink } from "react-router-dom";
 import Animation from 'components/Animation/Animation'
+import StayConnected from 'components/StayConnected/StayConnected';
 
 type Props = {}
 const Header = (props: Props) => {
@@ -76,28 +77,35 @@ const Header = (props: Props) => {
             <nav className="header-menu">
                 <ul className='header-menu-0'>
                     <li className='header-menu-item'>
-                        <a href="#top">Home</a>
+                        
+                        <NavLink to={'/'}>Home</NavLink>
                     </li>
                     <li className='header-menu-item'>
-                        <a href="#Travel">Travel</a>
+                       
+                        <NavLink to={'/browseCategory'}>Travel</NavLink>
                     </li>
                     <li className='header-menu-item'>
                         <a href="#top">Categories</a>
                         <ul className='header-menu-sub'>
                             <li>
-                                <a href="#top">Mobile</a>
+                               
+                                <NavLink to={'/mobile'}>Mobile</NavLink>
                             </li>
                             <li>
-                                <a href="#Travel">Travel</a>
+                                
+                                <NavLink to={'/browseCategory'}>Travel</NavLink>
                             </li>
                             <li>
-                                <a href="#top">Digital</a>
+                               
+                                <NavLink to={'/digital'}>Digital</NavLink>
                             </li>
                             <li>
-                                <a href="#top">Gadget</a>
+                              
+                                <NavLink to={'/gadget'}>Gadget</NavLink>
                             </li>
                             <li>
-                                <a href="#top">Lifestyle</a>
+                             
+                                <NavLink to={'/lifestyle'}>Lifestyle</NavLink>
                             </li>
                         </ul>
                     </li>
@@ -109,18 +117,16 @@ const Header = (props: Props) => {
                         
                     </li>
                     <li className='header-menu-item'>
-                        <a href="#about">About</a>
+                       
+                        <NavLink to={'/about'}>About</NavLink>
+                    </li>
+                    <li className='header-menu-item'>
+                       
+                        <NavLink to={'/articlePost'}>ArticlePost</NavLink>
                     </li>
                 </ul>
             </nav>
-            <div className="header-icons row">
-                <div className="soundcloud social"></div>
-                <div className="whatsapp social"></div>
-                <div className="gitH social"></div>
-                <div className="facebook social"></div>
-              
-
-            </div>
+            <StayConnected sizeStay='Smoll'/>
         </div></div>
     </header>
 </>

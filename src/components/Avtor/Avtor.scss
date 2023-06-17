@@ -1,0 +1,29 @@
+@import '../../Container/_valiable.scss';
+@import '../../Container/_font.scss';
+
+
+.author-box-containe{
+    @include container( flex,space-between,
+        flex-start, 50px, auto, 50px, auto,
+        $wight-frame, auto);
+    position: relative;
+   
+   }
+   .avatar-photo{
+    border-radius: 50%;
+    box-shadow: 0 6px 20px #38394457;
+    width: 120px;
+    height: 120px;
+    max-width: 100%;
+   }
+   .author-box-avatar{
+    flex-shrink: 0;
+   }
+   .author-box{
+    gap: 40px;
+   }
+   .written-by{display: block;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;}

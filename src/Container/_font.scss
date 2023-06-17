@@ -1,4 +1,4 @@
-h1{
+h1,h2{
     font-family: Merriweather,sans-serif;
     font-weight: 700; 
     line-height: 1.4;
@@ -7,6 +7,10 @@ h1{
 h1,.h1{
     font-size: 2rem;
 }
+h2,.h2{
+    font-size: 1.65rem;
+}
+
 .title-text{
   font-size: 23px;  
   font-weight: 700;
@@ -53,4 +57,10 @@ h3,.h3{
 }
 .color-white {
     color: white;
+   }
+   .author-name{
+    font-size: 1.3rem;
+   }
+   .author-bio{
+    font-size: 1rem;
    }

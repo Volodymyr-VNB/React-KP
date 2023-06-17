@@ -1,0 +1,95 @@
+@import '../../Container/_valiable.scss';
+@import '../../Container/_font.scss';
+.article-sect{
+    @include container( flex,center,
+    flex-start, 50px, auto, 50px, auto,
+    $wight-frame, auto);
+position: relative;
+flex-direction: column;
+
+gap: 50px;
+
+}
+.articleImg,
+.articleItem .ant-image-mask{
+    border-radius: 20px;
+}
+.artecTitle{
+    width: 75%;
+    margin: 20px auto;
+    gap : 10px;
+}
+.artecTitleClass{
+    width: fit-content;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    a{
+        text-decoration: none;
+    }
+    
+}
+.articleItem{
+    h1{
+        width: 75%;
+        margin: 0 auto;
+        // color: #32e7ff;
+    }
+}
+
+.avtor-blok-a,
+.line-arti{
+    width: 75%;
+    margin: 0 auto;
+    img{
+        width: 45px;
+        height: 45px;
+    }
+}
+.line-arti{
+    margin-bottom: 30px;
+    padding-top: 20px;
+    border-bottom: 1px solid #dfe1ea;
+}
+.avtor-avtor>div>h6{
+    font-size: 12px;
+
+}
+.avtor-avtor>h6{
+    font-size: 14px;
+
+}
+.avtor-avtor{
+    width: 100%;
+}
+.press{
+    font-size: 20px;
+    gap: 15px;
+   
+}
+.avtor-avtor>div{
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.heartTwoTone svg:hover path{
+   
+    fill:blue;
+}
+.heartTwoTone svg:hover>path+path{
+   
+    fill:red;
+}
+.messageTwoTone svg:hover path{
+   
+    fill:rgb(48, 142, 250);
+}
+.messageTwoTone svg:hover>path+path{
+   
+    fill:rgb(171, 202, 238);
+}
+.riFireLine:hover  {
+    
+    color: red
+
+}

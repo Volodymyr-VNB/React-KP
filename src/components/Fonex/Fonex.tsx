@@ -2,6 +2,8 @@
 import './Fonex.scss'
 import logo from 'assets/logo.png'
 import logo1 from 'assets/Logo-Light-Fonix.png'
+import { NavLink } from "react-router-dom";
+
 
 type Props = {
     classNam: string
@@ -38,9 +40,12 @@ const Fonex = ({
             )}
 
             <h4>{h4}</h4>
-            <button type="submit" className={butClass}>
+            <NavLink to={'/about'}>
+            <button type="submit" className={butClass} >
                 {buttonName}
             </button>
+            </NavLink>
+            
         </div>
     )
 }

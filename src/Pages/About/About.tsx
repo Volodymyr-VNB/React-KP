@@ -3,6 +3,7 @@ import './About.scss'
 import Newsletter from 'components/Newsletter/Newsletter'
 import { TbBrandTelegram } from 'react-icons/tb'
 import PostLi from 'components/PostLi/PostLi'
+import FooterPage from 'components/FooterPage/FooterPage'
 
 type Props = {}
 const About = (props: Props) => {
@@ -91,10 +92,10 @@ const About = (props: Props) => {
                 <PostLi
                             srcImg="images/woman-with-hat-700x700.jpg"
                             altImg="Travel"
-                            hrefTitle="https:/"
+                            hrefTitle="/browseCategory"
                             titleShot="Travel"
                             titleAll="Travel"
-                            titleViews="7 Posts"
+                            titleViews=""
                             divClass="categories-About row"
                             imgClass="categories-img cat-img-About"
                             aClass="post-Recent-title h5 line-a color-white"
@@ -104,14 +105,15 @@ const About = (props: Props) => {
                             catClass="dispNone"
                             catText="Travel"
                             subcategoriy=""
+                            lili={4}
                         />
                 <PostLi
                             srcImg="images/gadget.jpg"
                             altImg="Gadget"
-                            hrefTitle="https:/"
+                            hrefTitle="/gadget"
                             titleShot="Gadget"
                             titleAll="Gadget"
-                            titleViews="5 Posts"
+                            titleViews=""
                             divClass="categories-About row"
                             imgClass="categories-img cat-img-About"
                             aClass="post-Recent-title h5 line-a color-white"
@@ -121,14 +123,15 @@ const About = (props: Props) => {
                             catClass="dispNone"
                             catText="Gadget"
                             subcategoriy=""
+                            lili={4}
                         />
                 <PostLi
                             srcImg="images/digital.jpg"
                             altImg="Digital"
-                            hrefTitle="https:/"
+                            hrefTitle="/digital"
                             titleShot="Digital"
                             titleAll="Digital"
-                            titleViews="15 Posts"
+                            titleViews=""
                             divClass="categories-About row"
                             imgClass="categories-img cat-img-About"
                             aClass="post-Recent-title h5 line-a color-white"
@@ -138,14 +141,15 @@ const About = (props: Props) => {
                             catClass="dispNone"
                             catText="Digital"
                             subcategoriy=""
+                            lili={4}
                         />
                 <PostLi
                             srcImg="images/digital-1024x682.jpg"
                             altImg="Entertainment"
-                            hrefTitle="https:/"
+                            hrefTitle="/Entertainment"
                             titleShot="Entertainment"
                             titleAll="Entertainment"
-                            titleViews="7 Posts"
+                            titleViews=""
                             divClass="categories-About row"
                             imgClass="categories-img cat-img-About"
                             aClass="post-Recent-title h5 line-a color-white"
@@ -155,12 +159,14 @@ const About = (props: Props) => {
                             catClass="dispNone"
                             catText="Entertainment"
                             subcategoriy=""
+                            lili={4}
                         />
                 </div>
             </section>
             <section className='about-footer'>
 
             </section>
+            <FooterPage/>
         </>
     )
 }

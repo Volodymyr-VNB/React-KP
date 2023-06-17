@@ -3,18 +3,20 @@ import './BrowseCategory.scss'
 import PostLi from 'components/PostLi/PostLi'
 import TrendingNews from 'components/TrendingNews/TrendingNews'
 import StayConnected from 'components/StayConnected/StayConnected'
+import FooterPage from 'components/FooterPage/FooterPage'
 
-type Props = {}
-const BrowseCategory = (props: Props) => {
-    let count =0
-    count= articleArray.filter((articleArray) =>
-    articleArray.categoriy === 'Travel').length
+type Props = {
+    categogiyBrow:string
+}
+const BrowseCategory = ({categogiyBrow}: Props) => {
+    let count= articleArray.filter((articleArray) =>
+    articleArray.categoriy === categogiyBrow).length
     return (
         <>
             <section className="browse-Category" id='Travel'>
                 <div className="browse-headline">
                     <h4>Browse Category</h4>
-                    <h1>Travel</h1>
+                    <h1>{categogiyBrow}</h1>
                     <h4>
                         A wonderful serenity has taken possession of my entire
                         soul, like these sweet mornings of spring which I enjoy
@@ -74,7 +76,7 @@ const BrowseCategory = (props: Props) => {
                         )
                         .filter(
                             (articleArray) =>
-                                articleArray.props.catText === 'Travel'
+                                articleArray.props.catText === categogiyBrow
                         ) }
                 </div>
                 <aside className="aside col-4">
@@ -83,6 +85,7 @@ const BrowseCategory = (props: Props) => {
                     sizeStay = "L"/>
                 </aside>
             </section>
+            <FooterPage/>
         </>
     )
 }

@@ -1,0 +1,21 @@
+
+@import '../../Container/_valiable.scss';
+@import '../../Container/_font.scss';
+
+.OtherArticles{
+    @include container( flex,space-between,
+    flex-start, 50px, auto, 50px, auto,
+    $wight-frame, auto);
+position: relative;
+flex-direction: column;
+h3{
+    margin: 20px 12.5%;
+}
+}
+.OtherArticles-container{
+    width: 75%;
+    margin: 0 auto;
+}
+.previous-next{
+    gap: 10px;
+}

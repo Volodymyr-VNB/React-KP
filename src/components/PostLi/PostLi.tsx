@@ -1,19 +1,22 @@
 import { Image } from 'antd'
 import ColorCat from 'components/ColorCat/ColorCat'
 import { RiFireLine } from 'react-icons/ri'
+import { GrFormPreviousLink, GrFormNextLink } from 'react-icons/gr'
+import articleArray, { Article, getArticleObject } from 'utils/articleBlog'
+import { NavLink } from 'react-router-dom'
 
 type LineNews = {
     srcImg: string
     altImg: string
     hrefTitle: string
-    titleShot: string
-    titleAll: string
-    titleViews: string
+    titleShot?: string
+    titleAll?: string
+    titleViews?: string
     divClass: string
     imgClass: string
     aClass: string
-    h6Class: string
-    iconClass: string
+    h6Class?: string
+    iconClass?: string
     containerImg: string
     catClass: string
     catText: string
@@ -26,6 +29,7 @@ type LineNews = {
     autor?: string
     excerpt?: string
     subcategoriy: string
+    arrows?: string
 }
 const PostLi = ({
     srcImg,
@@ -48,14 +52,16 @@ const PostLi = ({
     autor,
     dates,
     excerpt,
+    arrows,
 }: LineNews) => {
-    // console.log(subcategoriy)
+    let count = articleArray.filter(
+        (articleArray) => articleArray.categoriy === catText
+    ).length
     if (lili === 1) {
         return (
             <li>
                 <div className={divClass}>
                     <div className={containerImg}>
-                    
                         <img className={imgClass} src={srcImg} alt={altImg} />
                     </div>
 
@@ -83,11 +89,7 @@ const PostLi = ({
         return (
             <div className={divClass}>
                 <div className={containerImg}>
-                <Image
-    width={410}
-    height={300}
-    src={srcImg}
-  />   
+                    <Image width={410} height={300} src={srcImg} />
                     {/* <img className={imgClass} src={srcImg} alt={altImg} /> */}
                 </div>
                 <div className="brow-txt ">
@@ -122,12 +124,10 @@ const PostLi = ({
         return (
             <div className={divClass}>
                 <div className={containerImg}>
-                    
                     <img className={imgClass} src={srcImg} alt={altImg} />
                 </div>
                 <div className="list"></div>
                 <div className={catClass}>
-                    
                     <h5>
                         <a
                             href={hrefTitle}
@@ -141,6 +141,83 @@ const PostLi = ({
                 </div>
             </div>
         )
+    }
+    if (lili === 4) {
+        return (
+            <div className={divClass}>
+                <div className={containerImg}>
+                    <img className={imgClass} src={srcImg} alt={altImg} />
+                </div>
+
+                <ColorCat catClass={catClass} catText={catText} />
+                <h5>
+                    <NavLink to={hrefTitle} className={aClass}>
+                        {catText}
+                    </NavLink>
+                    <h6 className={h6Class}>{count} Posts</h6>
+                </h5>
+            </div>
+        )
+    }
+    if (lili === 5) {
+        return (
+            <div className={divClass}>
+                <div className={containerImg}>
+                    <img className={imgClass} src={srcImg} alt={altImg} />
+                </div>
+                <div className="row-col previous-next">
+                    <p>
+                        {arrows === 'Previous' ? (
+                            <>
+                                <GrFormPreviousLink />
+                                &#160;Previous
+                            </>
+                        ) : (
+                            <>
+                                Next&#160;
+                                <GrFormNextLink />
+                            </>
+                        )}
+                    </p>
+                    <h5>
+                        <a
+                            href={hrefTitle}
+                            className={aClass}
+                            title={titleShot}
+                        >
+                            {titleAll}
+                        </a>
+                    </h5>
+                </div>
+            </div>
+        )
+    }
+    if (lili === 6) {
+        return (
+            <>
+                <div className={containerImg}>
+                    <a href={hrefTitle}>
+                        <img
+                            width="150"
+                            height="150"
+                            src={srcImg}
+                            className={imgClass}
+                            alt={altImg}
+                            title={titleShot}
+                            sizes="(max-width: 150px) 100vw, 150px"
+                        />
+                    </a>
+                </div>
+                <div className="contentNext">
+                    <span className="date">{dates}</span>
+                    <h3 className="content-title">
+                        <a className={aClass} href={hrefTitle}>
+                            {titleAll}
+                        </a>
+                    </h3>
+                </div>
+            </>
+        )
     } else {
         return (
             <div className={divClass}>
@@ -153,6 +230,7 @@ const PostLi = ({
                     <a href={hrefTitle} className={aClass} title={titleShot}>
                         {titleAll}{' '}
                     </a>
+
                     <h6 className={h6Class}>
                         <span className={iconClass}>
                             <RiFireLine />
