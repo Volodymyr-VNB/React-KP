@@ -1,4 +1,4 @@
-import articleArray, { Article, getArticleObject } from 'utils/articleBlog'
+import articleArray from 'utils/articleBlog'
 import './ArticlePost.scss'
 
 import ArticleItem from 'components/ArticleItem/ArticleItem'

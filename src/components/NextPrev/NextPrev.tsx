@@ -1,7 +1,6 @@
 import { AiOutlineArrowDown, AiOutlineArrowUp } from 'react-icons/ai'
 import './NextPrev.scss'
-import articleArray from 'utils/articleBlog'
-import PostLi from 'components/PostLi/PostLi'
+
 import NextPrevItem from './NextPrevItem'
 import { useContext } from 'react'
 import { AppContext } from 'Container/App/App'

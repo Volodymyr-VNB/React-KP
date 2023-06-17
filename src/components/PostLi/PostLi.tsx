@@ -2,7 +2,7 @@ import { Image } from 'antd'
 import ColorCat from 'components/ColorCat/ColorCat'
 import { RiFireLine } from 'react-icons/ri'
 import { GrFormPreviousLink, GrFormNextLink } from 'react-icons/gr'
-import articleArray, { Article, getArticleObject } from 'utils/articleBlog'
+import articleArray  from 'utils/articleBlog'
 import { NavLink } from 'react-router-dom'
 
 type LineNews = {
