@@ -7,6 +7,7 @@ import ColorCat from 'components/ColorCat/ColorCat'
 import { RiFireLine } from 'react-icons/ri'
 import ArticleHot from './ArticleHot'
 
+
 type Props = {
     srcImg: string
     altImg: string
@@ -28,11 +29,11 @@ type Props = {
 const ArticleItem = ({
     srcImg,
     altImg,
-    hrefTitle,
+    
     avtorImg,
     autor,
     titleAll,
-    titleViews,
+    
     categoriy,
     subcategoriy,
     dates,
@@ -41,6 +42,7 @@ const ArticleItem = ({
     comentsNum,
     likes,
 }: Props) => {
+    
     return (
         <div className="articleItem">
             

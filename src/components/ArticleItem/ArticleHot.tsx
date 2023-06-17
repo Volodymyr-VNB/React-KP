@@ -3,10 +3,12 @@ import './ArticleHot.scss'
 import StayConnected from 'components/StayConnected/StayConnected'
 import Avtor from 'components/Avtor/Avtor'
 import OtherArticles from 'components/OtherArticles/OtherArticles'
-import FooterPage from 'components/FooterPage/FooterPage'
+
 
 type Props = {}
 const ArticleHot = (props: Props) => {
+    
+
     return (
         <>
             <article className="row-col ar-hot-article">
@@ -174,15 +176,13 @@ const ArticleHot = (props: Props) => {
                     made herself on the way.
                 </p>
                 <StayConnected sizeStay="SC" />
-                <Avtor/>
+                <Avtor />
+
+                <OtherArticles
                 
-                <OtherArticles keyId={15}/>
-                <div className="post-reading-progress-indicator">
-                    <span ></span>
-                    </div>
+                 />
                 
             </article>
-            
         </>
     )
 }

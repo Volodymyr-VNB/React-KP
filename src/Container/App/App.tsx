@@ -5,11 +5,27 @@ import ArticlePost from 'Pages/ArticlePost/ArticlePost'
 import BrowseCategory from 'Pages/BrowseCategory/BrowseCategory'
 import ScrollToTop from 'components/ScrollToTop/ScrollToTop'
 import { Routes, Route } from 'react-router-dom'
+import { createContext  } from 'react'
 
+type Context = {
+    keyIdpr: number
+}
+
+export const AppContext = createContext<Context | null>(null)
+
+
+
+let keyId=22
 type Props = {}
 const App = (props: Props) => {
+    
+    
+        
+      
+
     return (
-        <>
+        
+        <AppContext.Provider value={{keyIdpr:keyId}}>
             <Header />
 
             <div>
@@ -113,7 +129,8 @@ const App = (props: Props) => {
                     />
                 </Routes>
             </div>
-        </>
+            </AppContext.Provider>
+       
     )
 }
 export default App

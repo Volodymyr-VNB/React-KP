@@ -3,10 +3,15 @@ import './OtherArticles.scss'
 import articleArray from 'utils/articleBlog'
 import PostLi from 'components/PostLi/PostLi'
 import NextPrev from 'components/NextPrev/NextPrev'
+import { useContext } from 'react'
+import { AppContext } from 'Container/App/App'
 type Props = {
-    keyId: number
+    
 }
-const OtherArticles = ({ keyId }: Props) => {
+const OtherArticles = (props : Props) => {
+    const data = useContext(AppContext);
+console.log(Number(data?.keyIdpr)-1)
+
     return (
         <div className="OtherArticles row">
             <h3>Other Articles</h3>
@@ -16,8 +21,8 @@ const OtherArticles = ({ keyId }: Props) => {
                         {articleArray
                             .filter(
                                 (item) =>
-                                    item.id === keyId - 1 ||
-                                    item.id === keyId + 1
+                                    item.id === Number(data?.keyIdpr)-1  ||
+                                    item.id === Number(data?.keyIdpr)+1
                             )
                             .map(
                                 ({
@@ -30,7 +35,7 @@ const OtherArticles = ({ keyId }: Props) => {
                                     <PostLi
                                         key={id}
                                         arrows={
-                                            keyId - 1 === id
+                                            Number(data?.keyIdpr) - 1 === id
                                                 ? 'Previous'
                                                 : 'Next'
                                         }
@@ -52,7 +57,7 @@ const OtherArticles = ({ keyId }: Props) => {
                             )}
                     </Row>
                 </div>
-                <NextPrev keyId={keyId}/>
+                <NextPrev />
             </div>
         </div>
     )

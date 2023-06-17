@@ -3,10 +3,13 @@ import './NextPrev.scss'
 import articleArray from 'utils/articleBlog'
 import PostLi from 'components/PostLi/PostLi'
 import NextPrevItem from './NextPrevItem'
+import { useContext } from 'react'
+import { AppContext } from 'Container/App/App'
 type Props = {
-    keyId:number
+    
 }
-const NextPrev = ({keyId}: Props) => {
+const NextPrev = (props: Props) => {
+    const data = useContext(AppContext);
     return (
         <div className="fixed-next-prev-posts show">
             <div className="fixed-post next-post">
@@ -51,7 +54,7 @@ const NextPrev = ({keyId}: Props) => {
                                 )
                             )}
                 </div> */}
-                <NextPrevItem keyIdItem={keyId+1}/>
+                <NextPrevItem keyIdItem={Number(data?.keyIdpr)+1}/>
             </div>
             <div className="fixed-post prev-post">
                 <div className="post-label">
@@ -124,7 +127,7 @@ const NextPrev = ({keyId}: Props) => {
                                 )
                             )}
                 </div> */}
-                <NextPrevItem keyIdItem={keyId-1}/>
+                <NextPrevItem keyIdItem={Number(data?.keyIdpr)-1}/>
             </div>
         </div>
     )
