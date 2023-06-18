@@ -16,7 +16,7 @@ import Footer from 'Container/Footer/Footer'
 
 type Props = {}
 const Main = (props: Props) => {
-    const data = useContext(AppContext)
+    // const data = useContext(AppContext)
     const hrefTitleswitch =(cat:string) =>{
         let html=""
         switch (cat) {

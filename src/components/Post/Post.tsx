@@ -1,9 +1,7 @@
 import './Post.scss'
 import { FaRegComment } from 'react-icons/fa'
 import ColorCat from 'components/ColorCat/ColorCat'
-import { Link, NavLink } from 'react-router-dom'
-import { useContext } from 'react'
-import { AppContext } from 'Container/App/App'
+
 import LinkArticle from 'components/LinkArticle/LinkArticle'
 
 type PostNew = {
