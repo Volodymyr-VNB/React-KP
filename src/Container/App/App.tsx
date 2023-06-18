@@ -6,36 +6,33 @@ import BrowseCategory from 'Pages/BrowseCategory/BrowseCategory'
 import ScrollToTop from 'components/ScrollToTop/ScrollToTop'
 import { Routes, Route } from 'react-router-dom'
 import { createContext, useState } from 'react'
+import articleArray from 'utils/articleBlog'
 
 type Context = {
     keyIdpr: number
     changKeyId: (id: number) => void
+    countAll:number
 }
 
 export const AppContext = createContext<Context | null>(null)
 
 
-
-// let keyId=15
 type Props = {}
 const App = (props: Props) => {
     const [keyId, setKeyId] = useState(15)
-    let pathId = '/article/' + String(keyId)
-
-    console.log('pathId=', pathId)
+    
+    let countAll = articleArray.length
 
     const changKeyId = (id: number) => {
         setKeyId((prevState) => id)
-        // this.setState(state => ({
-        //   theme:
-        //     state.theme === themes.dark
-        //       ? themes.light
-        //       : themes.dark,
-        // }));
+        
     }
 
     return (
-        <AppContext.Provider value={{ keyIdpr: keyId, changKeyId: changKeyId }}>
+        <AppContext.Provider value={{ 
+            keyIdpr: keyId, changKeyId: changKeyId ,
+            countAll:countAll
+            }}>
             <Header />
 
             <div>
@@ -138,7 +135,7 @@ const App = (props: Props) => {
                         }
                     />
 
-                    <Route
+                    {/* <Route
                         path={pathId}
                         element={
                             <>
@@ -146,7 +143,7 @@ const App = (props: Props) => {
                                 <ArticlePost />
                             </>
                         }
-                    />
+                    /> */}
                 </Routes>
             </div>
         </AppContext.Provider>

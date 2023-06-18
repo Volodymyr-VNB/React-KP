@@ -1,11 +1,13 @@
 import './Header.scss'
 import logo from 'assets/logo.png'
-import { NavLink } from "react-router-dom";
-import Animation from 'components/Animation/Animation'
+import {  NavLink } from "react-router-dom";
+
 import StayConnected from 'components/StayConnected/StayConnected';
+import CurrentTerm from 'components/CurrentTerm/CurrentTerm';
 
 type Props = {}
 const Header = (props: Props) => {
+    
   return (
     <>
     <header className="header">
@@ -17,7 +19,10 @@ const Header = (props: Props) => {
                 </div>
                 <div className="running-line">
                     <div className="heder-slide1 row">
-                        <span>
+                        <CurrentTerm/>
+                        <CurrentTerm/>
+
+                        {/* <span>
                           <Animation
                             hrefAni = "https://demo.rivaxstudio.com/fonix/main/game-changing-virtual-reality-console/"
                             srcAni  = "images/game-changing-1000x600.jpg"
@@ -33,24 +38,7 @@ const Header = (props: Props) => {
                             srcAni  = "images/texnologi-1000x600.jpg"
                             TxtAni  = "Technology Allows Profit To Serve The Community"
                             />
-                        </span>
-                        <span>
-                          <Animation
-                            hrefAni = "https://demo.rivaxstudio.com/fonix/main/game-changing-virtual-reality-console/"
-                            srcAni  = "images/game-changing-1000x600.jpg"
-                            TxtAni  = "Game Changing Virtual Reality Console"
-                            />
-                          <Animation
-                            hrefAni = "https://demo.rivaxstudio.com/fonix/main/how-to-make-a-competitors-success-work-for-you/"
-                            srcAni  = "images/how-to-make1000x600.jpg"
-                            TxtAni  = "How to Make a Competitor`s Success Work for You"
-                            />
-                          <Animation
-                            hrefAni = "https://demo.rivaxstudio.com/fonix/main/technology-allows-profit-to-serve-the-community/"
-                            srcAni  = "images/texnologi-1000x600.jpg"
-                            TxtAni  = "Technology Allows Profit To Serve The Community"
-                            />
-                        </span>
+                        </span> */}
                         
                     </div>
                 </div>

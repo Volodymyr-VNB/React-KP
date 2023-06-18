@@ -417,6 +417,24 @@ const articleArray: Article[] =[
         comentsNum :1,
         likes: 0,  
     viewsBlokc:"Other Articles", },
+	{
+        id:23,
+        categoriy   :'Entertainment',
+        subcategoriy:'Entertainment',
+        srcImg    :'images/texnologi-1000x600.jpg',
+        altImg    :'Mobile Photography',
+        hrefTitle :'https:/',
+        titleShot :'Technology Allows Profit To Serve The Community',
+        titleAll  :'Technology Allows Profit To Serve The Community',
+        titleViews:'115 views',
+        excerpt :'Far far away, behind the word mountains, far from the countries Vokalia and...',
+        views: 1,
+        autor:'John Nikova',
+        dates:'October 5, 2022',
+        lastRead :' 4 Mins Read',
+        comentsNum :1,
+        likes: 0,  
+    viewsBlokc:"", },
 	
 ]
 

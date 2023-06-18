@@ -8,8 +8,18 @@ import { AppContext } from 'Container/App/App'
 type Props = {
     
 }
+
+
 const OtherArticles = (props : Props) => {
     const data = useContext(AppContext);
+    const decrement = (id:number)=>{
+        return (id - 1 === 0)?Number(data?.countAll):(id - 1)
+    }
+    const increment = (id:number)=>{
+       return id + 1 > Number(data?.countAll) ? 1
+                : id + 1
+    }
+    
 console.log(Number(data?.keyIdpr)-1)
 
     return (
@@ -21,8 +31,8 @@ console.log(Number(data?.keyIdpr)-1)
                         {articleArray
                             .filter(
                                 (item) =>
-                                    item.id === Number(data?.keyIdpr)-1  ||
-                                    item.id === Number(data?.keyIdpr)+1
+                                    item.id === Number(increment(Number(data?.keyIdpr)))  ||
+                                    item.id === Number(decrement(Number(data?.keyIdpr))) 
                             )
                             .map(
                                 ({
@@ -41,8 +51,10 @@ console.log(Number(data?.keyIdpr)-1)
                                         }
                                         keyKey={
                                             Number(data?.keyIdpr) - 1 === id
-                                                ? Number(data?.keyIdpr) - 1 
-                                                : Number(data?.keyIdpr) + 1 
+                                                ? 
+                                                Number(decrement(Number(data?.keyIdpr))) 
+                                                : 
+                                                Number(increment(Number(data?.keyIdpr))) 
                                         }
                                         srcImg={srcImg}
                                         altImg={altImg}
