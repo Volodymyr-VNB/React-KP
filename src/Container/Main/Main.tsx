@@ -3,8 +3,7 @@ import './Main.scss'
 import PostLi from 'components/PostLi/PostLi'
 import { Carousel } from 'antd'
 import { LeftOutlined, RightOutlined } from '@ant-design/icons'
-import { useContext } from 'react'
-import { AppContext } from 'Container/App/App'
+
 
 import Weekly from 'components/Weekly/Weekly'
 import Post from 'components/Post/Post'
