@@ -30,9 +30,7 @@ console.log(Number(data?.keyIdpr)-1)
                     <Row justify="space-between" align="top">
                         {articleArray
                             .filter(
-                                (item) =>
-                                    item.id === Number(increment(Number(data?.keyIdpr)))  ||
-                                    item.id === Number(decrement(Number(data?.keyIdpr))) 
+                                (item) => item.id === Number(decrement(Number(data?.keyIdpr))) 
                             )
                             .map(
                                 ({
@@ -42,20 +40,46 @@ console.log(Number(data?.keyIdpr)-1)
                                     hrefTitle,
                                     titleAll,
                                 }) => (
+                                    
                                     <PostLi
                                         key={id}
-                                        arrows={
-                                            Number(data?.keyIdpr) - 1 === id
-                                                ? 'Previous'
-                                                : 'Next'
-                                        }
-                                        keyKey={
-                                            Number(data?.keyIdpr) - 1 === id
-                                                ? 
-                                                Number(decrement(Number(data?.keyIdpr))) 
-                                                : 
-                                                Number(increment(Number(data?.keyIdpr))) 
-                                        }
+                                        arrows={'Previous'}
+                                        keyKey={Number(decrement(Number(data?.keyIdpr)))}
+                                        srcImg={srcImg}
+                                        altImg={altImg}
+                                        hrefTitle={hrefTitle}
+                                        lili={5}
+                                        titleAll={titleAll}
+                                        divClass=" row weeklyNews-item"
+                                        imgClass="categories-img weeklyNews-img"
+                                        aClass="post-Recent-title line-a line-a-l "
+                                        containerImg="wweeklyNews-container"
+                                        catClass=""
+                                        catText=""
+                                        dates=""
+                                        subcategoriy=""
+                                    />
+                                    
+                                )
+                            )}
+                        {articleArray
+                            .filter(
+                                (item) =>
+                                    item.id === Number(increment(Number(data?.keyIdpr))) 
+                            )
+                            .map(
+                                ({
+                                    id,
+                                    srcImg,
+                                    altImg,
+                                    hrefTitle,
+                                    titleAll,
+                                }) => (
+                                    
+                                    <PostLi
+                                        key={id}
+                                        arrows={'Next'}
+                                        keyKey={Number(increment(Number(data?.keyIdpr)))}
                                         srcImg={srcImg}
                                         altImg={altImg}
                                         hrefTitle={hrefTitle}
