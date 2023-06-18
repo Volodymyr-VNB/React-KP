@@ -23,7 +23,7 @@ const NextPrevItem = ({keyIdItem}: Props) => {
                                     dates
                                 }) => (
                                     <PostLi
-                                        key={id}
+                                        keyKey={keyIdItem}
                                         srcImg={srcImg}
                                         altImg={altImg}
                                         hrefTitle={hrefTitle}

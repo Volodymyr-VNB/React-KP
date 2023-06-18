@@ -3,7 +3,10 @@ import ColorCat from 'components/ColorCat/ColorCat'
 import { RiFireLine } from 'react-icons/ri'
 import { GrFormPreviousLink, GrFormNextLink } from 'react-icons/gr'
 import articleArray  from 'utils/articleBlog'
-import { NavLink } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
+import { useContext } from 'react'
+import { AppContext } from 'Container/App/App'
+
 
 type LineNews = {
     srcImg: string
@@ -30,6 +33,8 @@ type LineNews = {
     excerpt?: string
     subcategoriy: string
     arrows?: string
+    id?:number
+    
 }
 const PostLi = ({
     srcImg,
@@ -53,7 +58,10 @@ const PostLi = ({
     dates,
     excerpt,
     arrows,
+    id,
+    keyKey,
 }: LineNews) => {
+    const data = useContext(AppContext)
     let count = articleArray.filter(
         (articleArray) => articleArray.categoriy === catText
     ).length
@@ -193,10 +201,16 @@ const PostLi = ({
         )
     }
     if (lili === 6) {
+       
+        let linkTo= keyKey
+        console.log("linkTo=",linkTo)
+        console.log("(key)",keyKey)
+        // data?.keyIdpr=keyKey
+        // data?.changKeyId(Number(keyKey))
         return (
             <>
                 <div className={containerImg}>
-                    <a href={hrefTitle}>
+                    {/* <a href={hrefTitle}>
                         <img
                             width="150"
                             height="150"
@@ -206,14 +220,33 @@ const PostLi = ({
                             title={titleShot}
                             sizes="(max-width: 150px) 100vw, 150px"
                         />
-                    </a>
+                    </a> */}
+                    {/* <Link to={String(linkTo)}> */}
+                    <Link to="/articlePost" >
+                    <img
+                            width="150"
+                            height="150"
+                            
+                            onClick={() => data?.changKeyId(Number(keyKey))}
+                            src={srcImg}
+                            className={imgClass}
+                            alt={altImg}
+                            title={titleShot}
+                            sizes="(max-width: 150px) 100vw, 150px"
+                        />
+      </Link>
                 </div>
                 <div className="contentNext">
                     <span className="date">{dates}</span>
                     <h3 className="content-title">
-                        <a className={aClass} href={hrefTitle}>
+                        <Link to="/articlePost"
+                        className={aClass} 
+                        // href={hrefTitle}
+                        onClick={() => data?.changKeyId(Number(keyKey))}
+                        >
                             {titleAll}
-                        </a>
+                        </Link>
+                        
                     </h3>
                 </div>
             </>

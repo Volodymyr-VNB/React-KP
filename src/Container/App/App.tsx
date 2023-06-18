@@ -5,27 +5,37 @@ import ArticlePost from 'Pages/ArticlePost/ArticlePost'
 import BrowseCategory from 'Pages/BrowseCategory/BrowseCategory'
 import ScrollToTop from 'components/ScrollToTop/ScrollToTop'
 import { Routes, Route } from 'react-router-dom'
-import { createContext  } from 'react'
+import { createContext, useState } from 'react'
 
 type Context = {
     keyIdpr: number
+    changKeyId: (id: number) => void
 }
 
 export const AppContext = createContext<Context | null>(null)
 
 
 
-let keyId=15
+// let keyId=15
 type Props = {}
 const App = (props: Props) => {
-    
-    
-        
-      
+    const [keyId, setKeyId] = useState(15)
+    let pathId = '/article/' + String(keyId)
+
+    console.log('pathId=', pathId)
+
+    const changKeyId = (id: number) => {
+        setKeyId((prevState) => id)
+        // this.setState(state => ({
+        //   theme:
+        //     state.theme === themes.dark
+        //       ? themes.light
+        //       : themes.dark,
+        // }));
+    }
 
     return (
-        
-        <AppContext.Provider value={{keyIdpr:keyId}}>
+        <AppContext.Provider value={{ keyIdpr: keyId, changKeyId: changKeyId }}>
             <Header />
 
             <div>
@@ -127,10 +137,19 @@ const App = (props: Props) => {
                             </>
                         }
                     />
+
+                    <Route
+                        path={pathId}
+                        element={
+                            <>
+                                <ScrollToTop />
+                                <ArticlePost />
+                            </>
+                        }
+                    />
                 </Routes>
             </div>
-            </AppContext.Provider>
-       
+        </AppContext.Provider>
     )
 }
 export default App
