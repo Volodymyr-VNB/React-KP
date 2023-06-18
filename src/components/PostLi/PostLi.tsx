@@ -6,6 +6,7 @@ import articleArray  from 'utils/articleBlog'
 import { Link, NavLink } from 'react-router-dom'
 import { useContext } from 'react'
 import { AppContext } from 'Container/App/App'
+import LinkArticle from 'components/LinkArticle/LinkArticle'
 
 
 type LineNews = {
@@ -75,13 +76,19 @@ const PostLi = ({
 
                     <ColorCat catClass={catClass} catText={catText} />
                     <h5>
-                        <a
+                        {/* <a
                             href={hrefTitle}
                             className={aClass}
                             title={titleShot}
                         >
                             {titleAll}{' '}
-                        </a>
+                        </a> */}
+                        <LinkArticle
+                        keyKey={Number(keyKey)}
+                        aClass={aClass} 
+                        titleAll={String(titleAll) }
+                        titleShot={titleShot}
+                        />
                         <h6 className={h6Class}>
                             <span className={iconClass}>
                                 <RiFireLine />
@@ -108,13 +115,19 @@ const PostLi = ({
                     />
 
                     <h5>
-                        <a
+                        {/* <a
                             href={hrefTitle}
                             className={aClass}
                             title={titleShot}
                         >
                             {titleAll}{' '}
-                        </a>
+                        </a> */}
+                        <LinkArticle
+                        keyKey={Number(keyKey)}
+                        aClass={aClass} 
+                        titleAll={String(titleAll) }
+                        titleShot={titleShot}
+                        />
                     </h5>
                     <div className="avtor-blok">
                         <img src={avtorImg} alt="avtor" className="avtor" />
@@ -137,13 +150,19 @@ const PostLi = ({
                 <div className="list"></div>
                 <div className={catClass}>
                     <h5>
-                        <a
+                        {/* <a
                             href={hrefTitle}
                             className={aClass}
                             title={titleShot}
                         >
                             {titleAll}
-                        </a>
+                        </a> */}
+                        <LinkArticle
+                        keyKey={Number(keyKey)}
+                        aClass={aClass} 
+                        titleAll={String(titleAll) }
+                        titleShot={titleShot}
+                        />
                     </h5>
                     <h6 className={h6Class}>{dates}</h6>
                 </div>
@@ -162,6 +181,8 @@ const PostLi = ({
                     <NavLink to={hrefTitle} className={aClass}>
                         {catText}
                     </NavLink>
+
+                    
                     <h6 className={h6Class}>{count} Posts</h6>
                 </h5>
             </div>
@@ -188,13 +209,19 @@ const PostLi = ({
                         )}
                     </p>
                     <h5>
-                        <a
+                        {/* <a
                             href={hrefTitle}
                             className={aClass}
                             title={titleShot}
                         >
                             {titleAll}
-                        </a>
+                        </a> */}
+                        <LinkArticle
+                        keyKey={Number(keyKey)}
+                        aClass={aClass} 
+                        titleAll={String(titleAll) }
+                        titleShot={titleShot}
+                        />
                     </h5>
                 </div>
             </div>
@@ -202,11 +229,11 @@ const PostLi = ({
     }
     if (lili === 6) {
        
-        let linkTo= keyKey
-        console.log("linkTo=",linkTo)
-        console.log("(key)",keyKey)
-        // data?.keyIdpr=keyKey
-        // data?.changKeyId(Number(keyKey))
+        // let linkTo= keyKey
+        // console.log("linkTo=",linkTo)
+        // console.log("(key)",keyKey)
+
+        
         return (
             <>
                 <div className={containerImg}>
@@ -239,13 +266,18 @@ const PostLi = ({
                 <div className="contentNext">
                     <span className="date">{dates}</span>
                     <h3 className="content-title">
-                        <Link to="/articlePost"
-                        className={aClass} 
-                        // href={hrefTitle}
+                        {/* <Link to="/articlePost"
                         onClick={() => data?.changKeyId(Number(keyKey))}
+                        className={aClass} 
                         >
                             {titleAll}
-                        </Link>
+                        </Link> */}
+                        <LinkArticle
+                        keyKey={Number(keyKey)}
+                        aClass={aClass} 
+                        titleAll={String(titleAll) }
+                        titleShot={titleShot}
+                        />
                         
                     </h3>
                 </div>
@@ -260,9 +292,15 @@ const PostLi = ({
 
                 <ColorCat catClass={catClass} catText={catText} />
                 <h5>
-                    <a href={hrefTitle} className={aClass} title={titleShot}>
+                    {/* <a href={hrefTitle} className={aClass} title={titleShot}>
                         {titleAll}{' '}
-                    </a>
+                    </a> */}
+                    <LinkArticle
+                        keyKey={Number(keyKey)}
+                        aClass={aClass} 
+                        titleAll={String(titleAll) }
+                        titleShot={titleShot}
+                        />
 
                     <h6 className={h6Class}>
                         <span className={iconClass}>

@@ -39,6 +39,11 @@ console.log(Number(data?.keyIdpr)-1)
                                                 ? 'Previous'
                                                 : 'Next'
                                         }
+                                        keyKey={
+                                            Number(data?.keyIdpr) - 1 === id
+                                                ? Number(data?.keyIdpr) - 1 
+                                                : Number(data?.keyIdpr) + 1 
+                                        }
                                         srcImg={srcImg}
                                         altImg={altImg}
                                         hrefTitle={hrefTitle}

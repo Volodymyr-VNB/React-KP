@@ -8,11 +8,17 @@ const Weekly = (props: Props) => {
     return (
         <>
             <Row justify="space-between" align="top">
-                {articleArray.map(
+                {articleArray
+                .filter((item) => 
+                item.viewsBlokc === "Weekly News" 
+                ||
+                item.dates === "August 26, 2022" 
+                ) 
+                .map(
                     ({id,srcImg,altImg,hrefTitle,titleShot,subcategoriy,
                         titleAll,titleViews,categoriy,viewsBlokc,dates}) =>  
                     (<PostLi 
-                        key={id}
+                        keyKey={id}
                         keyA ={viewsBlokc}
                         srcImg={srcImg}
                         altImg={altImg}
@@ -32,11 +38,7 @@ const Weekly = (props: Props) => {
                         subcategoriy={subcategoriy}
                         
                     />
-                )).filter((articleArray) => 
-                articleArray.props.keyA === "Weekly News" 
-                ||
-                articleArray.props.dates === "August 26, 2022" 
-                )  }
+                )) }
             </Row>
         </>
     )

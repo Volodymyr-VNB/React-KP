@@ -1,6 +1,11 @@
 import './Post.scss'
 import { FaRegComment } from 'react-icons/fa'
 import ColorCat from 'components/ColorCat/ColorCat'
+import { Link, NavLink } from 'react-router-dom'
+import { useContext } from 'react'
+import { AppContext } from 'Container/App/App'
+import LinkArticle from 'components/LinkArticle/LinkArticle'
+
 type PostNew = {
     srcImg: string
     altImg: string
@@ -22,6 +27,7 @@ type PostNew = {
     excerptClass: string
     excerpt: string
     keyKey?: number,
+    id?:number
 }
 
 const Post = ({
@@ -44,6 +50,8 @@ const Post = ({
     excerpt,
     h4Class,
     titleViews,
+    id,
+    keyKey
 }: PostNew) => {
     return (
         <div className={divClass}>
@@ -56,9 +64,15 @@ const Post = ({
                     <ColorCat catClass={subcatClass} catText={subcatText} />
                 </div>
                 <h1 className={h1Class}>
-                    <a href={hrefTitle} className={aClass} title={titleShot}>
+                    {/* <a href={hrefTitle} className={aClass} title={titleShot}>
                         {titleAll}
-                    </a>
+                    </a> */}
+                    <LinkArticle
+                        keyKey={Number(keyKey)} 
+                        aClass={aClass} 
+                        titleAll={String(titleAll) }
+                        titleShot={titleShot}
+                        />
                 </h1>
                 <h4 className={excerptClass}>{excerpt}</h4>
                 <h4 className={h4Class}>

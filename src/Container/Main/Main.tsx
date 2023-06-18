@@ -3,6 +3,8 @@ import './Main.scss'
 import PostLi from 'components/PostLi/PostLi'
 import { Carousel } from 'antd'
 import { LeftOutlined, RightOutlined } from '@ant-design/icons'
+import { useContext } from 'react'
+import { AppContext } from 'Container/App/App'
 
 import Weekly from 'components/Weekly/Weekly'
 import Post from 'components/Post/Post'
@@ -14,6 +16,7 @@ import Footer from 'Container/Footer/Footer'
 
 type Props = {}
 const Main = (props: Props) => {
+    const data = useContext(AppContext)
     const hrefTitleswitch =(cat:string) =>{
         let html=""
         switch (cat) {
@@ -53,6 +56,7 @@ const Main = (props: Props) => {
             <main className="main">
                 <section className="post">
                     {articleArray
+                    .filter((item) => item.id === 15)
                         .map(
                             ({
                                 id,
@@ -90,10 +94,8 @@ const Main = (props: Props) => {
                                 />
                             )
                         )
-                        .filter(
-                            (articleArray) => articleArray.props.keyKey === 15
-                            // articleArray.props.keyA === "Weekly News"
-                        )}
+                        
+                        }
                     <div className="post-Recent row">
                         <div className="post-Recent-a row">
                             <span className="post-title-inner row">
@@ -105,6 +107,7 @@ const Main = (props: Props) => {
                         </div>
                         <ol className="post-news">
                             {articleArray
+                            .filter((item) => item.dates === 'August 26, 2022')
                                 .map(
                                     ({
                                         id,
@@ -122,6 +125,7 @@ const Main = (props: Props) => {
                                         <PostLi
                                             lili={1}
                                             key={id}
+                                            keyKey={id}
                                             keyA={viewsBlokc}
                                             srcImg={srcImg}
                                             altImg={altImg}
@@ -142,12 +146,8 @@ const Main = (props: Props) => {
                                         />
                                     )
                                 )
-                                .filter(
-                                    (articleArray) =>
-                                        articleArray.props.dates ===
-                                        'August 26, 2022'
-                                    // articleArray.props.keyA === "Weekly News"
-                                )}
+                                
+                                }
                         </ol>
                     </div>
                 </section>
@@ -157,6 +157,15 @@ const Main = (props: Props) => {
                     <div className="categories-line row">
                        
                         {articleArray
+                        .filter(
+                            (item) =>
+                                item.id === 5 ||
+                                item.id === 4 ||
+                                item.id === 12 ||
+                                item.id === 17 ||
+                                item.id === 18
+                            
+                        )
                             .map(
                                 ({
                                     id,
@@ -195,15 +204,8 @@ const Main = (props: Props) => {
                                     />
                                 )
                             )
-                            .filter(
-                                (articleArray) =>
-                                    articleArray.props.keyKey === 5 ||
-                                    articleArray.props.keyKey === 4 ||
-                                    articleArray.props.keyKey === 12 ||
-                                    articleArray.props.keyKey === 17 ||
-                                    articleArray.props.keyKey === 18
-                                
-                            )}
+                            
+                            }
                     </div>
                 </section>
                 <section className="featured-News">
@@ -222,6 +224,13 @@ const Main = (props: Props) => {
                             className="ant-carousel0"
                         >
                             {articleArray
+                            .filter(
+                                (item) =>
+                                    item.titleShot ===
+                                        'Sony Laptops Are Still Part Of The Sony Family' ||
+                                    item.viewsBlokc ===
+                                        'Featured News'
+                            )
                                 .map(
                                     ({
                                         id,
@@ -236,7 +245,7 @@ const Main = (props: Props) => {
                                         viewsBlokc,
                                     }) => (
                                         <PostLi
-                                            key={id}
+                                            keyKey={id}
                                             keyA={viewsBlokc}
                                             srcImg={srcImg}
                                             altImg={altImg}
@@ -256,13 +265,8 @@ const Main = (props: Props) => {
                                         />
                                     )
                                 )
-                                .filter(
-                                    (articleArray) =>
-                                        articleArray.props.titleShot ===
-                                            'Sony Laptops Are Still Part Of The Sony Family' ||
-                                        articleArray.props.keyA ===
-                                            'Featured News'
-                                )}
+                                
+                                }
                         </Carousel>
                     </div>
                 </section>

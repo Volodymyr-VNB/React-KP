@@ -26,7 +26,15 @@ const CarouselEditor = (props: Props) => {
              centerPadding= "410px"
         >
             
-            {articleArray.map(
+            {articleArray
+            .filter((item) => 
+            item.id === 15  ||
+            item.id === 16  ||
+            item.id === 2  ||
+            item.id === 1  ||
+            item.id === 5  
+            )
+            .map(
                     ({id,srcImg,altImg,hrefTitle,titleShot,subcategoriy,
                         titleAll,titleViews,categoriy,excerpt}) =>  
                     (
@@ -53,14 +61,8 @@ const CarouselEditor = (props: Props) => {
                         excerpt={excerpt}
                     />
                     ))
-                    .filter((articleArray) => 
-                    articleArray.props.keyKey === 15  ||
-                    articleArray.props.keyKey === 16  ||
-                    articleArray.props.keyKey === 2  ||
-                    articleArray.props.keyKey === 1  ||
-                    articleArray.props.keyKey === 5  
-                    // articleArray.props.keyA === "Weekly News"
-                    )}
+                    
+                    }
             
             
             

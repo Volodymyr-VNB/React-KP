@@ -48,7 +48,7 @@ const BrowseCategory = ({categogiyBrow}: Props) => {
                             }) => (
                                 
                                 <PostLi
-                                    key={id}
+                                    keyKey={id}
                                     keyA={viewsBlokc}
                                     srcImg={srcImg}
                                     altImg={altImg}
