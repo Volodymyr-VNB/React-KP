@@ -66,13 +66,21 @@ overflow-y: hidden;
    
  }
 
-.post-contentn:hover>.post-coments
 
- {
+.post:hover .post-coments,
+.post-Recent-ImgS:hover  .post-coments
+{
     display: block;
     transform: translateY(150%);
     animation: ani 1s forwards;
  }
+
+
+.post-Title-a:hover{
+    background-size: 100% 2px;
+    background-position: left 0% bottom;
+    color: white;
+}
  
  .post-contentn{
     margin-bottom: 40px;
@@ -117,11 +125,7 @@ overflow-y: hidden;
     margin-bottom: 10px;
     
 }
-.post-Title-a:hover {
-    background-size: 100% 2px;
-    background-position: left 0% bottom;
-    color: white;
-}
+
 
 .post-Recent-title:hover {
     background-size: 100% 2px;
