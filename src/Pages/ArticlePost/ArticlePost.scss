@@ -93,3 +93,22 @@ gap: 50px;
     color: red
 
 }
+.reading-progress-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    z-index: 99999;
+    margin-top: 120px;
+   
+}
+.progress-indicator{
+    background: #5960FF;
+    transition: 0.3s ease-out;
+    height: 100%;
+    width: 0;
+    display: block;
+    box-shadow: 0 2px 6px #30323c26;
+    
+}

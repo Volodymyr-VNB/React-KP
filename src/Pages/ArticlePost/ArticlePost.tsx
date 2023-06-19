@@ -10,6 +10,10 @@ type postArtical = {}
 
 const ArticlePost = (props: postArtical) => {
     const data = useContext(AppContext)
+    const divStyle = {
+        width: 0,
+        
+        }
     return (
         <>
             <section className="article-sect">
@@ -49,7 +53,11 @@ const ArticlePost = (props: postArtical) => {
                             />
                         )
                     )}
+<div className="reading-progress-indicator">
+        <span  className="progress-indicator" style={divStyle} > </span>  
+        </div>
             </section>
+            
             <FooterPage />
         </>
     )
