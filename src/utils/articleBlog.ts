@@ -446,5 +446,5 @@ export const getArticleObject = (array: Article[]) =>
         }),
         {}
     )
-    console.log(getArticleObject)
+    // console.log(getArticleObject)
 export default articleArray

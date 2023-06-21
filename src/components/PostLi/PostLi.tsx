@@ -76,13 +76,7 @@ const PostLi = ({
 
                     <ColorCat catClass={catClass} catText={catText} />
                     <h5>
-                        {/* <a
-                            href={hrefTitle}
-                            className={aClass}
-                            title={titleShot}
-                        >
-                            {titleAll}{' '}
-                        </a> */}
+                        
                         <LinkArticle
                         keyKey={Number(keyKey)}
                         aClass={aClass} 
@@ -105,7 +99,6 @@ const PostLi = ({
             <div className={divClass}>
                 <div className={containerImg}>
                     <Image width={410} height={300} src={srcImg} />
-                    {/* <img className={imgClass} src={srcImg} alt={altImg} /> */}
                 </div>
                 <div className="brow-txt ">
                     <ColorCat
@@ -115,13 +108,7 @@ const PostLi = ({
                     />
 
                     <h5>
-                        {/* <a
-                            href={hrefTitle}
-                            className={aClass}
-                            title={titleShot}
-                        >
-                            {titleAll}{' '}
-                        </a> */}
+                        
                         <LinkArticle
                         keyKey={Number(keyKey)}
                         aClass={aClass} 
@@ -150,13 +137,7 @@ const PostLi = ({
                 <div className="list"></div>
                 <div className={catClass}>
                     <h5>
-                        {/* <a
-                            href={hrefTitle}
-                            className={aClass}
-                            title={titleShot}
-                        >
-                            {titleAll}
-                        </a> */}
+                        
                         <LinkArticle
                         keyKey={Number(keyKey)}
                         aClass={aClass} 
@@ -209,13 +190,7 @@ const PostLi = ({
                         )}
                     </p>
                     <h5>
-                        {/* <a
-                            href={hrefTitle}
-                            className={aClass}
-                            title={titleShot}
-                        >
-                            {titleAll}
-                        </a> */}
+                        
                         <LinkArticle
                         keyKey={Number(keyKey)}
                         aClass={aClass} 
@@ -229,26 +204,11 @@ const PostLi = ({
     }
     if (lili === 6) {
        
-        // let linkTo= keyKey
-        // console.log("linkTo=",linkTo)
-        // console.log("(key)",keyKey)
-
-        
         return (
             <>
                 <div className={containerImg}>
-                    {/* <a href={hrefTitle}>
-                        <img
-                            width="150"
-                            height="150"
-                            src={srcImg}
-                            className={imgClass}
-                            alt={altImg}
-                            title={titleShot}
-                            sizes="(max-width: 150px) 100vw, 150px"
-                        />
-                    </a> */}
-                    {/* <Link to={String(linkTo)}> */}
+                    
+                   
                     <Link to="/articlePost" >
                     <img
                             width="150"
@@ -266,12 +226,7 @@ const PostLi = ({
                 <div className="contentNext">
                     <span className="date">{dates}</span>
                     <h3 className="content-title">
-                        {/* <Link to="/articlePost"
-                        onClick={() => data?.changKeyId(Number(keyKey))}
-                        className={aClass} 
-                        >
-                            {titleAll}
-                        </Link> */}
+                        
                         <LinkArticle
                         keyKey={Number(keyKey)}
                         aClass={aClass} 
@@ -292,9 +247,7 @@ const PostLi = ({
 
                 <ColorCat catClass={catClass} catText={catText} />
                 <h5>
-                    {/* <a href={hrefTitle} className={aClass} title={titleShot}>
-                        {titleAll}{' '}
-                    </a> */}
+                    
                     <LinkArticle
                         keyKey={Number(keyKey)}
                         aClass={aClass} 

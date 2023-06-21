@@ -40,6 +40,7 @@ const CarouselEditor = (props: Props) => {
                     (
                     <Post
                     keyKey={id}
+                    key={id}
                         srcImg={srcImg}
                         altImg={altImg}
                         hrefTitle={hrefTitle}

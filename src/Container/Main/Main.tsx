@@ -70,6 +70,7 @@ const Main = (props: Props) => {
                                 excerpt,
                             }) => (
                                 <Post
+                                key={id}
                                     keyKey={id}
                                     srcImg={srcImg}
                                     altImg={altImg}
@@ -180,7 +181,7 @@ const Main = (props: Props) => {
                                     dates,
                                 }) => (
                                     <PostLi
-                                        
+                                        key={id}
                                         keyKey={id}
                                         keyA={viewsBlokc}
                                         srcImg={srcImg}
@@ -212,6 +213,7 @@ const Main = (props: Props) => {
                     <h3 className="post-title-inner">Featured News</h3>
                     <div className="categories-line row">
                         <Carousel
+                        
                             autoplay={true}
                             autoplaySpeed={4000}
                             slidesToShow={4}
@@ -244,6 +246,7 @@ const Main = (props: Props) => {
                                         viewsBlokc,
                                     }) => (
                                         <PostLi
+                                        key={id}
                                             keyKey={id}
                                             keyA={viewsBlokc}
                                             srcImg={srcImg}

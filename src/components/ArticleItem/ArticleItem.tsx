@@ -9,22 +9,21 @@ import ArticleHot from './ArticleHot'
 
 
 type Props = {
-    srcImg: string
-    altImg: string
-    hrefTitle: string
-
-    titleAll: string
-    titleViews: string
-    categoriy: string
-    subcategoriy: string
-    dates?: string
-    keyKey?: number
-    lastRead?: string
-    avtorImg?: string
-    autor?: string
-    views: number
-    comentsNum: number
-    likes: number
+    srcImg: string,
+    altImg: string,
+    hrefTitle: string,
+    titleAll: string,
+    titleViews: string,
+    categoriy: string,
+    subcategoriy: string,
+    dates?: string,
+    keyKey?: number,
+    lastRead?: string,
+    avtorImg?: string,
+    autor?: string,
+    views: number,
+    comentsNum: number,
+    likes: number,
 }
 const ArticleItem = ({
     srcImg,
@@ -82,7 +81,7 @@ const ArticleItem = ({
                             <span>
                             <MessageTwoTone twoToneColor="#32e7ff" className="messageTwoTone" />{' '}
                             {comentsNum}</span>
-                            <span>
+                            <span className='likes' >
                             <HeartTwoTone twoToneColor="#eb2f96" className="heartTwoTone"/> {likes}</span>
                         </div>
                     </div>

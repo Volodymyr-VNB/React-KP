@@ -36,6 +36,7 @@ const ArticlePost = (props: postArtical) => {
                             likes,
                         }) => (
                             <ArticleItem
+                            key={id}
                                 srcImg={srcImg}
                                 altImg={altImg}
                                 hrefTitle={hrefTitle}

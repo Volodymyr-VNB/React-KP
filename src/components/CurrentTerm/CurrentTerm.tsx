@@ -10,7 +10,7 @@ const CurrentTerm = (props: Props) => {
     <span>
                         <Link to="/articlePost" onClick={() => data?.changKeyId(11)} >
                           <Animation
-                            hrefAni = ""
+                            hrefAni = "#top"
                             
                             srcAni  = "images/game-changing-1000x600.jpg"
                             TxtAni  = "Game Changing Virtual Reality Console"
@@ -18,13 +18,13 @@ const CurrentTerm = (props: Props) => {
                              </Link>
                              <Link to="/articlePost" onClick={() => data?.changKeyId(12)} >
                           <Animation
-                            hrefAni = ""
+                            hrefAni = "#top"
                             srcAni  = "images/how-to-make1000x600.jpg"
                             TxtAni  = "How to Make a Competitor`s Success Work for You"
                             /></Link>
                              <Link to="/articlePost" onClick={() => data?.changKeyId(23)} >
                           <Animation
-                            hrefAni = ""
+                            hrefAni = "#top"
                             srcAni  = "images/texnologi-1000x600.jpg"
                             TxtAni  = "Technology Allows Profit To Serve The Community"
                             /></Link>

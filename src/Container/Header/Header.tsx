@@ -22,23 +22,7 @@ const Header = (props: Props) => {
                         <CurrentTerm/>
                         <CurrentTerm/>
 
-                        {/* <span>
-                          <Animation
-                            hrefAni = "https://demo.rivaxstudio.com/fonix/main/game-changing-virtual-reality-console/"
-                            srcAni  = "images/game-changing-1000x600.jpg"
-                            TxtAni  = "Game Changing Virtual Reality Console"
-                            />
-                          <Animation
-                            hrefAni = "https://demo.rivaxstudio.com/fonix/main/how-to-make-a-competitors-success-work-for-you/"
-                            srcAni  = "images/how-to-make1000x600.jpg"
-                            TxtAni  = "How to Make a Competitor`s Success Work for You"
-                            />
-                          <Animation
-                            hrefAni = "https://demo.rivaxstudio.com/fonix/main/technology-allows-profit-to-serve-the-community/"
-                            srcAni  = "images/texnologi-1000x600.jpg"
-                            TxtAni  = "Technology Allows Profit To Serve The Community"
-                            />
-                        </span> */}
+                       
                         
                     </div>
                 </div>
@@ -48,6 +32,7 @@ const Header = (props: Props) => {
                         type="text"
                         className="search-txt"
                         placeholder="search and enter"
+                        name='searchBox'
                     />
                     <div className="search-img"></div>
                 </div>

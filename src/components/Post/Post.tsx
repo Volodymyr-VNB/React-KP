@@ -52,7 +52,7 @@ const Post = ({
     keyKey
 }: PostNew) => {
     return (
-        <div className={divClass}>
+        <div className={divClass} key={id}>
             <div className={containerImg}>
             <img className={imgClass} src={srcImg} alt={altImg} />
             </div>
@@ -62,9 +62,7 @@ const Post = ({
                     <ColorCat catClass={subcatClass} catText={subcatText} />
                 </div>
                 <h1 className={h1Class}>
-                    {/* <a href={hrefTitle} className={aClass} title={titleShot}>
-                        {titleAll}
-                    </a> */}
+                    
                     <LinkArticle
                         keyKey={Number(keyKey)} 
                         aClass={aClass} 

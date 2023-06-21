@@ -18,6 +18,7 @@ const Weekly = (props: Props) => {
                     ({id,srcImg,altImg,hrefTitle,titleShot,subcategoriy,
                         titleAll,titleViews,categoriy,viewsBlokc,dates}) =>  
                     (<PostLi 
+                        key={id}
                         keyKey={id}
                         keyA ={viewsBlokc}
                         srcImg={srcImg}

@@ -20,7 +20,7 @@ const OtherArticles = (props : Props) => {
                 : id + 1
     }
     
-console.log(Number(data?.keyIdpr)-1)
+// console.log(Number(data?.keyIdpr)-1)
 
     return (
         <div className="OtherArticles row">

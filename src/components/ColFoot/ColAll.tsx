@@ -15,6 +15,7 @@ const ColAll = ({search1,search2,search3=999,search4=999, img="no"}: Props) => {
                 .map(({ id, titleShot, dates
                     ,srcImg, categoriy }) => (
                                 <ColFoot
+                                key={id}
                                     titleShot={titleShot}
                                     dates={dates}
                                     keykey={id}

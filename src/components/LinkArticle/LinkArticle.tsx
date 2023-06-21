@@ -18,8 +18,7 @@ const LinkArticle = ({
     titleShot,
 }: LinkAr) => {
     const data = useContext(AppContext)
-    // let keyKey=data?.keyIdpr
-    console.log('(keyKey=)', keyKey)
+    
     return (
         <>
             <ScrollToTop />
