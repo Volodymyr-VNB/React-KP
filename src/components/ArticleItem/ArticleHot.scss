@@ -1,5 +1,17 @@
 @import '../../Container/_valiable.scss';
 @import '../../Container/_font.scss';
+.articleImg{
+    width: 100%;
+    max-height: auto;
+   
+
+}
+.articleImg-cont{
+    width: 100%;
+    max-height: 700px;
+    overflow: hidden;
+
+}
 
 .ar-hot-article {
     gap: 24px;

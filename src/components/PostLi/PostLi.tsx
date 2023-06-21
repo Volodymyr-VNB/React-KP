@@ -203,18 +203,19 @@ const PostLi = ({
         )
     }
     if (lili === 6) {
-       
+     
         return (
             <>
                 <div className={containerImg}>
                     
                    
-                    <Link to="/articlePost" >
+                    <Link to={`/articlePost/${keyKey}`} >
                     <img
                             width="150"
                             height="150"
                             
                             onClick={() => data?.changKeyId(Number(keyKey))}
+                            // require('./images/mops.jpeg').default
                             src={srcImg}
                             className={imgClass}
                             alt={altImg}

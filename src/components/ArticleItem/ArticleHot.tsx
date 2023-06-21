@@ -33,7 +33,7 @@ const ArticleHot = (props: Props) => {
                         <img
                             width="819"
                             height="1024"
-                            src="images/art-hot-daniel-819x1024.jpg"
+                            src="/images/art-hot-daniel-819x1024.jpg"
                             alt="hours"
                             className="arc-hot-img"
                             sizes="(max-width: 819px) 90vw, 819px"
@@ -79,7 +79,7 @@ const ArticleHot = (props: Props) => {
                     <p className=" cite">John Doe</p>
                 </blockquote>
                 <figure className="arc-hot-img-figure ">
-                    <Image width="1280px" src="images/arc-hot-fone.jpg" />
+                    <Image width="1280px" src="/images/arc-hot-fone.jpg" />
                 </figure>
                 <h2 className="ar-hot-mar">Apple Design Award Winners: Apps</h2>
                 <p className="h4 ar-hot-p ar-hot-mar">
@@ -142,28 +142,28 @@ const ArticleHot = (props: Props) => {
                 <div className="arc-hot-block-images">
                     <figure className="arc-hot-images-large row">
                         <Image
-                            src="images/arti-mahdi-.jpg"
+                            src="/images/arti-mahdi-.jpg"
                             className="wp-image-1 row"
                         />
                     </figure>
                     <figure className="arc-hot-images-large row">
                         <Image
-                            src="images\arti-uriel.jpg"
+                            src="/images\arti-uriel.jpg"
                             className="wp-image-2"
                         />
                     </figure>
                     <figure className="arc-hot-images-large row">
-                        <Image src="images\wilmer.jpg" className="wp-image-2" />
+                        <Image src="/images\wilmer.jpg" className="wp-image-2" />
                     </figure>
                     <figure className="arc-hot-images-large2 row">
                         <Image
-                            src="images\sameer-.jpg"
+                            src="/images\sameer-.jpg"
                             className="wp-image-3"
                         />
                     </figure>
                     <figure className="arc-hot-images-large2 row">
                         <Image
-                            src="images\sameer-2.jpg"
+                            src="/images\sameer-2.jpg"
                             className="wp-image-4"
                         />
                     </figure>

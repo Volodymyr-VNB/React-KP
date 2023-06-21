@@ -134,16 +134,17 @@ const App = (props: Props) => {
                             </>
                         }
                     />
-
-                    {/* <Route
-                        path={pathId}
+                    <Route
+                        path="/articlePost/:id"
                         element={
                             <>
                                 <ScrollToTop />
                                 <ArticlePost />
                             </>
                         }
-                    /> */}
+                    />
+
+                    
                 </Routes>
             </div>
         </AppContext.Provider>

@@ -46,7 +46,7 @@ const ArticlePost = (props: postArtical) => {
                                 dates={dates}
                                 keyKey={id}
                                 categoriy={categoriy}
-                                avtorImg="images/john.jpg"
+                                avtorImg="/images/john.jpg"
                                 autor={autor}
                                 views={views}
                                 comentsNum={comentsNum}

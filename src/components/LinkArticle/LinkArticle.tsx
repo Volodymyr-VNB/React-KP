@@ -23,7 +23,7 @@ const LinkArticle = ({
         <>
             <ScrollToTop />
             <Link
-                to={to}
+                to={`/articlePost/${keyKey}`}
                 onClick={() => data?.changKeyId(Number(keyKey))}
                 className={aClass}
                 title={titleShot}

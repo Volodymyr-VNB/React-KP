@@ -8,7 +8,7 @@ const Avtor = (props: Props) => {
                 <div className="author-box-avatar">
                     <img
                         className="avatar-photo"
-                        src="images/john.jpg"
+                        src="/images/john.jpg"
                         alt="John Nikova"
                         width="120"
                         height="120"

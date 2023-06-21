@@ -44,14 +44,15 @@ const ArticleItem = ({
     
     return (
         <div className="articleItem">
-            
+            <div className="articleImg-cont">
             <Image
-                width={1280}
+                // width={1280}
+                
                 className="articleImg"
                 src={srcImg}
                 alt={altImg}
                 rootClassName="articleImg"
-            />
+            /></div>
             <div className="artecTitle row">
                 <ColorCat
                     catClass="artecTitleClass h6"

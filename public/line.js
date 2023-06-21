@@ -23,15 +23,15 @@ if ('.reading-progress-indicator'.length) {
             : ''
     })
 }
-window.addEventListener('load', function () {
-    let likeBtn = document.querySelector('.likes')
-console.log('likeBtn',  likeBtn);
+// window.addEventListener('load', function () {
+//     let likeBtn = document.querySelector('.likes')
+// console.log('likeBtn',  likeBtn);
 
-// likeBtn.addEventListener("click", function () {
-//         likeBtn.classList.toggle("heartTwoToneClick");
-//   });
+// // likeBtn.addEventListener("click", function () {
+// //         likeBtn.classList.toggle("heartTwoToneClick");
+// //   });
 
-})
+// })
 
 
 
