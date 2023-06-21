@@ -4,9 +4,14 @@ import {  NavLink } from "react-router-dom";
 
 import StayConnected from 'components/StayConnected/StayConnected';
 import CurrentTerm from 'components/CurrentTerm/CurrentTerm';
+import { useAppSelector } from 'redux/hoor';
 
 type Props = {}
 const Header = (props: Props) => {
+    // const countLiked = Object.keys(useAppSelector((state) => state.articleLikeState)).length
+    const countData = Object.values(useAppSelector((state) => state.articleLikeState)).filter((item) => item === true).length 
+    console.log('countData',countData,
+    Object.values(useAppSelector((state) => state.articleLikeState)).filter((item) => item === true) )
     
   return (
     <>
@@ -85,7 +90,7 @@ const Header = (props: Props) => {
                     <li className='header-menu-item like row'>
                         <a href="#top">Favorites</a>
                         <div className="like-number">
-                            <p id="like-count">0</p>
+                            <p id="like-count">{countData}</p>
                         </div>
                         
                     </li>

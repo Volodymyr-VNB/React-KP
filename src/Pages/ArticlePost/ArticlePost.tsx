@@ -9,7 +9,7 @@ import { AppContext } from 'Container/App/App'
 type postArtical = {}
 
 const ArticlePost = (props: postArtical) => {
-    const data = useContext(AppContext)
+    const dataC = useContext(AppContext)
     const divStyle = {
         width: 0,
         
@@ -18,7 +18,7 @@ const ArticlePost = (props: postArtical) => {
         <>
             <section className="article-sect">
                 {articleArray
-                    .filter((item) => item.id === data?.keyIdpr)
+                    .filter((item) => item.id === dataC?.keyIdpr)
                     .map(
                         ({
                             id,
