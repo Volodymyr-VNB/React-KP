@@ -1,4 +1,4 @@
-import { Button, Image } from 'antd'
+import {  Image } from 'antd'
 import ColorCat from 'components/ColorCat/ColorCat'
 import { RiFireLine } from 'react-icons/ri'
 import { GrFormPreviousLink, GrFormNextLink } from 'react-icons/gr'
@@ -7,7 +7,6 @@ import { Link, NavLink } from 'react-router-dom'
 import { useContext } from 'react'
 import { AppContext } from 'Container/App/App'
 import LinkArticle from 'components/LinkArticle/LinkArticle'
-import { HeartTwoTone } from '@ant-design/icons'
 import { useAppDispatch, useAppSelector } from 'redux/hoor'
 import LikedsBox from 'components/LikedsBox/LikedsBox'
 
@@ -66,9 +65,9 @@ const PostLi = ({
     keyKey,
 }: LineNews) => {
     const data = useContext(AppContext)
-    const artId = keyKey|| 0
-        const isLiked = useAppSelector((state) => state.articleLikeState[artId])
-        const dispatch = useAppDispatch()
+    // const artId = keyKey|| 0
+    //     const isLiked = useAppSelector((state) => state.articleLikeState[artId])
+    //     const dispatch = useAppDispatch()
 
     let count = articleArray.filter(
         (articleArray) => articleArray.categoriy === catText

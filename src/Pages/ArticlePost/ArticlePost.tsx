@@ -5,7 +5,6 @@ import ArticleItem from 'components/ArticleItem/ArticleItem'
 import FooterPage from 'components/FooterPage/FooterPage'
 import { useContext } from 'react'
 import { AppContext } from 'Container/App/App'
-import { Button } from 'antd'
 import Reviews from 'components/Reviews/Reviews'
 
 type postArtical = {}
