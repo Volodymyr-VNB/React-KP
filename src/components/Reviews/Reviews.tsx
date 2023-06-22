@@ -29,7 +29,7 @@ const Reviews = (props: Props) => {
         },
     ]
     const [reviews, setReviews] = useState(arrayReviews)
-
+    console.log(setReviews)
     return (
         <>
             <div className="comments-container">

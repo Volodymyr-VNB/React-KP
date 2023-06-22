@@ -7,7 +7,7 @@ import { Link, NavLink } from 'react-router-dom'
 import { useContext } from 'react'
 import { AppContext } from 'Container/App/App'
 import LinkArticle from 'components/LinkArticle/LinkArticle'
-import { useAppDispatch, useAppSelector } from 'redux/hoor'
+
 import LikedsBox from 'components/LikedsBox/LikedsBox'
 
 
