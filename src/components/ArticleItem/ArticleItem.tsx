@@ -1,9 +1,9 @@
-import { HeartTwoTone, MessageTwoTone } from '@ant-design/icons'
-import { Button, Image } from 'antd'
+import { MessageTwoTone } from '@ant-design/icons'
+import {  Image } from 'antd'
 import ColorCat from 'components/ColorCat/ColorCat'
 import { RiFireLine } from 'react-icons/ri'
 import ArticleHot from './ArticleHot'
-import { useAppDispatch, useAppSelector } from 'redux/hoor'
+import LikedsBox from 'components/LikedsBox/LikedsBox'
 
 type Props = {
     srcImg: string
@@ -41,9 +41,7 @@ const ArticleItem = ({
     likes,
 }: Props) => {
     
-    const artId = keyKey|| 0
-    const isLiked = useAppSelector((state) => state.articleLikeState[artId])
-    const dispatch = useAppDispatch()
+    
     
     return (
         <div className="articleItem">
@@ -93,22 +91,9 @@ const ArticleItem = ({
                             </span>
                             <span className="likes">
                                 
-                                <Button
-                                type="text"
-                                onClick={()=> dispatch({
-                                    type:"TOGGLE_LIKE",
-                                    id :keyKey
-                                })}
-                                size="large"
-                                icon={ isLiked? <HeartTwoTone
-                                        twoToneColor="#eb2f96"
-                                        className="heartTwoToneClick" /> : <HeartTwoTone
-                                        twoToneColor="#eb2f96"
-                                        className="heartTwoTone" />
-                                    
-                                    }></Button>
+                                <LikedsBox keyKey={keyKey!}/>
                                 
-                                {isLiked? 1:0}
+                                {/* {isLiked? 1:0} */}
                             </span>
                         </div>
                     </div>

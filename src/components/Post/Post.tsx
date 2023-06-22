@@ -3,6 +3,7 @@ import { FaRegComment } from 'react-icons/fa'
 import ColorCat from 'components/ColorCat/ColorCat'
 
 import LinkArticle from 'components/LinkArticle/LinkArticle'
+import LikedsBox from 'components/LikedsBox/LikedsBox'
 
 type PostNew = {
     srcImg: string
@@ -73,6 +74,7 @@ const Post = ({
                 <h4 className={excerptClass}>{excerpt}</h4>
                 <h4 className={h4Class}>
                     <FaRegComment /> No coments. {titleViews}
+                    <LikedsBox keyKey={keyKey!}/>
                 </h4>
             </div>
         </div>

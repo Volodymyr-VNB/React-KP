@@ -1,0 +1,45 @@
+@import '../../Container/_valiable.scss';
+@import '../../Container/_font.scss';
+
+.comments-container{
+    @include container( flex,center,
+    center, 50px, auto, 50px, auto,
+    $wight-frame, auto);
+position: relative;
+flex-direction: column;
+gap: 50px;
+}
+.comments-btn-box{
+    width: 75%;
+    margin: 0 auto;
+    justify-content: center;
+}
+.comments-btn-box .comentBtn{
+   
+    box-shadow: 0 10px 35px -10px #5960FF;
+    line-height: 1.6;
+    font-weight: 300;
+    color: #fff;
+    background-color: #5960ff;
+    
+    
+    display: inline-block;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+        transition: 0.3s;
+    
+}
+.comentBtn:hover{
+ 
+    background-color: #42474e;
+    span{
+        color: #fff;
+    }
+ }
+ .comments-area{
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 75%;
+    gap: 30px;
+ }

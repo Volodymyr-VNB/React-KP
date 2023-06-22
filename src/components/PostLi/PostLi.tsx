@@ -1,4 +1,4 @@
-import { Image } from 'antd'
+import { Button, Image } from 'antd'
 import ColorCat from 'components/ColorCat/ColorCat'
 import { RiFireLine } from 'react-icons/ri'
 import { GrFormPreviousLink, GrFormNextLink } from 'react-icons/gr'
@@ -7,6 +7,9 @@ import { Link, NavLink } from 'react-router-dom'
 import { useContext } from 'react'
 import { AppContext } from 'Container/App/App'
 import LinkArticle from 'components/LinkArticle/LinkArticle'
+import { HeartTwoTone } from '@ant-design/icons'
+import { useAppDispatch, useAppSelector } from 'redux/hoor'
+import LikedsBox from 'components/LikedsBox/LikedsBox'
 
 
 type LineNews = {
@@ -63,6 +66,10 @@ const PostLi = ({
     keyKey,
 }: LineNews) => {
     const data = useContext(AppContext)
+    const artId = keyKey|| 0
+        const isLiked = useAppSelector((state) => state.articleLikeState[artId])
+        const dispatch = useAppDispatch()
+
     let count = articleArray.filter(
         (articleArray) => articleArray.categoriy === catText
     ).length
@@ -124,6 +131,7 @@ const PostLi = ({
                         </div>
                     </div>
                     <h6 className="excerpt">{excerpt}</h6>
+                    <LikedsBox keyKey={keyKey!}/>
                 </div>
             </div>
         )
@@ -145,12 +153,15 @@ const PostLi = ({
                         titleShot={titleShot}
                         />
                     </h5>
-                    <h6 className={h6Class}>{dates}</h6>
+                    <h6 className={h6Class}>{dates}
+                    <LikedsBox keyKey={keyKey!}/>
+                    </h6>
                 </div>
             </div>
         )
     }
     if (lili === 4) {
+        //це категорія
         return (
             <div className={divClass}>
                 <div className={containerImg}>
@@ -181,9 +192,11 @@ const PostLi = ({
                             <>
                                 <GrFormPreviousLink />
                                 &#160;Previous
+                                <LikedsBox keyKey={keyKey!}/>
                             </>
                         ) : (
                             <>
+                            <LikedsBox keyKey={keyKey!}/>
                                 Next&#160;
                                 <GrFormNextLink />
                             </>
@@ -225,7 +238,9 @@ const PostLi = ({
       </Link>
                 </div>
                 <div className="contentNext">
-                    <span className="date">{dates}</span>
+                    <span className="date">{dates}
+                    <LikedsBox keyKey={keyKey!}/>
+                    </span>
                     <h3 className="content-title">
                         
                         <LinkArticle
@@ -240,6 +255,7 @@ const PostLi = ({
             </>
         )
     } else {
+        
         return (
             <div className={divClass}>
                 <div className={containerImg}>
@@ -260,7 +276,8 @@ const PostLi = ({
                         <span className={iconClass}>
                             <RiFireLine />
                         </span>
-                        {titleViews}{' '}
+                        {titleViews}
+                         <LikedsBox keyKey={keyKey!}/>
                     </h6>
                 </h5>
             </div>

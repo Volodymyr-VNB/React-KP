@@ -171,10 +171,10 @@ const Main = (props: Props) => {
                                     id,
                                     srcImg,
                                     altImg,
-                                    hrefTitle,
+                                    
                                     titleShot,
                                     subcategoriy,
-                                    titleAll,
+                                    
                                     titleViews,
                                     categoriy,
                                     viewsBlokc,
