@@ -7,6 +7,7 @@ import ScrollToTop from 'components/ScrollToTop/ScrollToTop'
 import { Routes, Route } from 'react-router-dom'
 import { createContext, useState } from 'react'
 import articleArray from 'utils/articleBlog'
+import Favorites from 'Pages/Favorites/Favorites'
 
 type Context = {
     keyIdpr: number
@@ -140,6 +141,15 @@ const App = (props: Props) => {
                             <>
                                 <ScrollToTop />
                                 <ArticlePost />
+                            </>
+                        }
+                    />
+                    <Route
+                        path="/favorites"
+                        element={
+                            <>
+                                <ScrollToTop />
+                                <Favorites id={keyId} />
                             </>
                         }
                     />

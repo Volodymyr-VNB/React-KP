@@ -15,7 +15,7 @@ export type Article = {
     dates:string
     lastRead :string
     comentsNum :number
-    likes: number
+    likes: boolean
     viewsBlokc: string
 }
 
@@ -36,7 +36,7 @@ const articleArray: Article[] =[
         dates:'August 26, 2022',
         lastRead :' 4 Mins Read',
         comentsNum :1,
-        likes: 0,  
+        likes: false,  
         viewsBlokc:"Featured News",
     },
     {
@@ -55,7 +55,7 @@ const articleArray: Article[] =[
         dates:'August 26, 2022',
         lastRead :' 4 Mins Read',
         comentsNum :1,
-        likes: 0,  
+         likes: false, 
     viewsBlokc:"Featured News", },
     {
         id:3,
@@ -73,7 +73,7 @@ const articleArray: Article[] =[
         dates:'August 26, 2022',
         lastRead :' 4 Mins Read',
         comentsNum :1,
-        likes: 0,  
+         likes: false, 
     viewsBlokc:"Featured News", },
     {
         id:4,
@@ -91,7 +91,7 @@ const articleArray: Article[] =[
         dates:'August 26, 2022',
         lastRead :' 4 Mins Read',
         comentsNum :1,
-        likes: 0,  
+         likes: false, 
     viewsBlokc:"Featured News", },
     {
         id:5,
@@ -109,7 +109,7 @@ const articleArray: Article[] =[
         dates:'September 26, 2022',
         lastRead :' 4 Mins Read',
         comentsNum :1,
-        likes: 0,  
+         likes: false, 
     viewsBlokc:"Weekly News" , },
     {
         id:6,
@@ -127,7 +127,7 @@ const articleArray: Article[] =[
         dates:'September 11, 2022',
         lastRead :' 4 Mins Read',
         comentsNum :1,
-        likes: 0,  
+         likes: false, 
     viewsBlokc:"", },
     {
         id:7,
@@ -145,7 +145,7 @@ const articleArray: Article[] =[
         dates:'August 9, 2022',
         lastRead :' 4 Mins Read',
         comentsNum :1,
-        likes: 0,  
+         likes: true, 
     viewsBlokc:"", },
     {
         id:8,
@@ -163,7 +163,7 @@ const articleArray: Article[] =[
         dates:'October 1, 2022',
         lastRead :' 4 Mins Read',
         comentsNum :1,
-        likes: 0,  
+         likes: false, 
     viewsBlokc:"Weekly News" , },
     {
         id:9,
@@ -181,7 +181,7 @@ const articleArray: Article[] =[
         dates:'April 13, 2022',
         lastRead :' 4 Mins Read',
         comentsNum :1,
-        likes: 0,  
+         likes: false, 
     viewsBlokc:"Trending News", },
     {
         id:10,
@@ -199,7 +199,7 @@ const articleArray: Article[] =[
         dates:'August 10, 2022',
         lastRead :' 4 Mins Read',
         comentsNum :1,
-        likes: 0,  
+         likes: true, 
     viewsBlokc:"Featured News", },
     {
         id:11,
@@ -217,7 +217,7 @@ const articleArray: Article[] =[
         dates:'October 8, 2022',
         lastRead :' 4 Mins Read',
         comentsNum :1,
-        likes: 0,  
+         likes: false, 
     viewsBlokc:"Weekly News", },
     {
         id:12,
@@ -235,7 +235,7 @@ const articleArray: Article[] =[
         dates:'October 7, 2022',
         lastRead :' 4 Mins Read',
         comentsNum :1,
-        likes: 0,  
+         likes: false, 
     viewsBlokc:"Weekly News" , },
     {
         id:13,
@@ -253,7 +253,7 @@ const articleArray: Article[] =[
         dates:' July 19, 2022',
         lastRead :' 4 Mins Read',
         comentsNum :1,
-        likes: 0,  
+         likes: false, 
     viewsBlokc:"", },
     {
         id:14,
@@ -271,7 +271,7 @@ const articleArray: Article[] =[
         dates:'September 15, 2022',
         lastRead :' 4 Mins Read',
         comentsNum :1,
-        likes: 0,  
+         likes: false, 
     viewsBlokc:"", },
     {
         id:15,
@@ -289,7 +289,7 @@ const articleArray: Article[] =[
         dates:'September 3, 2022',
         lastRead :' 4 Mins Read',
         comentsNum :1,
-        likes: 0,  
+         likes: false, 
     viewsBlokc:"", },
     {
         id:16,
@@ -307,7 +307,7 @@ const articleArray: Article[] =[
         dates:'August 21, 2022',
         lastRead :' 4 Mins Read',
         comentsNum :1,
-        likes: 0,  
+         likes: false, 
     viewsBlokc:"", },
     {
         id:17,
@@ -325,7 +325,7 @@ const articleArray: Article[] =[
         dates:'August 7, 2022',
         lastRead :' 4 Mins Read',
         comentsNum :1,
-        likes: 0,  
+         likes: false, 
     viewsBlokc:"", },
     {
         id:18,
@@ -343,7 +343,7 @@ const articleArray: Article[] =[
         dates:'September 25, 2022',
         lastRead :' 4 Mins Read',
         comentsNum :1,
-        likes: 0,  
+         likes: false, 
     viewsBlokc:"", },
 	{
         id:19,
@@ -361,7 +361,7 @@ const articleArray: Article[] =[
         dates:'August 2, 2022',
         lastRead :' 4 Mins Read',
         comentsNum :1,
-        likes: 0,  
+         likes: false, 
     viewsBlokc:"", },
 	{
         id:20,
@@ -379,7 +379,7 @@ const articleArray: Article[] =[
         dates:'April 12, 2022',
         lastRead :' 4 Mins Read',
         comentsNum :1,
-        likes: 0,  
+         likes: false, 
     viewsBlokc:"Trending News", },
 	{
         id:21,
@@ -397,7 +397,7 @@ const articleArray: Article[] =[
         dates:'April 17, 2022',
         lastRead :' 4 Mins Read',
         comentsNum :1,
-        likes: 0,  
+         likes: false, 
     viewsBlokc:"Trending News", },
 	{
         id:22,
@@ -415,7 +415,7 @@ const articleArray: Article[] =[
         dates:'September 2, 2022',
         lastRead :' 4 Mins Read',
         comentsNum :1,
-        likes: 0,  
+         likes: false, 
     viewsBlokc:"Other Articles", },
 	{
         id:23,
@@ -433,7 +433,7 @@ const articleArray: Article[] =[
         dates:'October 5, 2022',
         lastRead :' 4 Mins Read',
         comentsNum :1,
-        likes: 0,  
+         likes: false, 
     viewsBlokc:"", },
 	
 ]

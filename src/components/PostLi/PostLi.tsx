@@ -74,7 +74,7 @@ const PostLi = ({
     ).length
     if (lili === 1) {
         return (
-            <li>
+            <li key={id}>
                 <div className={divClass}>
                     <div className={containerImg}>
                         <img className={imgClass} src={srcImg} alt={altImg} />
@@ -83,7 +83,7 @@ const PostLi = ({
                     <ColorCat catClass={catClass} catText={catText} />
                     <h5>
                         
-                        <LinkArticle
+                        <LinkArticle key={id}
                         keyKey={Number(keyKey)}
                         aClass={aClass} 
                         titleAll={String(titleAll) }

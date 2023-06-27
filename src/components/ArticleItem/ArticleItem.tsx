@@ -20,7 +20,7 @@ type Props = {
     autor?: string
     views: number
     comentsNum: number
-    likes: number,
+   
    
   
 }
@@ -38,7 +38,7 @@ const ArticleItem = ({
     lastRead,
     views,
     comentsNum,
-    likes,
+    
 }: Props) => {
     
     
@@ -86,7 +86,7 @@ const ArticleItem = ({
                                 <MessageTwoTone
                                     twoToneColor="#32e7ff"
                                     className="messageTwoTone"
-                                />{' '}
+                                />
                                 {comentsNum}
                             </span>
                             <span className="likes">
