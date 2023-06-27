@@ -23,6 +23,7 @@ if ('.reading-progress-indicator'.length) {
             : ''
     })
 }
+
 // window.addEventListener('load', function () {
 //     let likeBtn = document.querySelector('.likes')
 // console.log('likeBtn',  likeBtn);

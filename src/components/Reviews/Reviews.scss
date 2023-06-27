@@ -14,7 +14,8 @@ gap: 50px;
     margin: 0 auto;
     justify-content: center;
 }
-.comments-btn-box .comentBtn{
+.comments-btn-box .comentBtn,
+.comments-container .comentBtn{
    
     box-shadow: 0 10px 35px -10px #5960FF;
     line-height: 1.6;
@@ -29,12 +30,12 @@ gap: 50px;
         transition: 0.3s;
     
 }
-.comentBtn:hover{
+.comments-btn-box .comentBtn:hover,
+.comments-container .comentBtn:hover{
  
     background-color: #42474e;
-    span{
-        color: #fff;
-    }
+    color: #fff;
+    
  }
  .comments-area{
     align-items: flex-start;
@@ -42,4 +43,13 @@ gap: 50px;
     flex-direction: column;
     width: 75%;
     gap: 30px;
+ }
+ .gap{
+    gap: 20px;
+ }
+ .display-none{
+    display: none;
+ }
+ .display-block{
+    display: block;
  }
