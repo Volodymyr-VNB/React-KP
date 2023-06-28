@@ -12,33 +12,21 @@ type Props = {
     id: number
 }
 const Favorites = ({ id }: Props) => {
-    const countDataLikeskeys = Object.values(
-        useAppSelector((state) => state.articleLikeState)
-    ).filter((item) => item === true)
+    
+
     const data = useAppSelector((state) => state.articleLikeState)
 
     let dataLikes = []
-
     for (const property in data) {
         if (data[property] === true) {
-            dataLikes.push(property)
+            for (const index in articleArray) {
+                if (Number(property) === articleArray[index].id) {
+                    dataLikes.push(articleArray[index])
+                }
+            }
         }
     }
-    let dataLikes2 = []
-    console.log("articleArray2",articleArray[0].id)
-    for (const property in dataLikes) {
-       for ( const index in articleArray ){
-        if (Number( dataLikes[property]) === articleArray[index].id ) {
-          dataLikes2.push(articleArray[index])
-      }
-       } 
-      
-    }
     
-    console.log("dataLikes2",dataLikes2)
-
-
-    console.log('dataLikes', dataLikes)
     const countData = Object.values(
         useAppSelector((state) => state.articleLikeState)
     ).filter((item) => item === true).length
@@ -48,7 +36,7 @@ const Favorites = ({ id }: Props) => {
             <section className="browse-Category" id="Travel">
                 <div className="browse-headline">
                     <h1>Favorites</h1>
-                    {/* <h1>{categogiyBrow}</h1> */}
+                   
                     <h4>
                         A wonderful serenity has taken possession of my entire
                         soul, like these sweet mornings of spring which I enjoy
@@ -65,57 +53,50 @@ const Favorites = ({ id }: Props) => {
                     </h3>
                 </div>
             </section>
-            <section className="browse-centr row">
+            <section className="browse-centr row right">
                 <div className="brows-articl col-8">
-                    {
-                     dataLikes2
-                       
-                        
-
-                        .map(
-                            ({
-                                id,
-                                srcImg,
-                                altImg,
-                                hrefTitle,
-                                titleShot,
-                                autor,
-                                excerpt,
-                                titleAll,
-                                titleViews,
-                                categoriy,
-                                viewsBlokc,
-                                dates,
-                                subcategoriy,
-                            }) => (
-                                <PostLi
-                                    keyKey={id}
-                                    keyA={viewsBlokc}
-                                    srcImg={srcImg}
-                                    altImg={altImg}
-                                    hrefTitle={hrefTitle}
-                                    titleShot={titleShot}
-                                    titleAll={titleAll}
-                                    titleViews={titleViews}
-                                    divClass=" row Brows-item"
-                                    imgClass="categories-img browse-img "
-                                    aClass="post-Recent-title line-a line-a-l h3 brow-title"
-                                    h6Class="avtor-blok-txt row-col"
-                                    iconClass="displayBlokc"
-                                    containerImg="brows-container "
-                                    catClass="featured-cat h4-cat brows-cat"
-                                    catText={categoriy}
-                                    dates={dates}
-                                    lili={2}
-                                    avtorImg="images/john.jpg"
-                                    autor={autor}
-                                    excerpt={excerpt}
-                                    subcategoriy={subcategoriy}
-                                />
-                            )
-                        )}
-                        
-                        
+                    {dataLikes.map(
+                        ({
+                            id,
+                            srcImg,
+                            altImg,
+                            hrefTitle,
+                            titleShot,
+                            autor,
+                            excerpt,
+                            titleAll,
+                            titleViews,
+                            categoriy,
+                            viewsBlokc,
+                            dates,
+                            subcategoriy,
+                        }) => (
+                            <PostLi
+                                keyKey={id}
+                                keyA={viewsBlokc}
+                                srcImg={srcImg}
+                                altImg={altImg}
+                                hrefTitle={hrefTitle}
+                                titleShot={titleShot}
+                                titleAll={titleAll}
+                                titleViews={titleViews}
+                                divClass=" row Brows-item"
+                                imgClass="categories-img browse-img "
+                                aClass="post-Recent-title line-a line-a-l h3 brow-title"
+                                h6Class="avtor-blok-txt row-col"
+                                iconClass="displayBlokc"
+                                containerImg="brows-container "
+                                catClass="featured-cat h4-cat brows-cat"
+                                catText={categoriy}
+                                dates={dates}
+                                lili={2}
+                                avtorImg="images/john.jpg"
+                                autor={autor}
+                                excerpt={excerpt}
+                                subcategoriy={subcategoriy}
+                            />
+                        )
+                    )}
                 </div>
                 <aside className="aside col-4">
                     <TrendingNews />

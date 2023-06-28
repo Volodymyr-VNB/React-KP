@@ -9,14 +9,12 @@ import Reviews from 'components/Reviews/Reviews'
 
 type postArtical = {}
 
-
-
 const ArticlePost = (props: postArtical) => {
     const dataC = useContext(AppContext)
     const divStyle = {
         width: 0,
-         }
-         
+    }
+
     return (
         <>
             <section className="article-sect">
@@ -35,11 +33,10 @@ const ArticlePost = (props: postArtical) => {
                             dates,
                             autor,
                             views,
-                            comentsNum,
-                            likes,
+                           coments,
                         }) => (
                             <ArticleItem
-                            key={id}
+                                key={id}
                                 srcImg={srcImg}
                                 altImg={altImg}
                                 hrefTitle={hrefTitle}
@@ -52,16 +49,17 @@ const ArticlePost = (props: postArtical) => {
                                 avtorImg="/images/john.jpg"
                                 autor={autor}
                                 views={views}
-                                comentsNum={comentsNum}
+                                coments={coments}
                                 
                             />
                         )
                     )}
-<div className="reading-progress-indicator">
-        <span  className="progress-indicator" style={divStyle} > </span>  
-        </div>
+                <div className="reading-progress-indicator">
+                    <span className="progress-indicator" style={divStyle}>
+                   </span>
+                </div>
             </section>
-            <Reviews/>
+            <Reviews key={dataC?.keyIdpr} id={dataC?.keyIdpr!} />
 
             <FooterPage />
         </>

@@ -8,12 +8,11 @@ import { useAppSelector } from 'redux/hoor'
 
 type Props = {}
 const Header = (props: Props) => {
-    // const countLiked = Object.keys(useAppSelector((state) => state.articleLikeState)).length
+    
     const countData = Object.values(
         useAppSelector((state) => state.articleLikeState)
     ).filter((item) => item === true).length
-    // console.log('countData',countData,
-    // Object.values(useAppSelector((state) => state.articleLikeState)).filter((item) => item === true) )
+    
 
     return (
         <>

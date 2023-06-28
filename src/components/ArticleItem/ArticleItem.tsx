@@ -4,6 +4,11 @@ import ColorCat from 'components/ColorCat/ColorCat'
 import { RiFireLine } from 'react-icons/ri'
 import ArticleHot from './ArticleHot'
 import LikedsBox from 'components/LikedsBox/LikedsBox'
+type T = {
+    name: string
+    text: string
+    email: string
+}
 
 type Props = {
     srcImg: string
@@ -19,7 +24,7 @@ type Props = {
     avtorImg?: string
     autor?: string
     views: number
-    comentsNum: number
+    coments?: Array<T>
    
    
   
@@ -37,10 +42,10 @@ const ArticleItem = ({
     dates,
     lastRead,
     views,
-    comentsNum,
+    coments,
     
 }: Props) => {
-    
+    let comentsNum =coments?.length
     
     
     return (
@@ -87,13 +92,13 @@ const ArticleItem = ({
                                     twoToneColor="#32e7ff"
                                     className="messageTwoTone"
                                 />
-                                {comentsNum}
+                                {" "+comentsNum}
                             </span>
                             <span className="likes">
                                 
                                 <LikedsBox keyKey={keyKey!}/>
                                 
-                                {/* {isLiked? 1:0} */}
+                                
                             </span>
                         </div>
                     </div>

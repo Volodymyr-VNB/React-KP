@@ -3,36 +3,48 @@ import './Reviews.scss'
 
 import React, { useState } from 'react'
 import { Input } from 'antd'
+import articleArray from 'utils/articleBlog'
 
 const { TextArea } = Input
 
 const { Title } = Typography
 
-type Props = {}
+type Props = {
+    id:number
+}
 type Review = {
     name: string
     text: string
     email: string
 }
 
-const Reviews = (props: Props) => {
-    const arrReviews: Review[] = [
-        {
-            name: 'Serg',
-            text: 'text',
-            email: 'Email',
-        },
-        {
-            name: 'Petro',
-            text: 'text',
-            email: 'Email',
-        },
-        {
-            name: 'Vovk',
-            text: 'text',
-            email: 'Email',
-        },
-    ]
+const Reviews = ({id}: Props) => {
+    // const arrReviews: Review[] = [
+    //     {
+    //         name: 'Serg',
+    //         text: 'nice article',
+    //         email: 'Sergi1970@i.ua',
+    //     },
+    //     {
+    //         name: 'Petro',
+    //         text: 'text',
+    //         email: 'Email',
+    //     },
+    //     {
+    //         name: 'Vovk',
+    //         text: 'text',
+    //         email: 'Email',
+    //     },
+    // ]
+    let arrReviews: Review[] =[]
+articleArray
+    .filter((item)=> item.id === id)
+    .map(({coments}) => 
+     arrReviews=coments!.slice()
+    )
+
+
+
     const [review, setReview] = useState(arrReviews)
     const [newReview, setNewReview] = useState<Review>({
         name: '',
