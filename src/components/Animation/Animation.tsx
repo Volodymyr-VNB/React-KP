@@ -4,10 +4,10 @@ type PropsAni = {
 }
 const Animation = ({ srcAni, TxtAni }: PropsAni) => {
     return (
-        <a>
+        <p>
             <img className="heder-slide-img" src={srcAni} alt="New" />
             <span className="heder-span">{TxtAni} </span>
-        </a>
+        </p>
     )
 }
 export default Animation
