@@ -4,13 +4,15 @@ import './Reviews.scss'
 import React, { useState } from 'react'
 import { Input } from 'antd'
 import articleArray from 'utils/articleBlog'
+import { useAppDispatch } from 'redux/hoor'
+import { addComme  } from 'redux/comentsReduser'
 
 const { TextArea } = Input
 
 const { Title } = Typography
 
 type Props = {
-    id:number
+    id: number
 }
 type Review = {
     name: string
@@ -18,39 +20,36 @@ type Review = {
     email: string
 }
 
-const Reviews = ({id}: Props) => {
-    // const arrReviews: Review[] = [
-    //     {
-    //         name: 'Serg',
-    //         text: 'nice article',
-    //         email: 'Sergi1970@i.ua',
-    //     },
-    //     {
-    //         name: 'Petro',
-    //         text: 'text',
-    //         email: 'Email',
-    //     },
-    //     {
-    //         name: 'Vovk',
-    //         text: 'text',
-    //         email: 'Email',
-    //     },
-    // ]
-    let arrReviews: Review[] =[]
-articleArray
-    .filter((item)=> item.id === id)
-    .map(({coments}) => 
-     arrReviews=coments!.slice()
-    )
+const Reviews = ({ id }: Props) => {
+    
+    let arrReviews: Review[] = []
 
+    articleArray
+        .filter((item) => item.id === id)
+        .map(({ coments }) => (arrReviews = coments!.slice()))
 
+    // console.log('arrReviews',arrReviews)    
+      
+    let noyCommets = arrReviews.length
+    let notComments = document.querySelector('.noyComments')
+    noyCommets > 0
+        ? notComments?.classList.add('display-none')
+        : notComments?.classList.add('display-block')
 
+    // console.log('noyCommets', noyCommets)
+    const dispatch =useAppDispatch()
+    //  console.log('comme',commentSlice)  
     const [review, setReview] = useState(arrReviews)
     const [newReview, setNewReview] = useState<Review>({
         name: '',
         text: '',
         email: '',
     })
+    // review    
+    // .map(({ name,text ,email}) => (articleArray[id].coments = review.slice()))
+
+    // console.log('===',articleArray)
+
 
     const showComents = () => {
         let comentsArea = document.querySelector('.comments-area')!
@@ -65,24 +64,28 @@ articleArray
             document.getElementById('btnComents')!.textContent = 'Show Comments'
         }
     }
+
     const changeName = (e: React.ChangeEvent<HTMLInputElement>) => {
         setNewReview((prevState) => ({
             ...prevState,
             name: e.target.value,
         }))
     }
+
     const changeEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
         setNewReview((prevState) => ({
             ...prevState,
             email: e.target.value,
         }))
     }
+
     const changeText = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
         setNewReview((prevState) => ({
             ...prevState,
             text: e.target.value,
         }))
     }
+
     const onSend = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         if (
@@ -100,9 +103,11 @@ articleArray
                 text: '',
                 email: '',
             })
+            
         }
     }
-
+     let comentsNum =review.length
+     console.log('comentsNum',comentsNum)
     return (
         <>
             <div className="comments-container">
@@ -118,7 +123,7 @@ articleArray
                     </Button>
                 </div>
                 <div className="comments-area row display-none">
-                    <h3 className="comments-title">
+                    <h3 className="comments-title noyComments">
                         No Comment! Be the first one.
                     </h3>
 
@@ -141,7 +146,10 @@ articleArray
                         Leave a Reply <br />
                     </h3>
                     {/* <Form method="post" className="comment-form"></Form> */}
-                    <form className="comment-form" onSubmit={onSend}>
+                    <form className="comment-form" onSubmit={
+                        onSend
+                        
+                        }>
                         <p className="h4">
                             Your email address will not be published. Required
                             fields are marked *
@@ -180,7 +188,17 @@ articleArray
                             shape="round"
                             className="comentBtn "
                             htmlType="submit"
-                        >
+                            onClick={()=>
+                                dispatch(addComme(
+                                    
+                                    {
+                                    id:id,
+                                    name: newReview.name,
+                                    text: newReview.text,
+                                    email: newReview.email,
+                                }))
+                            }
+                        >   
                             Post Comment
                         </Button>
                     </form>

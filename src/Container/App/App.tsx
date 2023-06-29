@@ -12,28 +12,30 @@ import Favorites from 'Pages/Favorites/Favorites'
 type Context = {
     keyIdpr: number
     changKeyId: (id: number) => void
-    countAll:number
+    countAll: number
 }
 
 export const AppContext = createContext<Context | null>(null)
 
-
 type Props = {}
 const App = (props: Props) => {
-    const [keyId, setKeyId] = useState(15)
-    
+    let useDefault = 15 || 0
+    const [keyId, setKeyId] = useState(useDefault)
+
     let countAll = articleArray.length
 
     const changKeyId = (id: number) => {
-        setKeyId((prevState) => id)
-        
+        setKeyId(() => id)
     }
 
     return (
-        <AppContext.Provider value={{ 
-            keyIdpr: keyId, changKeyId: changKeyId ,
-            countAll:countAll
-            }}>
+        <AppContext.Provider
+            value={{
+                keyIdpr: keyId,
+                changKeyId: changKeyId,
+                countAll: countAll,
+            }}
+        >
             <Header />
 
             <div>
@@ -50,7 +52,8 @@ const App = (props: Props) => {
                         path="/about"
                         element={
                             <>
-                                <ScrollToTop /> <About />
+                                <ScrollToTop />
+                                <About />
                             </>
                         }
                     />
@@ -153,8 +156,6 @@ const App = (props: Props) => {
                             </>
                         }
                     />
-
-                    
                 </Routes>
             </div>
         </AppContext.Provider>

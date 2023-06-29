@@ -1,10 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { likeReducer } from './likeReducer'
-// import { likeReducer } from './likeReducer'
+import comentsReduser from './comentsReduser'
+
 
 export const store = configureStore({
     reducer: {
         articleLikeState: likeReducer,
+        commentsState: comentsReduser,
     },
 })
 

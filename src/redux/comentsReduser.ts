@@ -1,26 +1,47 @@
-import { createSlice } from "@reduxjs/toolkit";
-type State = {
-    name: string
-    text: string
-    email: string
-}
+import { createSlice } from '@reduxjs/toolkit'
 
-const initialState: State ={
-    
-            
-                name: 'Serg',
-                text: 'nice article',
-                email: 'Sergi1970@i.ua',
-            
-            
-                
-            
-        
-}
+type State5 = [
+    [id: number],
+    [
+        {
+            name: string
+            text: string
+            email: string
+        }
+    ]
+]
 
-export const commentSlice =createSlice({
-    name: "comment",
+const initialState = [
+    [1],
+    [
+        {
+            name: 'Serg',
+            text: 'text',
+            email: 'email',
+        },
+    ],
+] as State5
+
+export const commentSlice = createSlice({
+    name: 'comme',
     initialState,
-    reducers:{},
-
+    reducers: {
+        
+        addComme: (state, action) => ({
+             ...state,
+            [action.payload.id]: [
+                 ( 
+                {
+                    name: action.payload.name || '',
+                    text: action.payload.text || '',
+                    email: action.payload.email || '',
+                }),
+            ],
+        
+        }),
+         
+    },
 })
+
+export const { addComme } = commentSlice.actions
+export default commentSlice.reducer

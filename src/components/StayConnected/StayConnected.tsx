@@ -12,6 +12,7 @@ import {
 } from 'react-icons/fa'
 
 import { RiPinterestLine, RiStackOverflowFill } from 'react-icons/ri'
+import { Link } from 'react-router-dom'
 type Props = {
     sizeStay?: string
 }
@@ -64,68 +65,65 @@ const StayConnected = ({ sizeStay = 'S' }: Props) => {
     }
     if (sizeStay === 'SC') {
         return (
-            <>
-                <div className="single-share-box-container">
-                    <h3 className="title ar-hot-mar row">Share Article</h3>
-                    <div className="single-share-box row">
-                        <a
-                            rel="noreferrer"
-                            className="facebook-2 single-share-box-"
-                            href="https://www.facebook.com/sharer/sharer.php?u=https://demo.rivaxstudio.com/fonix/main/?p=1707"
-                            target="_blank"
-                        >
-                            <FaFacebookF />
-                        </a>
-                        <a
-                            rel="noreferrer"
-                            className="twitter-2 single-share-box-"
-                            href="https://twitter.com/share?text=Top+5+New+Tech+Gadgets+You+Must+Have+In+2023&amp;url=https://demo.rivaxstudio.com/fonix/main/?p=1707"
-                            target="_blank"
-                        >
-                            <BsTwitter />
-                        </a>
-                        <a
-                            rel="noreferrer"
-                            className="pinterest-2 single-share-box-"
-                            href="//pinterest.com/pin/create/link/?url=https://demo.rivaxstudio.com/fonix/main/?p=1707&amp;media=https://demo.rivaxstudio.com/fonix/main/wp-content/uploads/2022/05/pretty-blonde-girl-sitting-window-sill-with-cup.jpg&amp;description=Top+5+New+Tech+Gadgets+You+Must+Have+In+2023"
-                            target="_blank"
-                        >
-                            <FaPinterestP />
-                        </a>
-                        <a
-                            rel="noreferrer"
-                            className="email-2 single-share-box-"
-                            href="mailto:?subject=Top+5+New+Tech+Gadgets+You+Must+Have+In+2023&amp;body=https://demo.rivaxstudio.com/fonix/main/?p=1707"
-                            target="_blank"
-                        >
-                            <AiOutlineMail />
-                        </a>
-                        <a
-                            rel="noreferrer"
-                            className="whatsapp-2 single-share-box-"
-                            href="https://api.whatsapp.com/send?text=https://demo.rivaxstudio.com/fonix/main/?p=1707"
-                            data-action="share/whatsapp/share"
-                            target="_blank"
-                        >
-                            <FaWhatsapp />
-                        </a>
-                    </div>
-                    <div className="single-share-box-link">
-                        <div className="form-content">
-                            <input
-                                type="text"
-                                name="url"
-                                value="https://demo.rivaxstudio.com/fonix/main/top-5-new-tech-gadgets-you-must-have-in-2023/"
-                                className="share-link-text"
-                            />
-                            <button type="submit" className="share-link-btn">
-                                <AiOutlineCopy />
-                                <span className="copied-popup-text"></span>
-                            </button>
-                        </div>
+            <div className="single-share-box-container">
+                <h3 className="title ar-hot-mar row">Share Article</h3>
+                <div className="single-share-box row">
+                    <Link
+                        rel="noreferrer"
+                        className="facebook-2 single-share-box-"
+                        to="https://www.facebook.com/sharer/sharer.php?u=https://demo.rivaxstudio.com/fonix/main/?p=1707"
+                        target="_blank"
+                    >
+                        <FaFacebookF />
+                    </Link>
+                    <Link
+                        rel="noreferrer"
+                        className="twitter-2 single-share-box-"
+                        to="https://twitter.com/share?text=Top+5+New+Tech+Gadgets+You+Must+Have+In+2023&amp;url=https://demo.rivaxstudio.com/fonix/main/?p=1707"
+                        target="_blank"
+                    >
+                        <BsTwitter />
+                    </Link>
+                    <Link
+                        rel="noreferrer"
+                        className="pinterest-2 single-share-box-"
+                        to="//pinterest.com/pin/create/link/?url=https://demo.rivaxstudio.com/fonix/main/?p=1707&amp;media=https://demo.rivaxstudio.com/fonix/main/wp-content/uploads/2022/05/pretty-blonde-girl-sitting-window-sill-with-cup.jpg&amp;description=Top+5+New+Tech+Gadgets+You+Must+Have+In+2023"
+                        target="_blank"
+                    >
+                        <FaPinterestP />
+                    </Link>
+                    <Link
+                        rel="noreferrer"
+                        className="email-2 single-share-box-"
+                        to="mailto:?subject=Top+5+New+Tech+Gadgets+You+Must+Have+In+2023&amp;body=https://demo.rivaxstudio.com/fonix/main/?p=1707"
+                        target="_blank"
+                    >
+                        <AiOutlineMail />
+                    </Link>
+                    <Link
+                        rel="noreferrer"
+                        className="whatsapp-2 single-share-box-"
+                        to="https://api.whatsapp.com/send?text=https://demo.rivaxstudio.com/fonix/main/?p=1707"
+                        target="_blank"
+                    >
+                        <FaWhatsapp />
+                    </Link>
+                </div>
+                <div className="single-share-box-link">
+                    <div className="form-content">
+                        <input
+                            type="text"
+                            name="url"
+                            value="https://demo.rivaxstudio.com/fonix/main/top-5-new-tech-gadgets-you-must-have-in-2023/"
+                            className="share-link-text"
+                        />
+                        <button type="submit" className="share-link-btn">
+                            <AiOutlineCopy />
+                            <span className="copied-popup-text"></span>
+                        </button>
                     </div>
                 </div>
-            </>
+            </div>
         )
     }
     if (sizeStay === 'Smoll') {
@@ -165,7 +163,7 @@ const StayConnected = ({ sizeStay = 'S' }: Props) => {
                     rel="noreferrer"
                     className="websites"
                     target="_blank"
-                    data-title="Follow Me on Facebook"
+                   
                     href="https://facebook.com"
                 >
                     <FaFacebookF />
@@ -174,41 +172,36 @@ const StayConnected = ({ sizeStay = 'S' }: Props) => {
                     rel="noreferrer"
                     className="websites"
                     target="_blank"
-                    data-title="Follow Me on Twitter"
+                    
                     href="https://twitter.com"
                 >
-                    {' '}
-                    <BsTwitter />{' '}
+                   
+                    <BsTwitter />
                 </a>
                 <a
                     rel="noreferrer"
                     className="websites"
                     target="_blank"
-                    data-title="Follow Me on Linkedin"
                     href="https://linkedIn.com"
                 >
-                    {' '}
-                    <FaLinkedinIn />{' '}
+                    
+                    <FaLinkedinIn />
                 </a>
                 <a
                     rel="noreferrer"
                     className="websites"
                     target="_blank"
-                    data-title="Follow Me on Instagram"
+                   
                     href="https://instagram.com"
                 >
-                    {' '}
-                    <AiOutlineInstagram />{' '}
+                    <AiOutlineInstagram />
                 </a>
                 <a
                     rel="noreferrer"
                     className="websites"
                     target="_blank"
-                    data-title="Follow Me on Pinterest"
                     href="https://Pinterest.com"
-                >
-                    {' '}
-                    <FaPinterestP />{' '}
+                ><FaPinterestP />
                 </a>
             </div>
         )

@@ -98,7 +98,7 @@ const OtherArticles = (props : Props) => {
                             )}
                     </Row>
                 </div>
-                <NextPrev />
+                <NextPrev/>
             </div>
         </div>
     )

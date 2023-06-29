@@ -1,5 +1,3 @@
-// Post Reading Progress Indicator
-// document.querySelectorAll(".reading-progress-indicator")
 if ('.reading-progress-indicator'.length) {
     window.addEventListener('scroll', function () {
         let docHeight = Math.max(
@@ -23,16 +21,6 @@ if ('.reading-progress-indicator'.length) {
             : ''
     })
 }
-
-// window.addEventListener('load', function () {
-//     let likeBtn = document.querySelector('.likes')
-// console.log('likeBtn',  likeBtn);
-
-// // likeBtn.addEventListener("click", function () {
-// //         likeBtn.classList.toggle("heartTwoToneClick");
-// //   });
-
-// })
 
 
 

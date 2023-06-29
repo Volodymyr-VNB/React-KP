@@ -171,13 +171,13 @@
     object-fit: cover;
     width: 100%;
 }
-.wp-image-4{
+.arc-hot-images-large2 .wp-image-4{
       
     aspect-ratio: auto 2000 / 1500;
    
     vertical-align: bottom;
     flex: 1 0 0%;
-    height: 100%;
+    height: -webkit-fill-available;
     object-fit: cover;
     width: 100%;
 }

@@ -11,14 +11,14 @@ type LinkAr = {
     titleShot?: string
 }
 const LinkArticle = ({
-    to = '/articlePost',
+    // to = '/articlePost',
     keyKey,
     aClass,
     titleAll,
     titleShot,
 }: LinkAr) => {
     const data = useContext(AppContext)
-    
+
     return (
         <>
             <ScrollToTop />

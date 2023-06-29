@@ -43,7 +43,7 @@ const articleArray: Article[] = [
         lastRead: ' 4 Mins Read',
         coments: [
             { name: 'Serg', text: 'nice article', email: 'Sergi1970@i.ua' },
-            { name: 'Petro', text: 'text', email: 'Email' },
+            { name: 'Petro', text: 'I didn\'t like it, I want something more', email: 'Petrgi10@i.ua' },
         ],
         likes: false,
         viewsBlokc: 'Featured News',
@@ -88,8 +88,8 @@ const articleArray: Article[] = [
         dates: 'August 26, 2022',
         lastRead: ' 4 Mins Read',
         coments: [
-            { name: 'Serg', text: 'nice article', email: 'Sergi1970@i.ua' },
-            { name: 'Petro', text: 'text', email: 'Email' },
+            { name: 'Ivan', text: 'nice article', email: 'Sergi1970@i.ua' },
+            { name: 'Leka', text: 'good', email: 'no@Email' },
         ],
         likes: false,
         viewsBlokc: 'Featured News',
@@ -111,8 +111,8 @@ const articleArray: Article[] = [
         dates: 'August 26, 2022',
         lastRead: ' 4 Mins Read',
         coments: [
-            { name: 'Serg', text: 'nice article', email: 'Sergi1970@i.ua' },
-            { name: 'Petro', text: 'text', email: 'Email' },
+            { name: 'Jack', text: 'good', email: 'Sadsfsd@gmail.com.ua' },
+            { name: 'Retro', text: 'the text is the same', email: 'Email' },
         ],
         likes: false,
         viewsBlokc: 'Featured News',
@@ -134,8 +134,8 @@ const articleArray: Article[] = [
         dates: 'September 26, 2022',
         lastRead: ' 4 Mins Read',
         coments: [
-            { name: 'Serg', text: 'nice article', email: 'Sergi1970@i.ua' },
-            { name: 'Petro', text: 'text', email: 'Email' },
+            { name: 'Yn', text: 'nice article', email: 'Sergi1970@i.ua' },
+            { name: 'Ivan-Petro', text: '+', email: 'Email' },
         ],
         likes: false,
         viewsBlokc: 'Weekly News',
@@ -158,7 +158,7 @@ const articleArray: Article[] = [
         lastRead: ' 4 Mins Read',
         coments: [
             { name: 'Serg', text: 'nice article', email: 'Sergi1970@i.ua' },
-            { name: 'Petro', text: 'text', email: 'Email' },
+            { name: 'Trol', text: '-', email: 'Email' },
         ],
         likes: false,
         viewsBlokc: '',
@@ -180,8 +180,8 @@ const articleArray: Article[] = [
         dates: 'August 9, 2022',
         lastRead: ' 4 Mins Read',
         coments: [
-            { name: 'Serg', text: 'nice article', email: 'Sergi1970@i.ua' },
-            { name: 'Petro', text: 'text', email: 'Email' },
+            { name: 'Anna', text: 'nice article', email: 'Sergi1970@i.ua' },
+            { name: 'Mysa', text: 'bad bad', email: 'Email' },
         ],
         likes: true,
         viewsBlokc: '',
@@ -204,7 +204,7 @@ const articleArray: Article[] = [
         lastRead: ' 4 Mins Read',
         coments: [
             { name: 'Serg', text: 'nice article', email: 'Sergi1970@i.ua' },
-            { name: 'Petro', text: 'text', email: 'Email' },
+            { name: 'Petro', text: 'good', email: 'Email' },
         ],
         likes: false,
         viewsBlokc: 'Weekly News',
@@ -227,7 +227,7 @@ const articleArray: Article[] = [
         lastRead: ' 4 Mins Read',
         coments: [
             { name: 'Serg', text: 'nice article', email: 'Sergi1970@i.ua' },
-            { name: 'Petro', text: 'text', email: 'Email' },
+            { name: 'Petro', text: 'good', email: 'Email' },
         ],
         likes: false,
         viewsBlokc: 'Trending News',
@@ -273,7 +273,7 @@ const articleArray: Article[] = [
         lastRead: ' 4 Mins Read',
         coments: [
             { name: 'Serg', text: 'nice article', email: 'Sergi1970@i.ua' },
-            { name: 'Petro', text: 'text', email: 'Email' },
+            { name: 'Petro', text: 'lorem acf at reue', email: 'Email' },
         ],
         likes: false,
         viewsBlokc: 'Weekly News',
@@ -300,6 +300,7 @@ const articleArray: Article[] = [
         ],
         likes: false,
         viewsBlokc: 'Weekly News',
+        
     },
     {
         id: 13,
@@ -342,7 +343,7 @@ const articleArray: Article[] = [
         lastRead: ' 4 Mins Read',
         coments: [
             { name: 'Serg', text: 'nice article', email: 'Sergi1970@i.ua' },
-            { name: 'Petro', text: 'text', email: 'Email' },
+            { name: 'Petro', text: 'Ok', email: 'Email' },
         ],
         likes: false,
         viewsBlokc: '',
@@ -365,7 +366,7 @@ const articleArray: Article[] = [
         lastRead: ' 4 Mins Read',
         coments: [
             { name: 'Serg', text: 'nice article', email: 'Sergi1970@i.ua' },
-            { name: 'Petro', text: 'text', email: 'Email' },
+            { name: 'Petro', text: 'Ok', email: 'Email' },
         ],
         likes: false,
         viewsBlokc: '',
@@ -388,7 +389,7 @@ const articleArray: Article[] = [
         lastRead: ' 4 Mins Read',
         coments: [
             { name: 'Serg', text: 'nice article', email: 'Sergi1970@i.ua' },
-            { name: 'Petro', text: 'text', email: 'Email' },
+            { name: 'Petro', text: 'Ok', email: 'Email' },
         ],
         likes: false,
         viewsBlokc: '',
@@ -411,7 +412,7 @@ const articleArray: Article[] = [
         lastRead: ' 4 Mins Read',
         coments: [
             { name: 'Serg', text: 'nice article', email: 'Sergi1970@i.ua' },
-            { name: 'Petro', text: 'text', email: 'Email' },
+            { name: 'Petro', text: 'Ok', email: 'Email' },
         ],
         likes: false,
         viewsBlokc: '',
@@ -434,7 +435,7 @@ const articleArray: Article[] = [
         lastRead: ' 4 Mins Read',
         coments: [
             { name: 'Serg', text: 'nice article', email: 'Sergi1970@i.ua' },
-            { name: 'Petro', text: 'text', email: 'Email' },
+            { name: 'Petro', text: 'Ok', email: 'Email' },
         ],
         likes: false,
         viewsBlokc: '',
@@ -457,7 +458,7 @@ const articleArray: Article[] = [
         lastRead: ' 4 Mins Read',
         coments: [
             { name: 'Serg', text: 'nice article', email: 'Sergi1970@i.ua' },
-            { name: 'Petro', text: 'text', email: 'Email' },
+            { name: 'Petro', text: 'Ok', email: 'Email' },
         ],
         likes: false,
         viewsBlokc: '',
@@ -480,7 +481,7 @@ const articleArray: Article[] = [
         lastRead: ' 4 Mins Read',
         coments: [
             { name: 'Serg', text: 'nice article', email: 'Sergi1970@i.ua' },
-            { name: 'Petro', text: 'text', email: 'Email' },
+            { name: 'Petro', text: 'Ok', email: 'Email' },
         ],
         likes: false,
         viewsBlokc: 'Trending News',
@@ -503,7 +504,7 @@ const articleArray: Article[] = [
         lastRead: ' 4 Mins Read',
         coments: [
             { name: 'Serg', text: 'nice article', email: 'Sergi1970@i.ua' },
-            { name: 'Petro', text: 'text', email: 'Email' },
+            { name: 'Petro', text: 'Ok', email: 'Email' },
         ],
         likes: false,
         viewsBlokc: 'Trending News',
@@ -526,7 +527,7 @@ const articleArray: Article[] = [
         lastRead: ' 4 Mins Read',
         coments: [
             { name: 'Serg', text: 'nice article', email: 'Sergi1970@i.ua' },
-            { name: 'Petro', text: 'text', email: 'Email' },
+            { name: 'Petro', text: 'Ok', email: 'Email' },
         ],
         likes: false,
         viewsBlokc: 'Other Articles',
@@ -549,7 +550,7 @@ const articleArray: Article[] = [
         lastRead: ' 4 Mins Read',
         coments: [
             { name: 'Serg', text: 'nice article', email: 'Sergi1970@i.ua' },
-            { name: 'Petro', text: 'text', email: 'Email' },
+            { name: 'Ok', text: 'Ok', email: 'Email' },
         ],
         likes: false,
         viewsBlokc: '',

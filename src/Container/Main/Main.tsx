@@ -295,7 +295,6 @@ const Main = (props: Props) => {
                     <StayConnected />
                 </section>
             </main>
-
             <Footer />
         </>
     )
