@@ -52,7 +52,7 @@ const App = (props: Props) => {
                         path="/about"
                         element={
                             <>
-                                <ScrollToTop />
+                                {/* <ScrollToTop /> */}
                                 <About />
                             </>
                         }
