@@ -5,7 +5,7 @@ import React, { useState } from 'react'
 import { Input } from 'antd'
 import articleArray from 'utils/articleBlog'
 import { useAppDispatch } from 'redux/hoor'
-import { addComme  } from 'redux/comentsReduser'
+import { addComme } from 'redux/comentsReduser'
 
 const { TextArea } = Input
 
@@ -21,35 +21,22 @@ type Review = {
 }
 
 const Reviews = ({ id }: Props) => {
-    
     let arrReviews: Review[] = []
 
     articleArray
         .filter((item) => item.id === id)
         .map(({ coments }) => (arrReviews = coments!.slice()))
 
-    // console.log('arrReviews',arrReviews)    
-      
-    let noyCommets = arrReviews.length
-    let notComments = document.querySelector('.noyComments')
-    noyCommets > 0
-        ? notComments?.classList.add('display-none')
-        : notComments?.classList.add('display-block')
+    const dispatch = useAppDispatch()
 
-    // console.log('noyCommets', noyCommets)
-    const dispatch =useAppDispatch()
-    //  console.log('comme',commentSlice)  
     const [review, setReview] = useState(arrReviews)
     const [newReview, setNewReview] = useState<Review>({
         name: '',
         text: '',
         email: '',
     })
-    // review    
-    // .map(({ name,text ,email}) => (articleArray[id].coments = review.slice()))
 
-    // console.log('===',articleArray)
-
+    let notComments = document.querySelector('.noyComments')!
 
     const showComents = () => {
         let comentsArea = document.querySelector('.comments-area')!
@@ -63,6 +50,13 @@ const Reviews = ({ id }: Props) => {
         } else {
             document.getElementById('btnComents')!.textContent = 'Show Comments'
         }
+
+        let noyCommets = review.length
+        notComments = document.querySelector('.noyComments')!
+
+        noyCommets >= 1
+            ? notComments.classList.add('display-none')
+            : notComments.classList.add('display-block')
     }
 
     const changeName = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -98,16 +92,21 @@ const Reviews = ({ id }: Props) => {
             setReview((prevState) => {
                 return [...prevState, newReview]
             })
+
+            notComments = document.querySelector('.noyComments')!
+            if (newReview.name !== '') {
+                notComments.classList.remove('display-block')
+                notComments.classList.add('display-none')
+            }
+
             setNewReview({
                 name: '',
                 text: '',
                 email: '',
             })
-            
         }
     }
-     let comentsNum =review.length
-     console.log('comentsNum',comentsNum)
+
     return (
         <>
             <div className="comments-container">
@@ -145,11 +144,8 @@ const Reviews = ({ id }: Props) => {
                     <h3 id="reply-title" className="comment-reply-title">
                         Leave a Reply <br />
                     </h3>
-                    {/* <Form method="post" className="comment-form"></Form> */}
-                    <form className="comment-form" onSubmit={
-                        onSend
-                        
-                        }>
+
+                    <form className="comment-form" onSubmit={onSend}>
                         <p className="h4">
                             Your email address will not be published. Required
                             fields are marked *
@@ -188,17 +184,17 @@ const Reviews = ({ id }: Props) => {
                             shape="round"
                             className="comentBtn "
                             htmlType="submit"
-                            onClick={()=>
-                                dispatch(addComme(
-                                    
-                                    {
-                                    id:id,
-                                    name: newReview.name,
-                                    text: newReview.text,
-                                    email: newReview.email,
-                                }))
+                            onClick={() =>
+                                dispatch(
+                                    addComme({
+                                        id: id,
+                                        name: newReview.name,
+                                        text: newReview.text,
+                                        email: newReview.email,
+                                    })
+                                )
                             }
-                        >   
+                        >
                             Post Comment
                         </Button>
                     </form>
